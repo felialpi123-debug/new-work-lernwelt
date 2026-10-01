@@ -384,7 +384,8 @@ body.presentation .floorplan{grid-template-rows:90px 42px 90px;min-height:250px;
 .home-btn{border:1px solid #d9dde3;background:#fff;color:var(--navy);font-weight:900;border-radius:999px;padding:9px 14px;cursor:pointer}
 .nav-group-body,.nav-chapter-body{display:none}.nav-group.open>.nav-group-body,.nav-chapter.open>.nav-chapter-body{display:block}
 .mission-jump{margin-top:11px;border:0;border-radius:999px;background:var(--navy);color:#fff;padding:9px 13px;font:inherit;font-size:12px;font-weight:900;cursor:pointer}
-.home-scene{display:grid!important;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center;padding:54px 6vw!important;background:radial-gradient(circle at 80% 22%,rgba(38,166,136,.18),transparent 28%),linear-gradient(135deg,#faf8f3,#eef6f3)!important}
+.home-scene{grid-template-columns:1.12fr .88fr;gap:48px;align-items:center;padding:54px 6vw!important;background:radial-gradient(circle at 80% 22%,rgba(38,166,136,.18),transparent 28%),linear-gradient(135deg,#faf8f3,#eef6f3)!important}
+.home-scene.active{display:grid!important}
 .home-scene h1{font-size:clamp(54px,6.2vw,92px);line-height:.92;letter-spacing:-.055em;margin:12px 0 24px}.home-scene h1 span{color:var(--teal)}
 .home-scene .lead{max-width:670px;font-size:clamp(20px,1.8vw,28px);line-height:1.35}
 .home-path{display:flex;gap:9px;flex-wrap:wrap;margin:26px 0}.home-path span{background:#fff;border:1px solid #dfe5e2;border-radius:999px;padding:9px 12px;font-size:11px;font-weight:900;letter-spacing:.08em}
@@ -419,3 +420,9 @@ body.presentation .presentation-nav button{
   font-size:15px;cursor:pointer;box-shadow:0 8px 24px rgba(25,34,72,.14)
 }
 body.presentation .presentation-nav button:hover{transform:translateY(-1px)}
+
+/* v1.8.3 guard: never let the home scene override scene navigation */
+body.presentation .scene:not(.active){display:none!important}
+
+/* v1.8.4: Nur die aktive Hauptszene darf sichtbar sein. */
+#app > .scene:not(.active){display:none!important}

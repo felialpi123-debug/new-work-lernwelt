@@ -1,3 +1,20 @@
+# New Work Lernwelt v1.8.4 – Navigation hard fix
+
+Ausgangspunkt war das tatsächlich deployte v1.8.3-Paket. Geprüft wurden app.js, index.html und styles.css.
+
+Änderungen:
+- zentrale Szenenliste wird einmal direkt aus `#app > .scene` aufgebaut
+- `go()`, `nextScene()` und `prevScene()` erzwingen die Sichtbarkeit inline mit `!important`
+- Kapitel-Einträge verwenden direkte `onclick`-Handler
+- Vorlesungsmodus hat direkte Weiter-/Zurück-Handler plus Inline-Fallback
+- CSS und JS erhalten `?v=1.8.4`, damit Browser/Vercel nicht alte Dateien aus dem Cache mischen
+- Startseite kann bei Kapitelwechseln nicht mehr parallel sichtbar bleiben
+
+
+# New Work Lernwelt v1.8.3 – Home-Overlay-Fix
+
+Behebt die eigentliche Ursache der Navigation: Die Startseite hatte `display:grid!important` und blieb deshalb trotz Szenenwechsel sichtbar. Jetzt wird sie ausschließlich als aktive Szene angezeigt. Kapitel-Sprünge und Vorlesungsmodus zeigen damit nur noch die gewählte Seite.
+
 # New Work Lernwelt v1.8.1 – Online-Navigation repariert
 
 Bugfix: zentrale show()/go()-Navigation ergänzt. Dadurch funktionieren Planspiel, Kapitel-Sprünge, Vorlesungsmodus/Lernmodus, Home sowie Weiter/Zurück wieder auch im Vercel-Deployment.

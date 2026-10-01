@@ -264,23 +264,28 @@ if(wScene){
 
 [...app.querySelectorAll(".scene")].forEach((el,i)=>el.dataset.index=i);
 
-// v1.8.2 – stabile zentrale Navigation
+// v1.8.4 – robuste Navigation, geprüft gegen das tatsächlich deployte v1.8.3-Paket
 let current = 0;
+const sceneEls = Array.from(document.querySelectorAll("#app > .scene"));
 
 function renderScene(index){
-  const all = Array.from(app.children).filter(el => el.classList.contains("scene"));
-  if(!all.length) return;
-  current = Math.max(0, Math.min(Number(index) || 0, all.length - 1));
+  if(!sceneEls.length) return;
+  const n = Number(index);
+  current = Math.max(0, Math.min(Number.isFinite(n) ? n : 0, sceneEls.length - 1));
 
-  all.forEach((el,n)=>{
-    el.classList.toggle("active", n === current);
-    el.setAttribute("aria-hidden", n === current ? "false" : "true");
+  // Sichtbarkeit absichtlich inline erzwingen: keine alte CSS-Regel kann mehr
+  // Startseite oder andere Szenen zusätzlich sichtbar halten.
+  sceneEls.forEach((el,i)=>{
+    const active = i === current;
+    el.classList.toggle("active", active);
+    el.setAttribute("aria-hidden", active ? "false" : "true");
+    el.style.setProperty("display", active ? (el.classList.contains("home-scene") ? "grid" : "block") : "none", "important");
   });
 
   const progress=document.getElementById("progressText");
-  if(progress) progress.textContent=`${current+1} / ${all.length}`;
+  if(progress) progress.textContent=`${current+1} / ${sceneEls.length}`;
   const bar=document.getElementById("progressBar");
-  if(bar) bar.style.width=`${((current+1)/all.length)*100}%`;
+  if(bar) bar.style.width=`${((current+1)/sceneEls.length)*100}%`;
 
   const tag=document.getElementById("chapterTag");
   if(tag){
@@ -296,9 +301,14 @@ function renderScene(index){
 
 function go(index){
   renderScene(index);
-  try { window.scrollTo({top:0,left:0,behavior:"auto"}); } catch(_) {}
+  try { window.scrollTo(0,0); } catch(_) {}
 }
+function nextScene(){ go(current+1); }
+function prevScene(){ go(current-1); }
+
 window.go = go;
+window.nextScene = nextScene;
+window.prevScene = prevScene;
 const chapter1Start=scenes.findIndex(s=>s.id==="newwork-map");
 const idx=id=>scenes.findIndex(s=>s.id===id);
 const sceneIds=(a,b)=>scenes.slice(idx(a),idx(b)+1).map(s=>s.id);
@@ -323,12 +333,11 @@ nav.innerHTML=navGroups.map(g=>{
 nav.querySelectorAll("[data-toggle-group]").forEach(b=>b.onclick=()=>b.closest(".nav-group").classList.toggle("open"));
 nav.querySelectorAll("[data-toggle-chapter]").forEach(b=>b.onclick=()=>b.closest(".nav-chapter").classList.toggle("open"));
 nav.querySelectorAll(".nav-item[data-go]").forEach(b=>{
-  b.addEventListener("click",e=>{
+  b.onclick=(e)=>{
     e.preventDefault();
-    e.stopPropagation();
-    go(Number(b.dataset.go));
+    go(parseInt(b.dataset.go,10));
     drawer.classList.remove("open");
-  });
+  };
 });
 
 document.getElementById("menuBtn").onclick=()=>drawer.classList.add("open");
@@ -342,8 +351,8 @@ document.addEventListener("keydown",e=>{
  if(e.key==="ArrowLeft"||e.key==="PageUp") go(current-1);
  if(e.key==="Escape"){document.body.classList.remove("presentation");document.getElementById("modeBtn").textContent="🎓 Vorlesungsmodus";}
 });
-document.getElementById("presentationPrev")?.addEventListener("click",e=>{e.preventDefault();go(current-1);});
-document.getElementById("presentationNext")?.addEventListener("click",e=>{e.preventDefault();go(current+1);});
+document.getElementById("presentationPrev").onclick=(e)=>{e.preventDefault();prevScene();};
+document.getElementById("presentationNext").onclick=(e)=>{e.preventDefault();nextScene();};
 go(0);
 
 document.getElementById("exitPresentation").onclick=()=>{
