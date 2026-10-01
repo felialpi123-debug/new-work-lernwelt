@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>New Work Lernwelt · THI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" data-go="home">NEW WORK <span>· THI</span></button>
+    <div class="top-actions">
+      <button id="modeBtn" class="ghost">🎓 Vorlesungsmodus</button>
+      <button id="homeBtn" class="home-btn" title="Zur Übersicht">⌂ Home</button><button id="simulationBtn" class="simulation-top-btn">Planspiel</button><button id="menuBtn" class="ghost">☰ Kapitel</button>
+    </div>
+  </header>
+
+  <aside id="drawer" class="drawer">
+    <button class="close" id="closeDrawer">×</button>
+    <p class="eyebrow">LERNWELT</p>
+    <h2>New Work · Grundlagen</h2>
+    <nav id="drawerNav"></nav>
+  </aside>
+
+  <button id="exitPresentation" class="exit-presentation">✕ Lernmodus</button>
+  <main id="app"></main>
+
+  <footer>
+    <span>Digital Organization & New Work · WS 2026/27</span>
+    <span id="progressText"></span>
+  </footer>
+
+<div class="progressbar"><span id="progressBar"></span></div><div class="chapter-tag" id="chapterTag">NEW WORK · GRUNDLAGEN</div>
+
+<aside id="simulationPanel" class="simulation-panel" aria-hidden="true">
+  <div class="sim-head">
+    <div><small>BLOCK 1 · DURCHGÄNGIGES PLANSPIEL</small><h2>NovaWorks Transformation Lab</h2></div>
+    <button id="closeSimulation" class="sim-close" aria-label="Planspiel schließen">×</button>
+  </div>
+  <div class="sim-tabs">
+    <button class="sim-tab active" data-simtab="company">Unternehmen</button>
+    <button class="sim-tab" data-simtab="missions">Aufträge</button>
+    <button class="sim-tab" data-simtab="board">Transformationsboard</button>
+  </div>
+  <div class="sim-scroll">
+    <section class="sim-pane active" data-pane="company">
+      <p class="sim-kicker">AUSGANGSLAGE</p>
+      <h3>NovaWorks GmbH</h3>
+      <p class="sim-intro">Sie sind das Transformationsteam. Ihre Aufgabe: NovaWorks im Laufe von Block 1 zu einer tragfähigen New-Work-Organisation weiterzuentwickeln – ohne die operative Realität auszublenden.</p>
+      <div class="sim-facts">
+        <div><b>450</b><span>Beschäftigte</span></div>
+        <div><b>3</b><span>Arbeitswelten</span></div>
+        <div><b>2026</b><span>Startpunkt</span></div>
+      </div>
+      <div class="sim-company-grid">
+        <article><span>🏭</span><b>Produktion</b><p>Schichtgebundene Arbeit, Maschinen und physische Anwesenheit.</p></article>
+        <article><span>🎧</span><b>Kundenservice</b><p>Erreichbarkeit und Servicezeiten müssen zuverlässig abgedeckt sein.</p></article>
+        <article><span>💻</span><b>Entwicklung & Verwaltung</b><p>Wissensarbeit mit größerem Spielraum für Zeit und Ort.</p></article>
+      </div>
+      <div class="sim-start-state">
+        <h4>So arbeitet NovaWorks heute</h4>
+        <div class="sim-tags"><span>5-Tage-Woche</span><span>Präsenzkultur</span><span>funktionale Silos</span><span>hierarchische Entscheidungen</span><span>KI punktuell</span></div>
+      </div>
+      <div class="sim-pressure">
+        <h4>Warum muss sich etwas verändern?</h4>
+        <p>Fachkräfte sind schwerer zu gewinnen, die Fluktuation steigt, Beschäftigte fordern mehr Flexibilität und KI verändert Tätigkeiten. Gleichzeitig dürfen Produktivität, Kundenservice und Produktion nicht leiden.</p>
+      </div>
+      <div class="sim-goal"><b>Ihr Ziel:</b> Am Ende präsentieren Sie Ihren <strong>„NovaWorks 2030 Blueprint“</strong> – inklusive Entscheidungen, Regeln, Kennzahlen und bewusst akzeptierter Zielkonflikte.</div>
+    </section>
+
+    <section class="sim-pane" data-pane="missions">
+      <p class="sim-kicker">AUFTRÄGE IM VERLAUF DES BLOCKS</p>
+      <h3>Ihre Transformationsmissionen</h3>
+      <div class="mission-list">
+        <article class="mission current"><div class="mission-no">01</div><div><small>KAPITEL 1 · GRUNDLAGEN</small><h4>Transformationsdiagnose</h4><p>Was ist bei NovaWorks heute bereits New Work – und was nicht? Legen Sie <b>3 Transformationsziele</b> fest.</p><em>Output: 3 Ziele + je 1 Begründung · 3er-Gruppen · 8 Min.</em><button class="mission-jump" data-jump-scene="newwork-map">Auftrag öffnen →</button></div></article>
+        <article class="mission current"><div class="mission-no">02</div><div><small>KAPITEL 2 · ARBEITSZEIT</small><h4>Arbeitszeit neu gestalten</h4><p>Entwickeln Sie für Produktion, Kundenservice und Wissensarbeit ein tragfähiges Arbeitszeitkonzept. Es darf unterschiedliche Lösungen geben.</p><em>Output: Modell(e) + 2 Regeln + 2 KPIs + 1 Trade-off · 4er-Gruppen · 12 Min. · 90-Sek.-Pitch</em><button class="mission-jump" data-jump-scene="arbeitszeit-start">Auftrag öffnen →</button></div></article>
+        <article class="mission current"><div class="mission-no">03</div><div><small>KAPITEL 3 · ARBEITSORT</small><h4>Arbeitsort gestalten</h4><p>Welche Tätigkeiten brauchen Präsenz, welche nicht – und wie organisieren Sie hybride Zusammenarbeit?</p><em>Output: Ortsmodell + 3 Regeln + 2 KPIs + 1 Trade-off · 4er-Gruppen · 12 Min.</em><button class="mission-jump" data-jump-scene="c3-novaworks">Auftrag öffnen →</button></div></article>
+        <article class="mission current"><div class="mission-no">04</div><div><small>KAPITEL 3 · WORKPLACE DESIGN</small><h4>Design the New Workplace</h4><p>Gestalten Sie die bestehende Büroetage für 60 Beschäftigte mit einem 100-Punkte-Budget neu.</p><em>35–40 Min. · visueller Grundriss · 3–5-Min.-Präsentation · Ereigniskarte</em><button class="mission-jump" data-jump-scene="c3-mission4-start">Auftrag öffnen →</button></div></article>
+        <article class="mission current"><div class="mission-no">05</div><div><small>KAPITEL 4 · ZUSAMMENARBEIT</small><h4>Operating Model neu gestalten</h4><p>Verteilen Sie Entscheidungen, Autonomie und Führungsverantwortung für ein NovaWorks-Team neu.</p><em>15 Min. · 12 Min. Design + 3 Min. Ereigniskarte · Transformationsboard</em><button class="mission-jump" data-jump-scene="c4-novaworks">Auftrag öffnen →</button></div></article>
+        <article class="mission future"><div class="mission-no">06</div><div><small>ZUSAMMENARBEIT</small><h4>Teams neu aufstellen</h4><p>Wie organisieren Sie Verantwortung, Kollaboration und Wissenstransfer?</p><em>Folgt im weiteren Block.</em></div></article>
+        <article class="mission future"><div class="mission-no">07</div><div><small>KI & ARBEITSWELT</small><h4>Mensch + KI gestalten</h4><p>Was automatisieren Sie, wo augmentiert KI – und was bleibt bewusst menschliche Aufgabe?</p><em>Folgt im weiteren Block.</em></div></article>
+        <article class="mission final"><div class="mission-no">★</div><div><small>FINALE</small><h4>NovaWorks 2030 Blueprint</h4><p>Führen Sie alle Entscheidungen zu einem konsistenten Organisationsmodell zusammen und verteidigen Sie Ihre Zielkonflikte.</p><em>Abschlusspräsentation des Planspiels.</em></div></article>
+      </div>
+    </section>
+
+    <section class="sim-pane" data-pane="board">
+      <p class="sim-kicker">IHR ENTSCHEIDUNGSLOG</p>
+      <h3>Transformationsboard</h3>
+      <p class="sim-intro">Hier halten Sie die Entscheidungen Ihres Teams fest. Die Einträge bleiben auf diesem Gerät im Browser gespeichert.</p>
+      <div class="board-grid">
+        <label><span>Unsere 3 Transformationsziele</span><textarea data-store="goals" placeholder="1. …&#10;2. …&#10;3. …"></textarea></label>
+        <label><span>Arbeitszeit – unsere Entscheidung</span><textarea data-store="workingtime" placeholder="Modell, Regeln, KPIs, Trade-off …"></textarea></label>
+        <label><span>Arbeitsort</span><textarea data-store="workplace" placeholder="Wird in Kapitel 3 bearbeitet …"></textarea></label><label><span>Workplace Design · Mission 04</span><textarea data-store="workplacedesign" placeholder="Zonen, Budget, Regeln, KPIs, Trade-off …"></textarea></label><label><span>Operating Model · Mission 05</span><textarea data-store="operatingmodel" placeholder="Entscheidungsräume, Leitplanken, Führungsrolle, KPIs, Risiken …"></textarea></label>
+        <label class="locked"><span>Organisation & Zusammenarbeit</span><textarea data-store="organization" placeholder="Wird später bearbeitet …"></textarea></label>
+        <label class="locked"><span>KI & Arbeitswelt</span><textarea data-store="ai" placeholder="Wird später bearbeitet …"></textarea></label>
+        <label><span>Offene Zielkonflikte / Ereignisse</span><textarea data-store="tradeoffs" placeholder="Was müssen wir später noch lösen?"></textarea></label>
+      </div>
+      <div class="board-actions"><button id="clearBoard">Board zurücksetzen</button><span id="saveState">lokal gespeichert</span></div>
+    </section>
+  </div>
+</aside>
+<div id="simulationBackdrop" class="simulation-backdrop"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
