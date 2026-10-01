@@ -264,17 +264,24 @@ if(wScene){
 
 [...app.querySelectorAll(".scene")].forEach((el,i)=>el.dataset.index=i);
 
-// v1.8.1 – zentrale Navigation / Modussteuerung
-// Diese Funktionen fehlten in v1.8. Dadurch brach JavaScript beim ersten show(0) ab:
-// Planspiel, Kapitel-Sprünge und "Lernmodus" wurden danach nicht mehr initialisiert.
+// v1.8.2 – stabile zentrale Navigation
 let current = 0;
-function show(i){
-  const all=[...app.querySelectorAll(".scene")];
+
+function renderScene(index){
+  const all = Array.from(app.children).filter(el => el.classList.contains("scene"));
   if(!all.length) return;
-  current=Math.max(0,Math.min(i,all.length-1));
-  all.forEach((el,n)=>el.classList.toggle("active",n===current));
+  current = Math.max(0, Math.min(Number(index) || 0, all.length - 1));
+
+  all.forEach((el,n)=>{
+    el.classList.toggle("active", n === current);
+    el.setAttribute("aria-hidden", n === current ? "false" : "true");
+  });
+
   const progress=document.getElementById("progressText");
   if(progress) progress.textContent=`${current+1} / ${all.length}`;
+  const bar=document.getElementById("progressBar");
+  if(bar) bar.style.width=`${((current+1)/all.length)*100}%`;
+
   const tag=document.getElementById("chapterTag");
   if(tag){
     const id=scenes[current]?.id || "";
@@ -286,11 +293,12 @@ function show(i){
       "NEW WORK · GRUNDLAGEN";
   }
 }
-function go(i){
-  show(i);
-  window.scrollTo({top:0,behavior:"instant"});
-}
 
+function go(index){
+  renderScene(index);
+  try { window.scrollTo({top:0,left:0,behavior:"auto"}); } catch(_) {}
+}
+window.go = go;
 const chapter1Start=scenes.findIndex(s=>s.id==="newwork-map");
 const idx=id=>scenes.findIndex(s=>s.id===id);
 const sceneIds=(a,b)=>scenes.slice(idx(a),idx(b)+1).map(s=>s.id);
@@ -314,7 +322,14 @@ nav.innerHTML=navGroups.map(g=>{
 }).join("");
 nav.querySelectorAll("[data-toggle-group]").forEach(b=>b.onclick=()=>b.closest(".nav-group").classList.toggle("open"));
 nav.querySelectorAll("[data-toggle-chapter]").forEach(b=>b.onclick=()=>b.closest(".nav-chapter").classList.toggle("open"));
-nav.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{go(+b.dataset.go);drawer.classList.remove("open");});
+nav.querySelectorAll(".nav-item[data-go]").forEach(b=>{
+  b.addEventListener("click",e=>{
+    e.preventDefault();
+    e.stopPropagation();
+    go(Number(b.dataset.go));
+    drawer.classList.remove("open");
+  });
+});
 
 document.getElementById("menuBtn").onclick=()=>drawer.classList.add("open");
 document.getElementById("closeDrawer").onclick=()=>drawer.classList.remove("open");
@@ -323,22 +338,27 @@ document.getElementById("modeBtn").onclick=()=>{
  document.getElementById("modeBtn").textContent=document.body.classList.contains("presentation")?"📚 Lernmodus":"🎓 Vorlesungsmodus";
 };
 document.addEventListener("keydown",e=>{
- if(e.key==="ArrowRight"||e.key==="PageDown") show(current+1);
- if(e.key==="ArrowLeft"||e.key==="PageUp") show(current-1);
+ if(e.key==="ArrowRight"||e.key==="PageDown") go(current+1);
+ if(e.key==="ArrowLeft"||e.key==="PageUp") go(current-1);
  if(e.key==="Escape"){document.body.classList.remove("presentation");document.getElementById("modeBtn").textContent="🎓 Vorlesungsmodus";}
 });
-show(0);
+document.getElementById("presentationPrev")?.addEventListener("click",e=>{e.preventDefault();go(current-1);});
+document.getElementById("presentationNext")?.addEventListener("click",e=>{e.preventDefault();go(current+1);});
+go(0);
 
 document.getElementById("exitPresentation").onclick=()=>{
  document.body.classList.remove("presentation");
  document.getElementById("modeBtn").textContent="🎓 Vorlesungsmodus";
 };
 
-// v1.8.1 – robuste Szenen-Navigation
+// v1.8.2 – Weiter/Zurück funktionieren per Button und als Fallback delegiert
 document.addEventListener("click",e=>{
-  if(e.target.closest("[data-next]")){e.preventDefault();go(current+1);return;}
-  if(e.target.closest("[data-prev]")){e.preventDefault();go(current-1);return;}
-  if(e.target.closest('.brand[data-go="home"]')){e.preventDefault();go(0);return;}
+  const next=e.target.closest("[data-next]");
+  const prev=e.target.closest("[data-prev]");
+  if(next){ e.preventDefault(); e.stopPropagation(); go(current+1); return; }
+  if(prev){ e.preventDefault(); e.stopPropagation(); go(current-1); return; }
+  const brand=e.target.closest('.brand[data-go="home"]');
+  if(brand){ e.preventDefault(); go(0); }
 });
 
 // v0.3 interactions
@@ -356,13 +376,6 @@ document.addEventListener("click",e=>{
    res.innerHTML=`<b>${ok} von ${cards.length} richtig.</b> ${ok===cards.length?"Genau: Bergmanns ursprüngliches Konzept und die heutige Managementdebatte überlappen, sind aber nicht dasselbe.":"Schaut euch die Begriffe noch einmal an: Eigenproduktion/Calling gehören zum Ursprung; Hybrid Work und agile Zusammenarbeit zur heutigen betrieblichen Debatte."}`;
  }
 });
-const oldShow=show;
-show=function(i){
- oldShow(i);
- const pct=((current+1)/scenes.length)*100;
- document.getElementById("progressBar").style.width=pct+"%";
-};
-show(current);
 
 document.addEventListener("click",e=>{
  if(e.target.closest(".source-row a")) e.stopPropagation();

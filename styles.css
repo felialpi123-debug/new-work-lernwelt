@@ -407,3 +407,15 @@ body.presentation .floorplan{grid-template-rows:90px 42px 90px;min-height:250px;
 }
 .chapter-bridge small{font-size:14px;font-weight:800;letter-spacing:.08em;color:#256879}
 .chapter-bridge p{font-size:18px;line-height:1.35;margin:6px 0 0}
+
+/* v1.8.2 – eindeutige Navigation im Vorlesungsmodus */
+.presentation-nav{display:none}
+body.presentation .presentation-nav{
+  display:flex;position:fixed;right:22px;bottom:22px;z-index:80;gap:10px
+}
+body.presentation .presentation-nav button{
+  border:1px solid rgba(25,34,72,.18);background:rgba(255,255,255,.94);
+  color:#192248;padding:11px 16px;border-radius:999px;font-weight:800;
+  font-size:15px;cursor:pointer;box-shadow:0 8px 24px rgba(25,34,72,.14)
+}
+body.presentation .presentation-nav button:hover{transform:translateY(-1px)}
