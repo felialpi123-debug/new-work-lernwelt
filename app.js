@@ -264,6 +264,33 @@ if(wScene){
 
 [...app.querySelectorAll(".scene")].forEach((el,i)=>el.dataset.index=i);
 
+// v1.8.1 – zentrale Navigation / Modussteuerung
+// Diese Funktionen fehlten in v1.8. Dadurch brach JavaScript beim ersten show(0) ab:
+// Planspiel, Kapitel-Sprünge und "Lernmodus" wurden danach nicht mehr initialisiert.
+let current = 0;
+function show(i){
+  const all=[...app.querySelectorAll(".scene")];
+  if(!all.length) return;
+  current=Math.max(0,Math.min(i,all.length-1));
+  all.forEach((el,n)=>el.classList.toggle("active",n===current));
+  const progress=document.getElementById("progressText");
+  if(progress) progress.textContent=`${current+1} / ${all.length}`;
+  const tag=document.getElementById("chapterTag");
+  if(tag){
+    const id=scenes[current]?.id || "";
+    tag.textContent =
+      id.startsWith("c4-") ? "NEW WORK · ZUSAMMENARBEIT & SELBSTORGANISATION" :
+      id.startsWith("c3-") ? "NEW WORK · ARBEITSORT & HYBRID WORK" :
+      id.startsWith("arbeitszeit") || id.startsWith("c2-") ? "NEW WORK · ARBEITSZEIT" :
+      id.startsWith("b2-") ? "BLOCK 2 · NEW BUSINESS MODELS" :
+      "NEW WORK · GRUNDLAGEN";
+  }
+}
+function go(i){
+  show(i);
+  window.scrollTo({top:0,behavior:"instant"});
+}
+
 const chapter1Start=scenes.findIndex(s=>s.id==="newwork-map");
 const idx=id=>scenes.findIndex(s=>s.id===id);
 const sceneIds=(a,b)=>scenes.slice(idx(a),idx(b)+1).map(s=>s.id);
@@ -298,7 +325,7 @@ document.getElementById("modeBtn").onclick=()=>{
 document.addEventListener("keydown",e=>{
  if(e.key==="ArrowRight"||e.key==="PageDown") show(current+1);
  if(e.key==="ArrowLeft"||e.key==="PageUp") show(current-1);
- if(e.key==="Escape") document.body.classList.remove("presentation");
+ if(e.key==="Escape"){document.body.classList.remove("presentation");document.getElementById("modeBtn").textContent="🎓 Vorlesungsmodus";}
 });
 show(0);
 
@@ -306,6 +333,13 @@ document.getElementById("exitPresentation").onclick=()=>{
  document.body.classList.remove("presentation");
  document.getElementById("modeBtn").textContent="🎓 Vorlesungsmodus";
 };
+
+// v1.8.1 – robuste Szenen-Navigation
+document.addEventListener("click",e=>{
+  if(e.target.closest("[data-next]")){e.preventDefault();go(current+1);return;}
+  if(e.target.closest("[data-prev]")){e.preventDefault();go(current-1);return;}
+  if(e.target.closest('.brand[data-go="home"]')){e.preventDefault();go(0);return;}
+});
 
 // v0.3 interactions
 document.addEventListener("click",e=>{

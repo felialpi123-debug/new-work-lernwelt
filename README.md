@@ -1,3 +1,7 @@
+# New Work Lernwelt v1.8.1 – Online-Navigation repariert
+
+Bugfix: zentrale show()/go()-Navigation ergänzt. Dadurch funktionieren Planspiel, Kapitel-Sprünge, Vorlesungsmodus/Lernmodus, Home sowie Weiter/Zurück wieder auch im Vercel-Deployment.
+
 # New Work Lernwelt v1.8 – Kapitel 4 finalisiert
 
 Kapitel 4 „Zusammenarbeit & Selbstorganisation“ ist vollständig eingebaut. Mission 05 wurde auf den abgestimmten 15-Minuten-Slot verdichtet (12 Min. Design + 3 Min. Ereigniskarte). Das Kapitel endet mit dem Übergang zum KI-Schwerpunkt von Tag 2.
