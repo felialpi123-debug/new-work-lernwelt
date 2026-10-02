@@ -444,3 +444,19 @@ body.presentation .scene:not(.active){display:none!important}
 #drawer nav,#drawer .nav,#drawer .nav-tree,#drawer .drawer-content{overflow:visible!important;max-height:none!important;height:auto!important}
 #drawer nav{padding-bottom:160px!important}
 @media(max-width:900px){#drawer{height:100dvh!important;max-height:100dvh!important}#drawer nav{padding-bottom:200px!important}}
+
+/* v2.0.3 – definitive drawer fix */
+#drawer{overflow:hidden!important;height:100dvh!important;max-height:100dvh!important}
+#drawerNav{
+ display:block!important;
+ overflow-y:auto!important;overflow-x:hidden!important;
+ height:calc(100dvh - 145px)!important;
+ max-height:calc(100dvh - 145px)!important;
+ padding-right:6px!important;padding-bottom:220px!important;
+ box-sizing:border-box!important;
+ -webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior-y:contain
+}
+#drawerNav .nav-group-body,#drawerNav .nav-chapter-body{max-height:none!important}
+@media(max-width:900px){
+ #drawerNav{height:calc(100dvh - 130px)!important;max-height:calc(100dvh - 130px)!important;padding-bottom:260px!important}
+}

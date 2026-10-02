@@ -360,7 +360,7 @@ const chapter1Start=scenes.findIndex(s=>s.id==="home");
 const idx=id=>scenes.findIndex(s=>s.id===id);
 const sceneIds=(a,b)=>scenes.slice(idx(a),idx(b)+1).map(s=>s.id);
 const navGroups=[
- {label:"MODUL", title:"Einführung & Organisation", open:false, ids:introScenes.map(s=>s.id)},
+ {label:"MODUL", title:"Einführung & Organisation", open:false, ids:["welcome","dozenten","modul","termine","arbeitsweise","lernwelt"]},
  {label:"BLOCK 1", title:"New Work", open:true, children:[
    {title:"Kapitel 1 · Grundlagen", open:false, ids:sceneIds("home","c1-est-5")},
    {title:"Kapitel 2 · Arbeitszeit", open:false, ids:sceneIds("arbeitszeit-start","c2-est-5")},

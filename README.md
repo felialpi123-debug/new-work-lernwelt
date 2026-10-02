@@ -1,3 +1,7 @@
+# v2.0.3 – definitive Navigationskorrektur
+
+Einführung & Organisation enthält jetzt explizit nur sechs Intro-Seiten. #drawerNav ist der einzige Scroll-Container; Kapitel 6 und Finale sind erreichbar.
+
 # New Work Lernwelt v2.0 – Kapitel 6 + NovaWorks Finale
 
 Kapitel 6 mit Challenges, Mission 07, Ereigniskarte sowie Red-Team- und Executive-Blueprint-Finale.
