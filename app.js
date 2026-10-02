@@ -335,6 +335,9 @@ function renderScene(index){
   if(tag){
     const id=scenes[current]?.id || "";
     tag.textContent =
+      id.startsWith("finale-") ? "BLOCK 1 · NOVAWORKS 2030 FINALE" :
+      id.startsWith("c6-") ? "NEW WORK · AGILE & NEUE ORGANISATIONSFORMEN" :
+      id.startsWith("c5-") ? "NEW WORK · KI & ZUKUNFT DER ARBEIT" :
       id.startsWith("c4-") ? "NEW WORK · ZUSAMMENARBEIT & SELBSTORGANISATION" :
       id.startsWith("c3-") ? "NEW WORK · ARBEITSORT & HYBRID WORK" :
       id.startsWith("arbeitszeit") || id.startsWith("c2-") ? "NEW WORK · ARBEITSZEIT" :
@@ -353,13 +356,13 @@ function prevScene(){ go(current-1); }
 window.go = go;
 window.nextScene = nextScene;
 window.prevScene = prevScene;
-const chapter1Start=scenes.findIndex(s=>s.id==="newwork-map");
+const chapter1Start=scenes.findIndex(s=>s.id==="home");
 const idx=id=>scenes.findIndex(s=>s.id===id);
 const sceneIds=(a,b)=>scenes.slice(idx(a),idx(b)+1).map(s=>s.id);
 const navGroups=[
- {label:"MODUL", title:"Einführung & Organisation", open:true, ids:scenes.slice(0,chapter1Start).map(s=>s.id)},
+ {label:"MODUL", title:"Einführung & Organisation", open:false, ids:introScenes.map(s=>s.id)},
  {label:"BLOCK 1", title:"New Work", open:true, children:[
-   {title:"Kapitel 1 · Grundlagen", open:true, ids:sceneIds("newwork-map","c1-est-5")},
+   {title:"Kapitel 1 · Grundlagen", open:false, ids:sceneIds("home","c1-est-5")},
    {title:"Kapitel 2 · Arbeitszeit", open:false, ids:sceneIds("arbeitszeit-start","c2-est-5")},
    {title:"Kapitel 3 · Arbeitsort & Hybrid Work", open:false, ids:sceneIds("c3-start","c3-mission4-event")},
    {title:"Kapitel 4 · Zusammenarbeit & Selbstorganisation", open:false, ids:sceneIds("c4-start","c4-end")},
