@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1.8.4"/>
+  <link rel="stylesheet" href="styles.css?v=2.0"/>
 </head>
 <body>
   <header class="topbar">
@@ -84,9 +84,10 @@
         <article class="mission current"><div class="mission-no">03</div><div><small>KAPITEL 3 · ARBEITSORT</small><h4>Arbeitsort gestalten</h4><p>Welche Tätigkeiten brauchen Präsenz, welche nicht – und wie organisieren Sie hybride Zusammenarbeit?</p><em>Output: Ortsmodell + 3 Regeln + 2 KPIs + 1 Trade-off · 4er-Gruppen · 12 Min.</em><button class="mission-jump" data-jump-scene="c3-novaworks">Auftrag öffnen →</button></div></article>
         <article class="mission current"><div class="mission-no">04</div><div><small>KAPITEL 3 · WORKPLACE DESIGN</small><h4>Design the New Workplace</h4><p>Gestalten Sie die bestehende Büroetage für 60 Beschäftigte mit einem 100-Punkte-Budget neu.</p><em>35–40 Min. · visueller Grundriss · 3–5-Min.-Präsentation · Ereigniskarte</em><button class="mission-jump" data-jump-scene="c3-mission4-start">Auftrag öffnen →</button></div></article>
         <article class="mission current"><div class="mission-no">05</div><div><small>KAPITEL 4 · ZUSAMMENARBEIT</small><h4>Operating Model neu gestalten</h4><p>Verteilen Sie Entscheidungen, Autonomie und Führungsverantwortung für ein NovaWorks-Team neu.</p><em>15 Min. · 12 Min. Design + 3 Min. Ereigniskarte · Transformationsboard</em><button class="mission-jump" data-jump-scene="c4-novaworks">Auftrag öffnen →</button></div></article>
-        <article class="mission future"><div class="mission-no">06</div><div><small>ZUSAMMENARBEIT</small><h4>Teams neu aufstellen</h4><p>Wie organisieren Sie Verantwortung, Kollaboration und Wissenstransfer?</p><em>Folgt im weiteren Block.</em></div></article>
-        <article class="mission future"><div class="mission-no">07</div><div><small>KI & ARBEITSWELT</small><h4>Mensch + KI gestalten</h4><p>Was automatisieren Sie, wo augmentiert KI – und was bleibt bewusst menschliche Aufgabe?</p><em>Folgt im weiteren Block.</em></div></article>
-        <article class="mission final"><div class="mission-no">★</div><div><small>FINALE</small><h4>NovaWorks 2030 Blueprint</h4><p>Führen Sie alle Entscheidungen zu einem konsistenten Organisationsmodell zusammen und verteidigen Sie Ihre Zielkonflikte.</p><em>Abschlusspräsentation des Planspiels.</em></div></article>
+        <article class="mission current"><div class="mission-no">06</div><div><small>KAPITEL 5 · KI & ARBEITSWELT</small><h4>Human–AI Workforce gestalten</h4><p>Was automatisieren Sie, wo augmentiert KI – und was bleibt bewusst menschliche Aufgabe?</p><em>35 Min. · 30 Min. Design + 5 Min. Ereigniskarte · Transformationsboard</em><button class="mission-jump" data-jump-scene="c5-novaworks">Auftrag öffnen →</button></div></article>
+
+        <article class="mission current"><div class="mission-no">07</div><div><small>KAPITEL 6 · ORGANISATION</small><h4>Re-Design NovaWorks</h4><p>Struktur, Entscheidungsrechte, Führung, Takt und Schnittstellen zu einem Operating Model verbinden.</p><em>45 Min. · 35 Min. Design + 10 Min. Ereigniskarte</em><button class="mission-jump" data-jump-scene="c6-novaworks">Auftrag öffnen →</button></div></article>
+        <article class="mission final"><div class="mission-no">★</div><div><small>FINALE</small><h4>NovaWorks 2030 Blueprint</h4><p>Führen Sie alle Entscheidungen zu einem konsistenten Organisationsmodell zusammen und verteidigen Sie Ihre Zielkonflikte.</p><em>Red-Team-Check · Executive Blueprint · Boardroom Pitch</em><button class="mission-jump" data-jump-scene="finale-start">Finale öffnen →</button></div></article>
       </div>
     </section>
 
@@ -99,7 +100,7 @@
         <label><span>Arbeitszeit – unsere Entscheidung</span><textarea data-store="workingtime" placeholder="Modell, Regeln, KPIs, Trade-off …"></textarea></label>
         <label><span>Arbeitsort</span><textarea data-store="workplace" placeholder="Wird in Kapitel 3 bearbeitet …"></textarea></label><label><span>Workplace Design · Mission 04</span><textarea data-store="workplacedesign" placeholder="Zonen, Budget, Regeln, KPIs, Trade-off …"></textarea></label><label><span>Operating Model · Mission 05</span><textarea data-store="operatingmodel" placeholder="Entscheidungsräume, Leitplanken, Führungsrolle, KPIs, Risiken …"></textarea></label>
         <label class="locked"><span>Organisation & Zusammenarbeit</span><textarea data-store="organization" placeholder="Wird später bearbeitet …"></textarea></label>
-        <label class="locked"><span>KI & Arbeitswelt</span><textarea data-store="ai" placeholder="Wird später bearbeitet …"></textarea></label>
+        <label><span>KI & Arbeitswelt</span><textarea data-store="ai" placeholder="AUTOMATE / AUGMENT / HUMAN LEAD · Agentic Workflow · Human Gates · Guardrails · KPIs · neue Kompetenz …"></textarea></label>
         <label><span>Offene Zielkonflikte / Ereignisse</span><textarea data-store="tradeoffs" placeholder="Was müssen wir später noch lösen?"></textarea></label>
       </div>
       <div class="board-actions"><button id="clearBoard">Board zurücksetzen</button><span id="saveState">lokal gespeichert</span></div>
@@ -108,6 +109,6 @@
 </aside>
 <div id="simulationBackdrop" class="simulation-backdrop"></div>
 
-<script src="app.js?v=1.8.4"></script>
+<script src="app.js?v=2.0"></script>
 </body>
 </html>

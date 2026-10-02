@@ -1,3 +1,11 @@
+# New Work Lernwelt v2.0 – Kapitel 6 + NovaWorks Finale
+
+Kapitel 6 mit Challenges, Mission 07, Ereigniskarte sowie Red-Team- und Executive-Blueprint-Finale.
+
+# New Work Lernwelt v1.9 – Kapitel 5 KI & Zukunft der Arbeit
+
+Vollständiges Kapitel 5 mit 12 Szenen, visueller Dramaturgie und NovaWorks Mission 06. Bestehende v1.8.4-Navigation bleibt erhalten.
+
 # New Work Lernwelt v1.8.4 – Navigation hard fix
 
 Ausgangspunkt war das tatsächlich deployte v1.8.3-Paket. Geprüft wurden app.js, index.html und styles.css.
