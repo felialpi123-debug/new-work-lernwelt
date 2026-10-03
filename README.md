@@ -1,3 +1,10 @@
+# New Work Lernwelt v3.0
+
+Block 1 bereinigt: Kapitel 6 Agile/Organisationsformen aus Block 1 entfernt; Kapitel 4 kompakter.
+Block 2 neu: Digital Organization mit 6 Kapiteln und NovaWorks-Finale.
+Inhaltliche Basis Block 2: „Digital Organization and New Work – Skript WS24/25“ von Christoph Witt / Claudia Schwabe.
+Repräsentative Originalfolien wurden als lokale visuelle Referenzen übernommen; die Lernwelt selbst bleibt im bestehenden THI/New-Work-Design.
+
 # v2.1 – Navigation vollständig neu aufgebaut
 
 Die alte, über viele Versionen gepatchte Drawer-Navigation wurde ersetzt. Version 2.1 zeigt eine sichtbare Versionsmarke im Menü, enthält Einführung exakt einmal, Kapitel 1–6 und Finale als eigene Akkordeons und verwendet nur einen Scrollbereich. Beim Öffnen eines Kapitels wird ein anderes Kapitel automatisch geschlossen.

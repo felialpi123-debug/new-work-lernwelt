@@ -510,3 +510,134 @@ body.presentation .scene:not(.active){display:none!important}
  #drawer{width:min(430px,96vw)!important;padding:28px 18px 14px!important}
  #drawerNav{padding-bottom:180px!important}
 }
+
+/* v2.2 HARD SCROLL FIX */
+#drawer{position:fixed!important;top:0!important;bottom:0!important;height:auto!important;max-height:none!important;overflow:hidden!important}
+#drawerNav{position:absolute!important;left:18px!important;right:12px!important;top:118px!important;bottom:14px!important;height:auto!important;max-height:none!important;min-height:0!important;overflow-y:scroll!important;overflow-x:hidden!important;padding:4px 8px 220px 0!important;margin:0!important;-webkit-overflow-scrolling:touch!important;touch-action:pan-y!important;scrollbar-gutter:stable!important}
+@media(max-width:900px){#drawerNav{left:14px!important;right:8px!important;top:108px!important;bottom:8px!important;padding-bottom:260px!important}}
+
+/* === v2.3 · SIMPLE DOCUMENT SCROLL ===
+   The entire drawer scrolls like a normal page. No nested scroll container. */
+#drawer{
+  position:fixed!important;
+  inset:0 auto 0 0!important;
+  width:min(430px,96vw)!important;
+  height:100dvh!important;
+  max-height:100dvh!important;
+  display:block!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  overscroll-behavior-y:contain!important;
+  -webkit-overflow-scrolling:touch!important;
+  touch-action:pan-y!important;
+  padding:28px 18px 180px!important;
+  box-sizing:border-box!important;
+}
+#drawerNav{
+  position:static!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+  padding:0 0 140px!important;
+  margin:14px 0 0!important;
+  touch-action:inherit!important;
+}
+#drawerNav .nav-group,
+#drawerNav .nav-group-body,
+#drawerNav .nav-chapter,
+#drawerNav .nav-chapter-body{
+  position:static!important;
+  max-height:none!important;
+}
+#drawerNav .nav-build{
+  position:static!important;
+  margin:0 0 10px auto!important;
+}
+
+/* === v2.4 · RIGHT DRAWER + CLOSE + PAGE SCROLL ===
+   Drawer is again an off-canvas panel on the RIGHT.
+   The drawer itself is the only scroll container. */
+#drawer{
+  position:fixed!important;
+  top:0!important;
+  right:0!important;
+  bottom:0!important;
+  left:auto!important;
+  width:min(430px,96vw)!important;
+  height:100dvh!important;
+  max-height:100dvh!important;
+  display:block!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  padding:28px 18px 180px!important;
+  box-sizing:border-box!important;
+  z-index:10020!important;
+  transform:translateX(105%)!important;
+  transition:transform .22s ease!important;
+  -webkit-overflow-scrolling:touch!important;
+  touch-action:pan-y!important;
+}
+#drawer.open{transform:translateX(0)!important}
+#drawerNav{
+  position:static!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  min-height:0!important;
+  overflow:visible!important;
+  padding:0 0 140px!important;
+  margin:14px 0 0!important;
+}
+#drawerBackdrop{
+  display:block!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transition:opacity .22s ease,visibility .22s ease!important;
+}
+#drawerBackdrop.open{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+}
+#drawerClose{
+  position:sticky!important;
+  top:0!important;
+  z-index:20!important;
+}
+
+/* === v3.0 BLOCK 2 === */
+.b2-scene{max-width:1180px;margin:auto}
+.b2-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:28px;align-items:center}
+.b2-visual{margin:0;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 18px 45px #19224818}
+.b2-visual img{display:block;width:100%;max-height:390px;object-fit:contain;background:#fff}
+.b2-visual figcaption{padding:8px 12px;font-size:12px;color:#667}
+.chapter-map,.triad,.four-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.four-cols{grid-template-columns:repeat(4,1fr)}
+.chapter-map b,.triad b,.four-cols b,.stack-cards b{background:#ddf8f2;border-radius:14px;padding:14px;color:#192248}
+.stack-cards{display:grid;gap:9px;margin:18px 0}
+.three-cols,.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.compare{grid-template-columns:1fr 1fr}
+.three-cols>div,.compare>div{background:#f4f1eb;border-radius:18px;padding:18px}
+.journey{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:22px 0}
+.journey b{padding:11px 14px;border-radius:999px;background:#192248;color:#fff}
+.challenge-output{margin-top:18px;padding:14px 16px;border-left:5px solid #26a688;background:#ddf8f2;font-weight:800}
+.b2-scene.challenge{border-top:8px solid #e6765b}
+.b2-scene.mission{border-top:8px solid #26a688}
+.b2-scene.dark{background:#192248;color:white;border-radius:28px;padding:34px}
+.b2-scene.dark .stack-cards b{background:#ffffff18;color:white}
+@media(max-width:900px){.b2-layout{grid-template-columns:1fr}.four-cols,.three-cols,.triad,.chapter-map{grid-template-columns:1fr 1fr}.b2-visual img{max-height:240px}}
+
+.orig-slide-ref img{width:100%;height:auto;max-height:360px;object-fit:contain;background:#fff}.orig-slide-ref{border:1px solid #19224818}
+.b3-scene{max-width:1180px;margin:auto}.b3-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:30px;align-items:center}.b3-visual{margin:0;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 18px 45px #19224818}.b3-visual img{display:block;width:100%;max-height:390px;object-fit:contain}.b3-visual figcaption{padding:8px 12px;font-size:13px;color:#667}.big-stat{font-size:clamp(64px,9vw,118px);line-height:.9;font-weight:900;color:#26a688;letter-spacing:-.05em;margin:16px 0}.five-choice{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:20px 0}.five-choice b{padding:16px 8px;border-radius:14px;text-align:center;background:#192248;color:white}.b3-scene.mission{border-top:8px solid #26a688}.b3-scene.challenge{border-top:8px solid #e6765b}.b3-scene.dark{background:#192248;color:white;border-radius:28px;padding:34px}.b3-scene .source-note{font-size:14px;line-height:1.35;margin-top:16px;padding-top:10px;border-top:1px solid #19224822;color:#5d6470}.b3-scene .source-note a{font-weight:700;color:#256879}@media(max-width:900px){.b3-layout{grid-template-columns:1fr}.five-choice{grid-template-columns:repeat(2,1fr)}.b3-visual img{max-height:250px}}
+/* === v3.3 · STABLE RENDER + DRAWER === */
+#app > .scene{display:none!important}
+#app > .scene.active{display:block!important}
+#app > .scene.home-scene.active{display:grid!important}
+.drawer-backdrop{position:fixed;inset:0;background:rgba(25,34,72,.22);opacity:0;visibility:hidden;pointer-events:none;z-index:10010;transition:opacity .2s ease,visibility .2s ease}
+.drawer-backdrop.open{opacity:1;visibility:visible;pointer-events:auto}
+#drawer{z-index:10020!important}

@@ -7,19 +7,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2.1"/>
+  <link rel="stylesheet" href="styles.css?v=3.4"/>
 </head>
 <body>
   <header class="topbar">
     <button class="brand" data-go="home">NEW WORK <span>· THI</span></button>
     <div class="top-actions">
       <button id="modeBtn" class="ghost">🎓 Vorlesungsmodus</button>
-      <button id="homeBtn" class="home-btn" title="Zur Übersicht">⌂ Home</button><button id="simulationBtn" class="simulation-top-btn">Planspiel</button><button id="menuBtn" class="ghost">☰ Kapitel</button>
+      <button id="homeBtn" class="home-btn" type="button" title="Zur Übersicht" onclick="if(window.go){window.go(0)}else{location.reload()}">⌂ Home</button><button id="simulationBtn" class="simulation-top-btn">Planspiel</button><button id="menuBtn" class="ghost" type="button" onclick="document.getElementById('drawer').classList.add('open');document.getElementById('drawerBackdrop').classList.add('open')">☰ Kapitel</button>
     </div>
   </header>
 
+  <div id="drawerBackdrop" class="drawer-backdrop" onclick="document.getElementById('drawer').classList.remove('open');this.classList.remove('open')"></div>
   <aside id="drawer" class="drawer">
-    <button class="close" id="closeDrawer">×</button>
+    <button class="close" id="closeDrawer" type="button" onclick="document.getElementById('drawer').classList.remove('open');document.getElementById('drawerBackdrop').classList.remove('open')">×</button>
     <p class="eyebrow">LERNWELT</p>
     <h2>New Work · Grundlagen</h2>
     <nav id="drawerNav"></nav>
@@ -109,6 +110,7 @@
 </aside>
 <div id="simulationBackdrop" class="simulation-backdrop"></div>
 
-<script src="app.js?v=2.1"></script>
+<script src="app.js?v=3.4"></script>
+<div id="buildBadge" style="position:fixed;right:10px;bottom:10px;z-index:99999;background:#192248;color:white;padding:6px 10px;border-radius:999px;font:700 11px Arial,sans-serif">Lernwelt v3.4</div>
 </body>
 </html>
