@@ -358,36 +358,86 @@ window.nextScene = nextScene;
 window.prevScene = prevScene;
 const chapter1Start=scenes.findIndex(s=>s.id==="home");
 const idx=id=>scenes.findIndex(s=>s.id===id);
-const sceneIds=(a,b)=>scenes.slice(idx(a),idx(b)+1).map(s=>s.id);
+const sceneIds=(a,b)=>{
+  const start=idx(a), end=idx(b);
+  if(start<0 || end<0 || end<start) return [];
+  return scenes.slice(start,end+1).map(s=>s.id);
+};
+
+const NAV_VERSION="2.1";
 const navGroups=[
- {label:"MODUL", title:"Einführung & Organisation", open:false, ids:["welcome","dozenten","modul","termine","arbeitsweise","lernwelt"]},
- {label:"BLOCK 1", title:"New Work", open:true, children:[
-   {title:"Kapitel 1 · Grundlagen", open:false, ids:sceneIds("home","c1-est-5")},
-   {title:"Kapitel 2 · Arbeitszeit", open:false, ids:sceneIds("arbeitszeit-start","c2-est-5")},
-   {title:"Kapitel 3 · Arbeitsort & Hybrid Work", open:false, ids:sceneIds("c3-start","c3-mission4-event")},
-   {title:"Kapitel 4 · Zusammenarbeit & Selbstorganisation", open:false, ids:sceneIds("c4-start","c4-end")},
-   {title:"Kapitel 5 · KI & Zukunft der Arbeit", open:false, ids:sceneIds("c5-start","c5-end")},
-   {title:"Kapitel 6 · Agile & neue Organisationsformen", open:false, ids:sceneIds("c6-start","c6-end")},
-   {title:"Finale · NovaWorks 2030", open:false, ids:sceneIds("finale-start","finale-pitch")}
+ {label:"MODUL", title:"Einführung & Organisation", ids:["welcome","dozenten","modul","termine","arbeitsweise","lernwelt"]},
+ {label:"BLOCK 1", title:"New Work", children:[
+   {title:"Kapitel 1 · Grundlagen", ids:sceneIds("home","c1-est-5")},
+   {title:"Kapitel 2 · Arbeitszeit", ids:sceneIds("arbeitszeit-start","c2-est-5")},
+   {title:"Kapitel 3 · Arbeitsort & Hybrid Work", ids:sceneIds("c3-start","c3-mission4-event")},
+   {title:"Kapitel 4 · Zusammenarbeit & Selbstorganisation", ids:sceneIds("c4-start","c4-end")},
+   {title:"Kapitel 5 · KI & Zukunft der Arbeit", ids:sceneIds("c5-start","c5-end")},
+   {title:"Kapitel 6 · Agile & neue Organisationsformen", ids:sceneIds("c6-start","c6-end")},
+   {title:"Finale · NovaWorks 2030", ids:sceneIds("finale-start","finale-pitch")}
  ]},
- {label:"BLOCK 2", title:"New Business Models", open:false, children:[
-   {title:"Zahlen-Challenge · 5 Schätzfragen", open:false, ids:sceneIds("b2-challenge-start","b2-est-5")}
+ {label:"BLOCK 2", title:"New Business Models", children:[
+   {title:"Zahlen-Challenge · 5 Schätzfragen", ids:sceneIds("b2-challenge-start","b2-est-5")}
  ]}
 ];
 
-nav.innerHTML=navGroups.map(g=>{
- const items=ids=>ids.map(id=>{const i=idx(id),s=scenes[i]; return i<0?"":`<button class="nav-item" data-go="${i}"><span>${String(i+1).padStart(2,"0")}</span>${s.title}</button>`;}).join("");
- if(g.children) return `<section class="nav-group ${g.open?"open":""}"><button class="nav-group-head" data-toggle-group><span><small>${g.label}</small><b>${g.title}</b></span><i>⌃</i></button><div class="nav-group-body">${g.children.map(c=>`<div class="nav-chapter ${c.open?"open":""}"><button class="nav-chapter-head" data-toggle-chapter><span>${c.title}</span><i>⌃</i></button><div class="nav-chapter-body">${items(c.ids)}</div></div>`).join("")}</div></section>`;
- return `<section class="nav-group ${g.open?"open":""}"><button class="nav-group-head" data-toggle-group><span><small>${g.label}</small><b>${g.title}</b></span><i>⌃</i></button><div class="nav-group-body">${items(g.ids)}</div></section>`;
-}).join("");
-nav.querySelectorAll("[data-toggle-group]").forEach(b=>b.onclick=()=>b.closest(".nav-group").classList.toggle("open"));
-nav.querySelectorAll("[data-toggle-chapter]").forEach(b=>b.onclick=()=>b.closest(".nav-chapter").classList.toggle("open"));
-nav.querySelectorAll(".nav-item[data-go]").forEach(b=>{
-  b.onclick=(e)=>{
-    e.preventDefault();
-    go(parseInt(b.dataset.go,10));
-    drawer.classList.remove("open");
-  };
+function navItems(ids){
+ return ids.map(id=>{
+   const i=idx(id), s=scenes[i];
+   if(i<0 || !s) return "";
+   return `<button class="nav-item" type="button" data-go="${i}"><span>${String(i+1).padStart(2,"0")}</span><b>${s.title}</b></button>`;
+ }).join("");
+}
+
+nav.innerHTML = `
+ <div class="nav-build">Navigation · Version ${NAV_VERSION}</div>
+ ${navGroups.map((g,gi)=>{
+   if(g.children){
+     return `<section class="nav-group ${gi===1?"open":""}">
+       <button class="nav-group-head" type="button" data-toggle-group>
+         <span><small>${g.label}</small><b>${g.title}</b></span><i>⌄</i>
+       </button>
+       <div class="nav-group-body">
+         ${g.children.map(c=>`
+           <div class="nav-chapter">
+             <button class="nav-chapter-head" type="button" data-toggle-chapter>
+               <span>${c.title}</span><i>⌄</i>
+             </button>
+             <div class="nav-chapter-body">${navItems(c.ids)}</div>
+           </div>`).join("")}
+       </div>
+     </section>`;
+   }
+   return `<section class="nav-group">
+     <button class="nav-group-head" type="button" data-toggle-group>
+       <span><small>${g.label}</small><b>${g.title}</b></span><i>⌄</i>
+     </button>
+     <div class="nav-group-body">${navItems(g.ids)}</div>
+   </section>`;
+ }).join("")}
+`;
+
+nav.querySelectorAll("[data-toggle-group]").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+   const group=btn.closest(".nav-group");
+   group.classList.toggle("open");
+ });
+});
+nav.querySelectorAll("[data-toggle-chapter]").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+   const chapter=btn.closest(".nav-chapter");
+   const wasOpen=chapter.classList.contains("open");
+   nav.querySelectorAll(".nav-chapter.open").forEach(x=>x.classList.remove("open"));
+   if(!wasOpen) chapter.classList.add("open");
+   requestAnimationFrame(()=>btn.scrollIntoView({block:"nearest",behavior:"smooth"}));
+ });
+});
+nav.querySelectorAll(".nav-item[data-go]").forEach(btn=>{
+ btn.addEventListener("click",(e)=>{
+   e.preventDefault();
+   go(Number(btn.dataset.go));
+   drawer.classList.remove("open");
+ });
 });
 
 document.getElementById("menuBtn").onclick=()=>drawer.classList.add("open");

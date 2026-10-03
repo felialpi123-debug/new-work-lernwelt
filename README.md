@@ -1,3 +1,7 @@
+# v2.1 – Navigation vollständig neu aufgebaut
+
+Die alte, über viele Versionen gepatchte Drawer-Navigation wurde ersetzt. Version 2.1 zeigt eine sichtbare Versionsmarke im Menü, enthält Einführung exakt einmal, Kapitel 1–6 und Finale als eigene Akkordeons und verwendet nur einen Scrollbereich. Beim Öffnen eines Kapitels wird ein anderes Kapitel automatisch geschlossen.
+
 # v2.0.3 – definitive Navigationskorrektur
 
 Einführung & Organisation enthält jetzt explizit nur sechs Intro-Seiten. #drawerNav ist der einzige Scroll-Container; Kapitel 6 und Finale sind erreichbar.
