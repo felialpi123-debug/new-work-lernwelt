@@ -659,3 +659,19 @@ body.presentation .scene:not(.active){display:none!important}
 .visual-figure img[src^="https"]{object-fit:cover;max-height:260px;}
 .visual-figure figcaption{font-size:clamp(12px,1.2vw,15px);line-height:1.4;opacity:.78;margin-top:8px;}
 @media(max-width:700px){.visual-figure img{max-height:230px}.visual-figure img[src^="https"]{max-height:190px}}
+
+/* v3.9 · Unternehmensakte und visuelle Aufgabenführung */
+.nw-figure{margin:14px 0 18px;display:flex;flex-direction:column;gap:7px}
+.nw-figure img{display:block;width:100%;max-height:420px;object-fit:contain;border-radius:18px;background:#f4f7f8;border:1px solid rgba(70,90,110,.15)}
+.nw-figure figcaption{font-size:.8rem;color:#667a88;line-height:1.45}
+.nw-table{width:100%;border-collapse:collapse;font-size:.93rem}
+.nw-table td,.nw-table th{padding:6px 8px;border-bottom:1px solid rgba(100,120,140,.16);text-align:left}
+.nw-table td:last-child,.nw-table th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.nw-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.nw-kpis>div{background:#e6eef1;border-radius:15px;padding:16px;display:flex;flex-direction:column;gap:5px;color:#173b53}
+.nw-kpis b{font-size:clamp(1.25rem,2vw,2.1rem)}.nw-kpis span{font-size:.82rem}
+.nw-timeline{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}
+.nw-timeline>div{padding:15px;border-radius:12px;background:#e9f1f3;display:flex;gap:14px;align-items:center}
+.nw-timeline b{color:#176c7b;font-size:1.05rem}
+.nw-chain{background:#e8f1f4;padding:14px;border-radius:10px;font-weight:700;line-height:1.5}
+@media(max-width:700px){.nw-kpis,.nw-timeline{grid-template-columns:1fr}.nw-figure img{max-height:300px}}
