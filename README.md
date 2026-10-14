@@ -176,3 +176,7 @@ Die Teilzeit-Vergleichsfolie verrät die Lösung nicht mehr.
 - Planspiel-Button robust repariert.
 - Kapitel 4 Zusammenarbeit & Selbstorganisation ergänzt.
 - NovaWorks Mission 05: Operating Model.
+
+
+## Update v4.0 – Allgemeiner Modulteil
+Ergänzt: Profil Felicitas Albrecht, Modulziele, Kontakt und Moodle, Prüfungsübersicht, Literatur mit grafischen Buchkarten. Angaben aus WS 2025/26 sind als vorläufig gekennzeichnet; abgelaufene Frist und alter Einschreibeschlüssel werden nicht als aktuell ausgegeben.

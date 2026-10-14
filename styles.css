@@ -675,3 +675,49 @@ body.presentation .scene:not(.active){display:none!important}
 .nw-timeline b{color:#176c7b;font-size:1.05rem}
 .nw-chain{background:#e8f1f4;padding:14px;border-radius:10px;font-weight:700;line-height:1.5}
 @media(max-width:700px){.nw-kpis,.nw-timeline{grid-template-columns:1fr}.nw-figure img{max-height:300px}}
+
+
+/* v4.0: editorial general module section */
+.intro-info .info-layout{display:grid;grid-template-columns:1.25fr .8fr;gap:24px;margin-top:25px}
+.intro-info .info-stack{display:grid;gap:18px}
+.intro-info .info-panel,.intro-info .goal-card,.intro-info .reading-card{background:#fff;border:1px solid #e5ebf2;border-radius:20px;padding:23px;box-shadow:0 12px 32px rgba(20,48,77,.055)}
+.intro-info .info-panel h3{margin:6px 0 8px;font-size:24px}
+.intro-info .info-panel p{margin:8px 0;line-height:1.5}
+.intro-info a{color:#006aa0;overflow-wrap:anywhere}
+.intro-info .info-visual{background:linear-gradient(140deg,#073d61,#007ba8);color:white;border-radius:26px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;min-height:340px}
+.intro-info .info-visual strong{font-size:clamp(27px,3.4vw,48px);line-height:1.12}
+.intro-info .info-visual-icon{font-size:50px}
+.intro-info .info-tag{border:1px solid #ffffff80;border-radius:40px;padding:9px 13px;width:fit-content;font-size:13px}
+.intro-info .assessment-tiles{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+.intro-info .assessment-tile{background:#083e60;color:white;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:8px}
+.intro-info .assessment-tile:nth-child(2){background:#007b9d}
+.intro-info .assessment-tile span{font-size:clamp(42px,6vw,76px);font-weight:800;line-height:1}
+.intro-info .assessment-tile b{font-size:24px}
+.intro-info .assessment-tile p{margin:0;color:#e4f4fc}
+.intro-info .goals-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:26px}
+.intro-info .goal-card{display:flex;flex-direction:column;gap:9px}
+.intro-info .goal-card span{font-weight:800;font-size:34px;color:#007da8}
+.intro-info .goal-card b{font-size:20px}
+.intro-info .goal-card p{margin:0;line-height:1.5}
+.intro-info .info-quote{background:#e6f5f5;border-left:5px solid #007c91;border-radius:10px;padding:18px 24px;margin-top:20px;font-weight:650}
+.intro-info .reading-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:25px}
+.intro-info .reading-card{display:grid;grid-template-columns:112px 1fr;gap:19px;align-items:center}
+.intro-info .reading-card h3{font-size:20px;margin:5px 0 9px}
+.intro-info .reading-card p{margin:0 0 8px}
+.intro-info .reading-card small{color:#627587}
+.intro-info .book-cover{aspect-ratio:2/3;box-shadow:8px 8px 13px #1e30402c;display:flex;flex-direction:column;justify-content:space-between;padding:11px;background:#e04d2d;color:white;transform:rotate(-2deg);border-radius:2px}
+.intro-info .book-cover small{color:inherit;font-size:8px;letter-spacing:1px}
+.intro-info .book-cover strong{font-size:15px;line-height:1.2}
+.intro-info .book-cover span{font-size:22px;opacity:.8}
+.intro-info .book-cover.empower{background:#008e8a}
+.intro-info .book-cover.brave{background:#e3c72e;color:#26334b}
+.intro-info .book-cover.workspace{background:#159f9c}
+.intro-info .profile-layout{display:grid;grid-template-columns:minmax(260px,.8fr) 1.5fr;gap:30px;align-items:stretch;margin-top:24px}
+.intro-info .profile-image{min-height:450px;border-radius:25px;overflow:hidden;background:#dce7ed}
+.intro-info .profile-image img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.intro-info .profile-facts{background:white;border-radius:25px;padding:26px 32px}
+.intro-info .profile-facts h3{font-size:28px;margin:9px 0 15px}
+.intro-info .profile-facts p{line-height:1.52;margin:10px 0}
+.intro-info .profile-kicker{font-weight:800;color:#007b9d;letter-spacing:.06em;text-transform:uppercase;font-size:12px}
+@media(max-width:950px){.intro-info .info-layout,.intro-info .reading-grid,.intro-info .profile-layout{grid-template-columns:1fr}.intro-info .goals-grid{grid-template-columns:1fr 1fr}.intro-info .profile-image{min-height:260px;max-height:420px}}
+@media(max-width:600px){.intro-info .goals-grid,.intro-info .assessment-tiles{grid-template-columns:1fr}.intro-info .reading-card{grid-template-columns:85px 1fr}}
