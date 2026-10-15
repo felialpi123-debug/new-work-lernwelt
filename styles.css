@@ -738,3 +738,9 @@ body.presentation .presentation-nav{z-index:150}
 .blueprint-template{display:grid;grid-template-columns:1fr 1fr;gap:15px}.blueprint-template>div{padding:20px;border:2px solid #bdd4dc;border-radius:16px;background:white;min-height:115px}.blueprint-template p{color:#486273}
 .lecturer-photo img[src*="felicitas"],.lecturer-photo img[src*="christoph"]{object-position:center 28%}
 @media(max-width:750px){.blueprint-template{grid-template-columns:1fr}}
+
+/* v4.4 readability / lecturer crops */
+.lecturer-grid .lecturer-feli .lecturer-photo img,.lecturer-grid .lecturer-witt .lecturer-photo img{object-position:center 8% !important;}
+.nw-pairs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.nw-pairs article{background:#fff;border:1px solid #d7e6e9;border-radius:18px;padding:16px;color:#092a40;min-width:0}.nw-pairs article b{color:#007e6b;font-size:18px}.nw-pairs article strong{color:#a34b29;font-size:17px}.nw-pairs article p{font-size:16px;line-height:1.4;margin:5px 0 12px}.nw-pairs article h3{font-size:20px;margin:0 0 10px}body.presentation .nw-pairs article{padding:14px}body.presentation .nw-pairs article p{font-size:clamp(15px,1.5vw,20px)}
+@media(max-width:700px){.nw-pairs{grid-template-columns:1fr}}
+body.presentation .scene{padding-bottom:100px!important;overflow-y:auto!important;max-height:calc(100vh - 8px);scrollbar-width:thin}body.presentation .visual-figure img{max-height:42vh;object-fit:contain}body.presentation .video-responsive{max-height:46vh}
