@@ -744,3 +744,15 @@ body.presentation .presentation-nav{z-index:150}
 .nw-pairs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.nw-pairs article{background:#fff;border:1px solid #d7e6e9;border-radius:18px;padding:16px;color:#092a40;min-width:0}.nw-pairs article b{color:#007e6b;font-size:18px}.nw-pairs article strong{color:#a34b29;font-size:17px}.nw-pairs article p{font-size:16px;line-height:1.4;margin:5px 0 12px}.nw-pairs article h3{font-size:20px;margin:0 0 10px}body.presentation .nw-pairs article{padding:14px}body.presentation .nw-pairs article p{font-size:clamp(15px,1.5vw,20px)}
 @media(max-width:700px){.nw-pairs{grid-template-columns:1fr}}
 body.presentation .scene{padding-bottom:100px!important;overflow-y:auto!important;max-height:calc(100vh - 8px);scrollbar-width:thin}body.presentation .visual-figure img{max-height:42vh;object-fit:contain}body.presentation .video-responsive{max-height:46vh}
+
+/* v4.5: module overview and central Planspiel navigation */
+.module-flow-three{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.module-flow-three .module-block{min-width:0;padding:22px;min-height:210px}
+.module-flow-three .module-block h3{font-size:clamp(21px,2.1vw,32px);line-height:1.15}
+.module-thread{margin-top:22px;background:#e3f3f0;padding:17px 22px;border-radius:18px;font-size:18px;line-height:1.45;color:#073d4b}
+.nw-big-stat{font-size:clamp(30px,4vw,55px);font-weight:900;color:#009e8b;letter-spacing:-.04em}
+.sim-hub-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.sim-hub-links button{border:1px solid #cbdedb;background:#f4faf8;color:#0a3543;border-radius:10px;text-align:left;font:700 13px Manrope,Arial,sans-serif;padding:11px;cursor:pointer}
+.sim-hub-links button:hover,.sim-hub-links button:focus-visible{background:#cceee8;outline:2px solid #007f83}
+@media(max-width:850px){.module-flow-three{grid-template-columns:1fr}.module-flow-three .module-block{min-height:130px}}
+@media(max-width:550px){.sim-hub-links{grid-template-columns:1fr}}
