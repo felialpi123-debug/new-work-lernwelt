@@ -1,12 +1,10 @@
-# New Work Lernwelt v4.5 · Gesamtupdate
+# New Work Lernwelt v4.6 – Navigation & Planspiel bereinigt
 
-Vollständige Offline-Webapp: `index.html` im Browser öffnen. Externe Studienlinks und Video benötigen Internet.
+Vollständige Offline-Lernwelt, `index.html` im Browser öffnen.
 
-Änderungen:
-- Modulübersicht korrigiert: Block 1 New Work, Block 2 Digital Organization, Block 3 New Business Models.
-- Zentrale NovaWorks-Unternehmensakte, Betriebsrat, Rollen, Ereignisse und Mission-04-Unterlagen im Tab Planspiel.
-- Kapitel-3-Vorbereitung ergänzt: Gründe für Büroumbau, ifo-Flächenzahlen, Konzepte, Vor- und Nachteile, Forschung und Novaworks-Planungsdaten.
-- Kapitel-3-Navigation von Planspiel-Unterlagen bereinigt.
-- Unternehmensdaten im Planspiel vereinheitlicht (850 weltweit).
-
-Quellenhinweis: ifo (Mai 2025), Bernstein & Turban (2018), Bloom et al. (Nature 2024). Prozentwerte beziehen sich auf jeweils untersuchte Populationen.
+- Kapitel 3: doppelt aufgeführte Workplace-Folien in der Navigation entfernt; Studien und Workplace Challenge in sinnvoller Reihenfolge.
+- Unternehmensakte, Belegschaft, Betriebsrat und Spielregeln nur über das zentrale Planspiel erreichbar.
+- Mission 01: neue vollständig lesbare Auftragsfolie und funktionierender Link.
+- Mission 04: nur noch eine Missionskarte mit allen Materialien direkt darunter; getrennt von Mission 03 (hybride Arbeitsregeln).
+- Missions-Kapitelbezeichnungen 05–07 auf neue Gliederung angepasst.
+- Bestehende Folien, Studien und Bilder bleiben enthalten.
