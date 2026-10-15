@@ -10,3 +10,6 @@ Vollständige Offline-Lernwelt, `index.html` im Browser öffnen.
 - Bestehende Folien, Studien und Bilder bleiben enthalten.
 
 Version 4.6.3: Aktivierungsfolie „Wer sollte entscheiden?“ entfernt; Navigationsfolge aktualisiert. Die NovaWorks-Operating-Model-Mission bleibt erhalten.
+
+
+Version 4.7: zusätzliche lokal gespeicherte Bildmotive als dezente thematische Hintergründe auf Vorlesungsfolien; alle Bilder funktionieren offline. Die Fotos sind illustrative Visualisierungen, keine Aufnahmen des fiktiven Unternehmens.

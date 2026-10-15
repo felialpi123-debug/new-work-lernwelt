@@ -765,3 +765,19 @@ body.presentation .scene{padding-bottom:100px!important;overflow-y:auto!importan
 .wp-plan-scene .fp-corridor{font-size:clamp(10px,.9vw,13px)}
 body.presentation .wp-plan-scene .floorplan{grid-template-rows:66px 30px 66px;min-height:194px;margin:7px 0}
 @media(max-width:700px){.wp-plan-scene .floorplan{overflow-x:auto;min-width:550px}.wp-plan-scene{overflow-x:auto}}
+
+/* v4.7 editorial imagery: locally bundled, offline, and presentation-safe. */
+.scene.editorial-bg{position:relative;isolation:isolate;background-color:var(--paper,#f7f5f0);background-repeat:no-repeat;background-size:cover;background-position:center right;}
+.scene.editorial-bg:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(248,246,241,.99) 0%,rgba(248,246,241,.98) 52%,rgba(248,246,241,.83) 72%,rgba(248,246,241,.43) 100%);}
+.scene.editorial-teamwork{background-image:url('assets/editorial/teamwork.jpg')}
+.scene.editorial-focus{background-image:url('assets/editorial/focus.jpg')}
+.scene.editorial-meeting{background-image:url('assets/editorial/meeting.jpg')}
+.scene.editorial-lounge{background-image:url('assets/editorial/lounge.jpg')}
+.scene.editorial-hybrid{background-image:url('assets/editorial/hybrid.jpg')}
+.scene.editorial-people{background-image:url('assets/editorial/people.jpg')}
+.scene.editorial-office{background-image:url('assets/editorial/office.jpg')}
+.scene.editorial-collaboration{background-image:url('assets/editorial/collaboration.jpg')}
+/* Keep all charts, text and buttons fully opaque; no image should obscure the content. */
+.scene.editorial-bg > *{position:relative;z-index:1}
+body.presentation .scene.editorial-bg{background-size:cover}
+@media(max-width:800px){.scene.editorial-bg:before{background:rgba(248,246,241,.94)}}
