@@ -721,3 +721,20 @@ body.presentation .scene:not(.active){display:none!important}
 .intro-info .profile-kicker{font-weight:800;color:#007b9d;letter-spacing:.06em;text-transform:uppercase;font-size:12px}
 @media(max-width:950px){.intro-info .info-layout,.intro-info .reading-grid,.intro-info .profile-layout{grid-template-columns:1fr}.intro-info .goals-grid{grid-template-columns:1fr 1fr}.intro-info .profile-image{min-height:260px;max-height:420px}}
 @media(max-width:600px){.intro-info .goals-grid,.intro-info .assessment-tiles{grid-template-columns:1fr}.intro-info .reading-card{grid-template-columns:85px 1fr}}
+
+.date-row.claudia{border-left-color:#00a98c;background:#daf8f0}.date-row.feli{border-left-color:#bb7bdb;background:#f2e8fa}
+
+/* v4.3: prevent presentation clipping; reserve space for navigation */
+body.presentation{overflow-y:auto!important}
+body.presentation #app{height:auto!important;min-height:100vh;overflow:visible!important}
+body.presentation .scene.active{height:auto!important;min-height:100vh!important;overflow:visible!important;padding:3.5vh 4vw 115px!important;box-sizing:border-box}
+body.presentation .nw-figure img{max-height:38vh;object-fit:contain}
+body.presentation .compact-scene h2{font-size:clamp(30px,3.2vw,52px);margin:10px 0 20px}
+body.presentation .compact-scene .card{padding:18px 20px}
+body.presentation .compact-scene .card p,body.presentation .compact-scene li{font-size:clamp(16px,1.3vw,21px)!important;line-height:1.38}
+body.presentation .presentation-nav{z-index:150}
+.video-responsive{position:relative;width:min(780px,100%);aspect-ratio:16/9;margin:12px auto}
+.video-responsive iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:16px}
+.blueprint-template{display:grid;grid-template-columns:1fr 1fr;gap:15px}.blueprint-template>div{padding:20px;border:2px solid #bdd4dc;border-radius:16px;background:white;min-height:115px}.blueprint-template p{color:#486273}
+.lecturer-photo img[src*="felicitas"],.lecturer-photo img[src*="christoph"]{object-position:center 28%}
+@media(max-width:750px){.blueprint-template{grid-template-columns:1fr}}

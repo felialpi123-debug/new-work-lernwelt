@@ -180,3 +180,10 @@ Die Teilzeit-Vergleichsfolie verrät die Lösung nicht mehr.
 
 ## Update v4.0 – Allgemeiner Modulteil
 Ergänzt: Profil Felicitas Albrecht, Modulziele, Kontakt und Moodle, Prüfungsübersicht, Literatur mit grafischen Buchkarten. Angaben aus WS 2025/26 sind als vorläufig gekennzeichnet; abgelaufene Frist und alter Einschreibeschlüssel werden nicht als aktuell ausgegeben.
+
+
+## v4.1 Termine
+Felicitas Albrecht: 16./17./30./31.10. wieder ergänzt; Claudia ohne MPS-Vorbehalt; Räume aus älterer Planung als noch zu bestätigen markiert.
+
+
+v4.2: Fehlende große Bildflächen korrigiert. Bergmann-Dreiklang und weitere dynamische Teamfotos verwenden ein lokales Motiv; externe Bilder erhalten einen lokalen Fallback, Bergmann-Porträt eine gekennzeichnete Konzeptgrafik.
