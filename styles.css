@@ -756,3 +756,12 @@ body.presentation .scene{padding-bottom:100px!important;overflow-y:auto!importan
 .sim-hub-links button:hover,.sim-hub-links button:focus-visible{background:#cceee8;outline:2px solid #007f83}
 @media(max-width:850px){.module-flow-three{grid-template-columns:1fr}.module-flow-three .module-block{min-height:130px}}
 @media(max-width:550px){.sim-hub-links{grid-template-columns:1fr}}
+
+/* v4.6.2: Workplace ground plan integrated into planning slide */
+.wp-plan-scene .wp-plan-intro,.wp-plan-scene .wp-plan-outro{font-size:clamp(14px,1.2vw,19px);line-height:1.32;margin:6px 0}
+.wp-plan-scene .floorplan{grid-template-rows:70px 34px 70px;min-height:205px;margin:8px 0;gap:5px;border-width:5px}
+.wp-plan-scene .fp-room b{font-size:clamp(11px,1.05vw,16px)}
+.wp-plan-scene .fp-room small{font-size:clamp(9px,.85vw,12px);margin-top:2px}
+.wp-plan-scene .fp-corridor{font-size:clamp(10px,.9vw,13px)}
+body.presentation .wp-plan-scene .floorplan{grid-template-rows:66px 30px 66px;min-height:194px;margin:7px 0}
+@media(max-width:700px){.wp-plan-scene .floorplan{overflow-x:auto;min-width:550px}.wp-plan-scene{overflow-x:auto}}

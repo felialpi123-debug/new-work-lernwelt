@@ -8,3 +8,5 @@ Vollständige Offline-Lernwelt, `index.html` im Browser öffnen.
 - Mission 04: nur noch eine Missionskarte mit allen Materialien direkt darunter; getrennt von Mission 03 (hybride Arbeitsregeln).
 - Missions-Kapitelbezeichnungen 05–07 auf neue Gliederung angepasst.
 - Bestehende Folien, Studien und Bilder bleiben enthalten.
+
+Version 4.6.3: Aktivierungsfolie „Wer sollte entscheiden?“ entfernt; Navigationsfolge aktualisiert. Die NovaWorks-Operating-Model-Mission bleibt erhalten.
