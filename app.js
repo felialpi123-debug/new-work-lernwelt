@@ -247,6 +247,8 @@ const chapter2Scenes=[
 
 scenes.unshift(...introScenes);
 scenes.push(...chapter1EstimateScenes);   // Ende Kapitel 1 → Schätzfragen zu Kapitel 2
+scenes.push({id:"kahoot-k1",title:"Kahoot · Kapitel 1",html:`<section class="scene kahoot-launch editorial-bg editorial-teamwork"><p class="eyebrow">KAPITEL 1 · WISSENSCHECK</p><div class="kahoot-layout"><div><div class="kahoot-label">LIVE QUIZ · KAPITEL 1</div><h1>Was ist wirklich New Work?</h1><p class="lead">Zum Abschluss prüfen wir gemeinsam, wie gut wir Bergmanns Idee, moderne New-Work-Konzepte und ihre Zielkonflikte unterscheiden können.</p><div class="kahoot-info"><span>10 Fragen</span><span>4 Antworten je Frage</span><span>Live mit Smartphones</span></div><a class="kahoot-open" href="https://create.kahoot.it/details/ef9639f2-a618-4853-a001-42c56f05828f" target="_blank" rel="noopener noreferrer">Kahoot für Kapitel 1 öffnen ↗</a><p class="micro">Für die Lehrperson: Link öffnen, bei Kahoot anmelden und das Quiz live starten. Die Studierenden treten anschließend über die angezeigte Spiel-PIN bei.</p></div><div class="kahoot-visual" aria-hidden="true"><div class="kahoot-symbol">?</div><span>KNOWLEDGE<br>CHECK</span><div class="kahoot-shapes"><i></i><i></i><i></i><i></i></div></div></div></section>`});
+
 scenes.push(...chapter2Scenes);           // Kapitel 2 Arbeitszeit
 scenes.push(...chapter2EstimateScenes);   // Ende Kapitel 2 → Schätzfragen zu Kapitel 3
 scenes.push(...chapter3Scenes);           // Kapitel 3 Arbeitsort & Hybrid Work
@@ -268,6 +270,7 @@ if(b1Start>=0){
  const take=(a,b)=>{const ai=firstBlock.findIndex(x=>x.id===a),bi=firstBlock.findIndex(x=>x.id===b);return ai>=0&&bi>=ai?firstBlock.slice(ai,bi+1).map(x=>x.id):[]};
  const ordered=[];
  add(ordered,take("home","c1-est-5"));
+ add(ordered,["kahoot-k1"]);
  add(ordered,take("arbeitszeit-start","c2-est-5"));
  add(ordered,take("c3-start","c3-end").filter(id=>id!=="c3-end"));
  add(ordered,["wp-reasons","wp-numbers","wp-design-options","wp-evidence2","wp-cost","wp-data"]);
@@ -541,7 +544,7 @@ const NAV_VERSION="3.9";
 const navGroups=[
  {label:"MODUL", title:"Einführung & Organisation", ids:["welcome","dozenten","feli-profil","lernziele","kontakt","pruefung","literatur","modul","termine","arbeitsweise","lernwelt","day1-agenda","day2-agenda"]},
  {label:"BLOCK 1", title:"New Work", children:[
-   {title:"Tag 1 · Kapitel 1 · Grundlagen",ids:[...sceneIds("home","c1-est-5")]},
+   {title:"Tag 1 · Kapitel 1 · Grundlagen",ids:[...sceneIds("home","c1-est-5"),"kahoot-k1"]},
    {title:"Tag 1 · Kapitel 2 · Arbeitszeit & Flexibilität",ids:sceneIds("arbeitszeit-start","c2-est-5")},
    {title:"Tag 1 · Kapitel 3 · New Workplace & Zusammenarbeit",ids:[
      "c3-start","c3-terms","c3-de","c3-sectors","c3-eu","c3-evidence","c3-tradeoffs","c3-task",

@@ -13,3 +13,6 @@ Version 4.6.3: Aktivierungsfolie „Wer sollte entscheiden?“ entfernt; Navigat
 
 
 Version 4.7: zusätzliche lokal gespeicherte Bildmotive als dezente thematische Hintergründe auf Vorlesungsfolien; alle Bilder funktionieren offline. Die Fotos sind illustrative Visualisierungen, keine Aufnahmen des fiktiven Unternehmens.
+
+
+Update v4.7.1: Kahoot-Kapitel-1-Startfolie nach den Schätzfragen am Ende von Kapitel 1. Link: https://create.kahoot.it/details/ef9639f2-a618-4853-a001-42c56f05828f. Kahoot benötigt Internet und Login für den Host.

@@ -781,3 +781,11 @@ body.presentation .wp-plan-scene .floorplan{grid-template-rows:66px 30px 66px;mi
 .scene.editorial-bg > *{position:relative;z-index:1}
 body.presentation .scene.editorial-bg{background-size:cover}
 @media(max-width:800px){.scene.editorial-bg:before{background:rgba(248,246,241,.94)}}
+
+/* Kapitel 1: Live-Kahoot als eigene Folie */
+.kahoot-launch .kahoot-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:36px;align-items:center;min-height:68vh}
+.kahoot-label{display:inline-block;border-radius:100px;background:#eee5ff;color:#5624a5;padding:10px 18px;font-size:15px;font-weight:900;letter-spacing:.09em;margin-bottom:14px}
+.kahoot-launch h1{max-width:800px}.kahoot-info{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0}.kahoot-info span{background:white;border:1px solid #ded7eb;border-radius:12px;padding:10px 14px;font-weight:750}
+.kahoot-open{display:inline-flex;align-items:center;justify-content:center;padding:18px 24px;background:#5c28b7;color:white!important;border-radius:14px;font-size:20px;font-weight:900;text-decoration:none!important;box-shadow:0 8px 25px #5c28b73b}.kahoot-open:hover{background:#421a89}.kahoot-launch .micro{max-width:720px;margin-top:18px}
+.kahoot-visual{position:relative;min-height:330px;background:linear-gradient(145deg,#6739c4,#422184);border-radius:28px;color:white;display:flex;align-items:center;justify-content:center;flex-direction:column;overflow:hidden;box-shadow:0 16px 38px #2c145e36}.kahoot-symbol{font-size:135px;line-height:1;font-weight:1000;transform:rotate(-9deg);text-shadow:0 9px 20px #24104b55}.kahoot-visual>span{font-weight:950;letter-spacing:.17em;text-align:center;line-height:1.4}.kahoot-shapes{position:absolute;inset:0;pointer-events:none}.kahoot-shapes i{position:absolute;width:45px;height:45px;opacity:.8}.kahoot-shapes i:nth-child(1){background:#ed343b;top:12%;left:13%;transform:rotate(35deg)}.kahoot-shapes i:nth-child(2){background:#2189e8;top:15%;right:10%;border-radius:50%}.kahoot-shapes i:nth-child(3){background:#f0b323;bottom:15%;left:12%;clip-path:polygon(50% 0,100% 100%,0 100%)}.kahoot-shapes i:nth-child(4){background:#31af69;bottom:15%;right:10%;transform:rotate(45deg)}
+@media(max-width:850px){.kahoot-launch .kahoot-layout{grid-template-columns:1fr}.kahoot-visual{min-height:180px}.kahoot-symbol{font-size:80px}}
