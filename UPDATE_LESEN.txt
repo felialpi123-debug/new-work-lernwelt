@@ -1,5 +1,10 @@
-Update für New Work Lernwelt v4.7.1 (Kahoot Kapitel 1).
-Nur app.js im Hauptordner der entpackten Lernwelt durch die Datei aus diesem ZIP ersetzen.
-Danach index.html neu öffnen / Browser aktualisieren.
-Kahoot-Links Kapitel 2 bis 6 sind an den Kapitelenden eingebaut.
-Für Live-Kahoot ist Internet erforderlich.
+ROBOTIK-UPDATE – TAG 2
+
+Nur die Datei app.js im Hauptordner der Lernwelt ersetzen.
+
+Basis: Lernwelt v4.7.1 mit anschließendem Kahoot-Update Kapitel 2–6.
+Das Update enthält 9 neue Robotikfolien, darunter 2 BMW-Praxisbeispiele mit externen Videolinks, Daten der IFR, Physical AI, Zukunftsszenarien und Arbeitsmarktwirkungen.
+Die bestehenden sechs Kahoot-Verlinkungen bleiben erhalten.
+
+Hinweis: BMW-Videos benötigen Internet; kein Videomaterial ist lokal eingebettet.
+Die zusätzliche Robotiksequenz benötigt Zeit; den bisherigen Tagesablauf entsprechend anpassen.
