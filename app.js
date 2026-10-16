@@ -251,6 +251,11 @@ scenes.push({id:"kahoot-k1",title:"Kahoot · Kapitel 1",html:`<section class="sc
 
 scenes.push(...chapter2Scenes);           // Kapitel 2 Arbeitszeit
 scenes.push(...chapter2EstimateScenes);   // Ende Kapitel 2 → Schätzfragen zu Kapitel 3
+scenes.push({id:"kahoot-k2",title:"Kahoot · Kapitel 2",html:`<section class="scene kahoot-launch editorial-bg editorial-teamwork"><p class="eyebrow">KAPITEL 2 · WISSENSCHECK</p><div class="kahoot-layout"><div><div class="kahoot-label">LIVE QUIZ · KAPITEL 2</div><h1>Welche Arbeitszeitmodelle sind wirklich tragfähig?</h1><p class="lead">Arbeitszeitmodelle, Fairness und Zielkonflikte: Prüfen wir die wichtigsten Unterscheidungen zum Kapitel gemeinsam.</p><div class="kahoot-info"><span>10 Fragen</span><span>4 Antworten je Frage</span><span>Live mit Smartphones</span></div><a class="kahoot-open" href="https://create.kahoot.it/details/baa355e3-7471-4e4a-a861-164d3b9431c6" target="_blank" rel="noopener noreferrer">Kahoot für Kapitel 2 öffnen ↗</a><p class="micro">Für die Lehrperson: Link öffnen, bei Kahoot anmelden und das Quiz live starten. Die Studierenden treten über die angezeigte Spiel-PIN bei.</p></div><div class="kahoot-visual" aria-hidden="true"><div class="kahoot-symbol">?</div><span>KNOWLEDGE<br>CHECK</span><div class="kahoot-shapes"><i></i><i></i><i></i><i></i></div></div></div></section>`});
+scenes.push({id:"kahoot-k3",title:"Kahoot · Kapitel 3",html:`<section class="scene kahoot-launch editorial-bg editorial-teamwork"><p class="eyebrow">KAPITEL 3 · WISSENSCHECK</p><div class="kahoot-layout"><div><div class="kahoot-label">LIVE QUIZ · KAPITEL 3</div><h1>Wie gestalten wir Arbeitsorte und Zusammenarbeit?</h1><p class="lead">Hybride Arbeit, Bürogestaltung und Selbstorganisation: Prüfen wir die wichtigsten Unterscheidungen zum Kapitel gemeinsam.</p><div class="kahoot-info"><span>10 Fragen</span><span>4 Antworten je Frage</span><span>Live mit Smartphones</span></div><a class="kahoot-open" href="https://create.kahoot.it/details/2b3147b4-1b98-41b0-8842-d85cb1f0dc26" target="_blank" rel="noopener noreferrer">Kahoot für Kapitel 3 öffnen ↗</a><p class="micro">Für die Lehrperson: Link öffnen, bei Kahoot anmelden und das Quiz live starten. Die Studierenden treten über die angezeigte Spiel-PIN bei.</p></div><div class="kahoot-visual" aria-hidden="true"><div class="kahoot-symbol">?</div><span>KNOWLEDGE<br>CHECK</span><div class="kahoot-shapes"><i></i><i></i><i></i><i></i></div></div></div></section>`});
+scenes.push({id:"kahoot-k4",title:"Kahoot · Kapitel 4",html:`<section class="scene kahoot-launch editorial-bg editorial-teamwork"><p class="eyebrow">KAPITEL 4 · WISSENSCHECK</p><div class="kahoot-layout"><div><div class="kahoot-label">LIVE QUIZ · KAPITEL 4</div><h1>Wie verändert Technologie unsere Arbeit?</h1><p class="lead">Robotik, KI, Aufgabenverteilung und Zukunftskompetenzen: Prüfen wir die wichtigsten Unterscheidungen zum Kapitel gemeinsam.</p><div class="kahoot-info"><span>10 Fragen</span><span>4 Antworten je Frage</span><span>Live mit Smartphones</span></div><a class="kahoot-open" href="https://create.kahoot.it/details/cd0a294e-83f8-47e6-954b-294ba75ace1b" target="_blank" rel="noopener noreferrer">Kahoot für Kapitel 4 öffnen ↗</a><p class="micro">Für die Lehrperson: Link öffnen, bei Kahoot anmelden und das Quiz live starten. Die Studierenden treten über die angezeigte Spiel-PIN bei.</p></div><div class="kahoot-visual" aria-hidden="true"><div class="kahoot-symbol">?</div><span>KNOWLEDGE<br>CHECK</span><div class="kahoot-shapes"><i></i><i></i><i></i><i></i></div></div></div></section>`});
+scenes.push({id:"kahoot-k5",title:"Kahoot · Kapitel 5",html:`<section class="scene kahoot-launch editorial-bg editorial-teamwork"><p class="eyebrow">KAPITEL 5 · WISSENSCHECK</p><div class="kahoot-layout"><div><div class="kahoot-label">LIVE QUIZ · KAPITEL 5</div><h1>Wer entscheidet in neuen Organisationen?</h1><p class="lead">Führung, Verantwortung und Organisationsformen: Prüfen wir die wichtigsten Unterscheidungen zum Kapitel gemeinsam.</p><div class="kahoot-info"><span>10 Fragen</span><span>4 Antworten je Frage</span><span>Live mit Smartphones</span></div><a class="kahoot-open" href="https://create.kahoot.it/details/a53bd4ec-ecbb-4608-8e7c-b5ae02e9c0a3" target="_blank" rel="noopener noreferrer">Kahoot für Kapitel 5 öffnen ↗</a><p class="micro">Für die Lehrperson: Link öffnen, bei Kahoot anmelden und das Quiz live starten. Die Studierenden treten über die angezeigte Spiel-PIN bei.</p></div><div class="kahoot-visual" aria-hidden="true"><div class="kahoot-symbol">?</div><span>KNOWLEDGE<br>CHECK</span><div class="kahoot-shapes"><i></i><i></i><i></i><i></i></div></div></div></section>`});
+scenes.push({id:"kahoot-k6",title:"Kahoot · Kapitel 6",html:`<section class="scene kahoot-launch editorial-bg editorial-teamwork"><p class="eyebrow">KAPITEL 6 · WISSENSCHECK</p><div class="kahoot-layout"><div><div class="kahoot-label">LIVE QUIZ · KAPITEL 6</div><h1>Wie wird aus Einzelmaßnahmen ein Gesamtsystem?</h1><p class="lead">Transformation, Zielkonflikte und Umsetzung: Prüfen wir die wichtigsten Unterscheidungen zum Kapitel gemeinsam.</p><div class="kahoot-info"><span>10 Fragen</span><span>4 Antworten je Frage</span><span>Live mit Smartphones</span></div><a class="kahoot-open" href="https://create.kahoot.it/details/b7025501-3004-465d-b0f7-04ddb7ebd783" target="_blank" rel="noopener noreferrer">Kahoot für Kapitel 6 öffnen ↗</a><p class="micro">Für die Lehrperson: Link öffnen, bei Kahoot anmelden und das Quiz live starten. Die Studierenden treten über die angezeigte Spiel-PIN bei.</p></div><div class="kahoot-visual" aria-hidden="true"><div class="kahoot-symbol">?</div><span>KNOWLEDGE<br>CHECK</span><div class="kahoot-shapes"><i></i><i></i><i></i><i></i></div></div></div></section>`});
 scenes.push(...chapter3Scenes);           // Kapitel 3 Arbeitsort & Hybrid Work
 scenes.push(...workplaceDesignScenes);
 scenes.push(...chapter4Scenes);
@@ -272,17 +277,19 @@ if(b1Start>=0){
  add(ordered,take("home","c1-est-5"));
  add(ordered,["kahoot-k1"]);
  add(ordered,take("arbeitszeit-start","c2-est-5"));
+ add(ordered,["kahoot-k2"]);
  add(ordered,take("c3-start","c3-end").filter(id=>id!=="c3-end"));
  add(ordered,["wp-reasons","wp-numbers","wp-design-options","wp-evidence2","wp-cost","wp-data"]);
  add(ordered,["day1-workplace","day1-workplace-review","c3-end"]);
  add(ordered,take("c4-start","c4-end"));
- add(ordered,["day1-bayer","day1-transfer","day1-cliff"]);
+ add(ordered,["day1-bayer","day1-transfer","day1-cliff","kahoot-k3"]);
  add(ordered,["day2-robotics","day2-cobot-task"]);
  add(ordered,take("c5-start","c5-end"));
- add(ordered,["day2-ai-status","day2-ai-use","day2-ai-jobs","day2-ai-skills","day2-ai-career","day2-ai-economy","day2-video","day2-ailit","day2-ki-evidence","day2-mission-review"]);
+ add(ordered,["day2-ai-status","day2-ai-use","day2-ai-jobs","day2-ai-skills","day2-ai-career","day2-ai-economy","day2-video","day2-ailit","day2-ki-evidence","day2-mission-review","kahoot-k4"]);
  add(ordered,take("c6-start","c6-end"));
+ add(ordered,["kahoot-k5"]);
  add(ordered,take("finale-start","finale-end"));
- add(ordered,["day2-system","day2-blueprint","day2-blueprint-template","day2-pitches","day2-redteam","day2-exit"]);
+ add(ordered,["day2-system","day2-blueprint","day2-blueprint-template","day2-pitches","day2-redteam","day2-exit","kahoot-k6"]);
  firstBlock.forEach(x=>{if(!moved.has(x.id))ordered.push(x)});
  scenes.push(...ordered);
 }
@@ -545,16 +552,16 @@ const navGroups=[
  {label:"MODUL", title:"Einführung & Organisation", ids:["welcome","dozenten","feli-profil","lernziele","kontakt","pruefung","literatur","modul","termine","arbeitsweise","lernwelt","day1-agenda","day2-agenda"]},
  {label:"BLOCK 1", title:"New Work", children:[
    {title:"Tag 1 · Kapitel 1 · Grundlagen",ids:[...sceneIds("home","c1-est-5"),"kahoot-k1"]},
-   {title:"Tag 1 · Kapitel 2 · Arbeitszeit & Flexibilität",ids:sceneIds("arbeitszeit-start","c2-est-5")},
+   {title:"Tag 1 · Kapitel 2 · Arbeitszeit & Flexibilität",ids:[...sceneIds("arbeitszeit-start","c2-est-5"),"kahoot-k2"]},
    {title:"Tag 1 · Kapitel 3 · New Workplace & Zusammenarbeit",ids:[
      "c3-start","c3-terms","c3-de","c3-sectors","c3-eu","c3-evidence","c3-tradeoffs","c3-task",
      "wp-reasons","wp-numbers","wp-design-options","wp-evidence2","wp-cost","wp-data",
      "day1-workplace","day1-workplace-review",
-     "c4-start","c4-shift","c4-autonomy","c4-team-evidence","c4-empowerment-risk","c4-leadership","c4-novaworks","c4-event","c4-end","day1-bayer","day1-transfer","day1-cliff"
+     "c4-start","c4-shift","c4-autonomy","c4-team-evidence","c4-empowerment-risk","c4-leadership","c4-novaworks","c4-event","c4-end","day1-bayer","day1-transfer","day1-cliff","kahoot-k3"
    ]},
-   {title:"Tag 2 · Kapitel 4 · Robotik, KI & Zukunft der Arbeit",ids:["day2-robotics","day2-cobot-task",...sceneIds("c5-start","c5-end"),"day2-ai-status","day2-ai-use","day2-ai-jobs","day2-ai-skills","day2-ai-career","day2-ai-economy","day2-video","day2-ailit","day2-ki-evidence"]},
-   {title:"Tag 2 · Kapitel 5 · Führung & Organisationsformen",ids:[...sceneIds("c6-start","c6-end")]},
-   {title:"Tag 2 · Kapitel 6 · New Work als Gesamtsystem",ids:[...sceneIds("finale-start","finale-end"),"day2-system","day2-blueprint","day2-blueprint-template","day2-pitches","day2-redteam","day2-exit"]},
+   {title:"Tag 2 · Kapitel 4 · Robotik, KI & Zukunft der Arbeit",ids:["day2-robotics","day2-cobot-task",...sceneIds("c5-start","c5-end"),"day2-ai-status","day2-ai-use","day2-ai-jobs","day2-ai-skills","day2-ai-career","day2-ai-economy","day2-video","day2-ailit","day2-ki-evidence","kahoot-k4"]},
+   {title:"Tag 2 · Kapitel 5 · Führung & Organisationsformen",ids:[...sceneIds("c6-start","c6-end"),"kahoot-k5"]},
+   {title:"Tag 2 · Kapitel 6 · New Work als Gesamtsystem",ids:[...sceneIds("finale-start","finale-end"),"day2-system","day2-blueprint","day2-blueprint-template","day2-pitches","day2-redteam","day2-exit","kahoot-k6"]},
  ]},
  {label:"BLOCK 2", title:"Digital Organization", children:[
    {title:"Übergang · Digital Organization", ids:["b2-start"]},

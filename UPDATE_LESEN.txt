@@ -1,0 +1,5 @@
+Update für New Work Lernwelt v4.7.1 (Kahoot Kapitel 1).
+Nur app.js im Hauptordner der entpackten Lernwelt durch die Datei aus diesem ZIP ersetzen.
+Danach index.html neu öffnen / Browser aktualisieren.
+Kahoot-Links Kapitel 2 bis 6 sind an den Kapitelenden eingebaut.
+Für Live-Kahoot ist Internet erforderlich.
