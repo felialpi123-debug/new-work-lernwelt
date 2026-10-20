@@ -789,3 +789,34 @@ body.presentation .scene.editorial-bg{background-size:cover}
 .kahoot-open{display:inline-flex;align-items:center;justify-content:center;padding:18px 24px;background:#5c28b7;color:white!important;border-radius:14px;font-size:20px;font-weight:900;text-decoration:none!important;box-shadow:0 8px 25px #5c28b73b}.kahoot-open:hover{background:#421a89}.kahoot-launch .micro{max-width:720px;margin-top:18px}
 .kahoot-visual{position:relative;min-height:330px;background:linear-gradient(145deg,#6739c4,#422184);border-radius:28px;color:white;display:flex;align-items:center;justify-content:center;flex-direction:column;overflow:hidden;box-shadow:0 16px 38px #2c145e36}.kahoot-symbol{font-size:135px;line-height:1;font-weight:1000;transform:rotate(-9deg);text-shadow:0 9px 20px #24104b55}.kahoot-visual>span{font-weight:950;letter-spacing:.17em;text-align:center;line-height:1.4}.kahoot-shapes{position:absolute;inset:0;pointer-events:none}.kahoot-shapes i{position:absolute;width:45px;height:45px;opacity:.8}.kahoot-shapes i:nth-child(1){background:#ed343b;top:12%;left:13%;transform:rotate(35deg)}.kahoot-shapes i:nth-child(2){background:#2189e8;top:15%;right:10%;border-radius:50%}.kahoot-shapes i:nth-child(3){background:#f0b323;bottom:15%;left:12%;clip-path:polygon(50% 0,100% 100%,0 100%)}.kahoot-shapes i:nth-child(4){background:#31af69;bottom:15%;right:10%;transform:rotate(45deg)}
 @media(max-width:850px){.kahoot-launch .kahoot-layout{grid-template-columns:1fr}.kahoot-visual{min-height:180px}.kahoot-symbol{font-size:80px}}
+
+/* Block 3 · accessible teaching and self-contained missions */
+.b3new{--b3ink:#193348;color:var(--b3ink);background:linear-gradient(140deg,#f7fbfc,#f1f6f5);padding:clamp(26px,4vw,60px)!important;overflow-y:auto!important;}
+.b3new h1{font-size:clamp(34px,4vw,60px)!important;line-height:1.12!important;max-width:1100px;margin:.2em 0 .45em!important;color:#163348!important;}
+.b3new h3{font-size:clamp(19px,1.6vw,25px)!important;margin:0 0 8px;color:#17384b!important;}
+.b3new p,.b3new li,.b3new label,.b3new summary{font-size:clamp(17px,1.3vw,22px)!important;line-height:1.48!important;}
+.b3new .lead{font-size:clamp(21px,1.9vw,29px)!important;max-width:1100px;}
+.b3new-kicker{font-size:15px;letter-spacing:.11em;font-weight:800;color:#1a7b83;text-transform:uppercase;}
+.b3new-photo{height:clamp(120px,18vh,230px);max-width:1200px;overflow:hidden;border-radius:18px;margin:16px 0 20px;}
+.b3new-photo img{width:100%;height:100%;object-fit:cover;}
+.b3new-body{max-width:1250px;}
+.b3new-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px;margin:16px 0;}
+.b3new-cards article{background:white;border:1px solid #d7e5e9;border-radius:16px;padding:18px 20px;box-shadow:0 3px 12px #103e4b0c;}
+.b3new-cards article p{margin:4px 0 0;}
+.b3new details{background:#fff;border:1px solid #b5d6d8;border-radius:14px;padding:15px 20px;margin:15px 0;}
+.b3new details summary{cursor:pointer;font-weight:750;color:#176a72;}
+.b3new-note{font-size:15px!important;color:#536c77;}
+.b3new-test fieldset{border:1px solid #d7e5e9;background:white;border-radius:14px;margin:12px 0;padding:14px 20px;}
+.b3new-test legend{font-size:19px;font-weight:750;padding:0 8px;}
+.b3new-test label{display:block;padding:7px 0;cursor:pointer;}
+.b3new-test input[type=radio]{width:19px;height:19px;accent-color:#197b82;}
+.b3new-action{background:#116c75;color:white;border:0;border-radius:12px;padding:13px 22px;font-size:18px;font-weight:750;cursor:pointer;}
+.b3new-action.secondary{background:#dbe9ea;color:#183947;}
+.b3new-warning{color:#9c431f;font-weight:700;}
+.b3new-result{margin:14px 0;background:white;padding:12px 16px;border-radius:12px;}
+.b3new-result span{font-weight:750;font-size:20px;}.b3new-result small{display:block;font-size:15px;}
+.b3new-bar{height:13px;background:#d8e8e9;border-radius:20px;margin:6px 0;overflow:hidden;}.b3new-bar i{height:100%;display:block;background:#198c88;}
+.b3new-form{display:grid;gap:14px;max-width:950px;}.b3new-form label{display:grid;gap:5px;}
+.b3new-form input,.b3new-form textarea{font:18px/1.45 inherit;font-family:inherit;font-size:19px;width:100%;border:1px solid #adc9cf;border-radius:10px;padding:12px;background:white;color:#193348;}
+.b3new-actions{display:flex;gap:12px;flex-wrap:wrap;}.b3new-org-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+@media(max-width:850px){.b3new-org-grid{grid-template-columns:repeat(2,1fr)}.b3new-cards{grid-template-columns:1fr}}
