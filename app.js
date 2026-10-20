@@ -362,6 +362,41 @@ for(const [chapter,endId] of Object.entries({"1": "b3c1-game", "2": "b3c2-game",
  const newSlides=b3ExtraScenes.filter(s=>s.id.startsWith("b3x"+chapter+"-"));
  const at=block3Scenes.findIndex(s=>s.id===endId); if(at>=0) block3Scenes.splice(at,0,...newSlides);
 }
+
+/* Block 3: people-centred visual system, applied to every slide without touching exercises. */
+(function enhanceBlock3PeopleImages(){
+  const chapterPhotos={
+    b3c1:['people.jpg','teamwork.jpg','collaboration.jpg'],
+    b3c2:['meeting.jpg','people.jpg','lounge.jpg'],
+    b3c3:['meeting.jpg','focus.jpg','teamwork.jpg'],
+    b3c4:['people.jpg','meeting.jpg','collaboration.jpg'],
+    b3c5:['teamwork.jpg','hybrid.jpg','meeting.jpg'],
+    b3c6:['focus.jpg','people.jpg','lounge.jpg'],
+    b3:['teamwork.jpg','people.jpg','meeting.jpg']
+  };
+  const coverIds=new Set(['b3-start','b3c1-start','b3c2-start','b3c3-start','b3c4-start','b3c5-start','b3c6-start']);
+  const chapterCount={};
+  for(const slide of block3Scenes){
+    if(!slide.id || !slide.id.startsWith('b3') || !slide.html)continue;
+    const chapter=(slide.id.match(/^b3c[1-6]/)||['b3'])[0];
+    const photos=chapterPhotos[chapter]||chapterPhotos.b3;
+    const index=chapterCount[chapter]||0; chapterCount[chapter]=index+1;
+    const photo='assets/editorial/'+photos[index%photos.length];
+    const isCover=coverIds.has(slide.id);
+    // Real photo is an actual bundled image file, not a remote dependency.
+    slide.html=slide.html.replace(/<section class="scene-inner b3-scene([^\"]*)"/,
+      (match,rest)=>'<section class="scene-inner b3-scene b3-people-photo'+(isCover?' b3-people-cover':'')+rest+'" style="--b3-person-photo:url(\''+photo+'\')"');
+    if(isCover){
+      // Preserve heading and introduction; remove redundant pictogram on covers.
+      slide.html=slide.html.replace(/<figure class="b3-visual">[\s\S]*?<\/figure>/,'');
+    }else if(index%3===1 && !/<img\b/.test(slide.html) && !/b3-(?:game|exercise|quiz|test|cockpit)/.test(slide.id)){
+      // Add an explicit, readable photo strip on selected explanatory slides.
+      slide.html=slide.html.replace(/<\/section>\s*$/,
+        '<div class="b3-human-photo-strip" aria-hidden="true"><img src="'+photo+'" alt=""></div></section>');
+    }
+  }
+})();
+
 scenes.push(...block3Scenes);
 
 

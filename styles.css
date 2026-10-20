@@ -820,3 +820,20 @@ body.presentation .scene.editorial-bg{background-size:cover}
 .b3new-form input,.b3new-form textarea{font:18px/1.45 inherit;font-family:inherit;font-size:19px;width:100%;border:1px solid #adc9cf;border-radius:10px;padding:12px;background:white;color:#193348;}
 .b3new-actions{display:flex;gap:12px;flex-wrap:wrap;}.b3new-org-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
 @media(max-width:850px){.b3new-org-grid{grid-template-columns:repeat(2,1fr)}.b3new-cards{grid-template-columns:1fr}}
+
+/* === Block 3 · Menschliche Bildsprache (offline, editorial assets) === */
+.b3-scene.b3-people-photo{position:relative;isolation:isolate;overflow:hidden;min-height:100%;}
+.b3-scene.b3-people-photo::before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--b3-person-photo);background-position:right center;background-size:cover;opacity:.15;pointer-events:none;}
+.b3-scene.b3-people-photo::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.77) 55%,rgba(255,255,255,.43) 100%);pointer-events:none;}
+.b3-scene.b3-people-photo .b3-layout{position:relative;z-index:1;}
+.b3-scene.b3-people-photo .b3-human-photo-strip{margin:18px 0 0 auto;width:min(45%,440px);height:145px;overflow:hidden;border-radius:16px;box-shadow:0 10px 28px rgba(15,35,55,.13);}
+.b3-scene.b3-people-photo .b3-human-photo-strip img{width:100%;height:100%;object-fit:cover;display:block;}
+.b3-scene.b3-people-cover{min-height:100%;display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,5vw,70px);color:#fff;background:#132d40;}
+.b3-scene.b3-people-cover::before{opacity:1;background-position:center 38%;}
+.b3-scene.b3-people-cover::after{background:linear-gradient(90deg,rgba(7,25,39,.94) 0%,rgba(7,25,39,.80) 46%,rgba(7,25,39,.22) 100%);}
+.b3-scene.b3-people-cover h1,.b3-scene.b3-people-cover .lead,.b3-scene.b3-people-cover .eyebrow{color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.30);}
+.b3-scene.b3-people-cover h1{font-size:clamp(2.5rem,5vw,4.7rem);line-height:1.06;max-width:850px;}
+.b3-scene.b3-people-cover .lead{font-size:clamp(1.2rem,2vw,1.8rem);max-width:760px;}
+.b3-scene.b3-people-cover .chapter-map b{background:rgba(255,255,255,.90);color:#16374c;}
+@media(max-width:800px){.b3-scene.b3-people-photo .b3-human-photo-strip{width:100%;height:110px}.b3-scene.b3-people-cover{padding:28px}.b3-scene.b3-people-cover::after{background:rgba(7,25,39,.70)}}
+@media print{.b3-scene.b3-people-photo{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
