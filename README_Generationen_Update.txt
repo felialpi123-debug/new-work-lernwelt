@@ -1,0 +1,1 @@
+Block 3 Kapitel 2: vier Schätzfragen vor dem Kapitelstart, ein YouTube-Sketch und überarbeiteter Myth Buster. Quellen und methodische Einschränkungen stehen auf den Folien. Hinweis: Für YouTube ist Internetzugang nötig. Der bisherige, missverständlich formulierte Renten-Schätzwert und die pseudo-numerische Generationen-Schätzfrage wurden entfernt.

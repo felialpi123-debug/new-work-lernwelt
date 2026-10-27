@@ -1,0 +1,1 @@
+Kapitel 2: 3 neue Schätzfragen + Vergleichsfolie, Myth Buster präzisiert, Planspiel mit Briefing und Ergebnisfolie. Quellen und unterschiedliche Generationsabgrenzungen auf Folien beachten.
