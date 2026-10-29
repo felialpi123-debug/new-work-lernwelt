@@ -1,0 +1,1 @@
+Block 3 Kapitel 6: Die Folien Schätzfrage bis 2030 und Interview-Training mit KI wurden durch fünf KI-Recruiter-Challenge-Folien ersetzt. Alle übrigen Inhalte (insbesondere Block 2) bleiben erhalten. app.js, index.html und ggf. enthaltene Assets aus der ZIP übernehmen. Browser neu laden (Strg+F5).

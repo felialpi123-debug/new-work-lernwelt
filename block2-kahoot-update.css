@@ -1,0 +1,12 @@
+/* Kahoot interludes for Block 2 / Chapter 1 */
+.b2-kahoot-slide{background:radial-gradient(circle at 88% 12%,rgba(127,90,240,.24),transparent 37%),linear-gradient(130deg,#14142d,#242051 65%,#38236a);color:#fff;min-height:100%;display:flex;flex-direction:column;justify-content:center}
+.b2-kahoot-slide .eyebrow{color:#d5c9ff}
+.b2-kahoot-layout{max-width:960px;margin:0 auto;padding:clamp(16px,4vw,55px);text-align:center}
+.b2-kahoot-kicker{font-weight:800;letter-spacing:.19em;color:#cfc4ff;font-size:clamp(12px,1.3vw,16px);margin-bottom:22px}
+.b2-kahoot-slide h1{font-size:clamp(34px,5vw,76px);line-height:1.07;color:#fff;margin:0 auto 24px;max-width:920px}
+.b2-kahoot-lead{font-size:clamp(17px,2vw,25px);line-height:1.45;color:#e2dcfa;max-width:740px;margin:0 auto 32px}
+.b2-kahoot-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:18px}
+.b2-kahoot-button{display:inline-flex;align-items:center;justify-content:center;padding:18px 31px;border-radius:16px;background:#fff;color:#29205e!important;text-decoration:none;font-size:clamp(18px,1.8vw,23px);font-weight:800;box-shadow:0 10px 32px rgba(0,0,0,.23)}
+.b2-kahoot-button:hover{transform:translateY(-2px);background:#eee9ff}
+.b2-kahoot-note{color:#d0c8e9;font-size:14px}
+.b2-kahoot-tip{margin:38px auto 0;border:1px solid rgba(255,255,255,.26);border-radius:15px;padding:17px 22px;max-width:780px;color:#e9e4fc;font-size:clamp(14px,1.4vw,18px)}

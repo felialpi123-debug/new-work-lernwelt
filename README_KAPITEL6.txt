@@ -1,0 +1,1 @@
+Update baut auf Block 3 Kapitel 4 Fotos final auf. Nur Block 3 Kapitel 6 wurde inhaltlich ergänzt: Workshop-Überblick, Arbeitsmarktdaten 2025 (BA Februar 2026), konkreter Lebenslauf-Workshop, erklärter Karriere-Kompass und neue Folienreihenfolge. Block 2 unverändert. app.js und index.html ersetzen; assets unverändert beibehalten. Strg+F5.
