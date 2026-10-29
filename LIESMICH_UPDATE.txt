@@ -1,0 +1,13 @@
+BLOCK 2 UPDATE · 29.10.2026
+
+Grundlage: Update_Block3_Kapitel4_Frauen_Fuehrung_Planspiel.zip vom 29.10.2026.
+Nur das Array block2Scenes wurde ersetzt; dazu kommt der auf Block 2 begrenzte Antwort-Button-Handler. Der übrige JavaScript-Code bleibt exakt erhalten.
+index.html erhält nur den zusätzlichen CSS-Verweis und eine neue Cache-Kennung für app.js. styles.css wird NICHT ersetzt.
+Die acht in der Vorlage fehlenden Modellgrafiken wurden als skalierbare, vereinfachte Lehrgrafiken neu aufgebaut.
+
+INSTALLATION:
+ZIP entpacken. Den Inhalt in den bestehenden Projektordner übernehmen: app.js und index.html ersetzen; block2-update.css und assets ergänzen. Vorhandene styles.css und alle anderen Assets behalten. Danach wie gewohnt veröffentlichen.
+Kein eigenständiges Vollpaket: vorhandene Lernwelt und Assets sind erforderlich. Falls die produktive Lernwelt neuer als die genannte Grundlage ist, nicht pauschal ersetzen.
+
+PRÜFUNG:
+Block 1, Einführung und Block 3: Code außerhalb block2Scenes unverändert. Kein Block-2-only-Filter übernommen. Alle sechs Block-2-Kapitel enthalten.
