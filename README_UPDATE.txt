@@ -1,1 +1,1 @@
-Kapitel 4 Bildkorrektur: app.js ersetzen; neuen Ordner assets/block3 samt Foto hinzufügen. Bestehende assets/editorial behalten. Zwei dekorative Fotos wurden durch scharfe typografische Grafiken ersetzt. Keine Änderung an Navigation oder anderen Kapiteln.
+Ersetze app.js und kopiere assets/block3/ in den bestehenden Lernwelt-Ordner. Browser mit Strg+F5 neu laden. Alle drei Bildbereiche in Kapitel 4 wurden auf nicht-beschneidende Darstellung (contain) umgestellt; das Care-Motiv ist ein skalierbares SVG. Bestehende Dateien nicht loeschen.
