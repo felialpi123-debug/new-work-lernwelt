@@ -1,0 +1,41 @@
+BLOCK 3 · KAPITEL 2 · GENERATION CLASH — FALLAKTE & PLANSSPIEL
+Update-Stand: 29.10.2026
+
+WAS IST NEU?
+- Briefing: klarer Projektstatus mit fiktiven Kennzahlen und 30-Minuten-Plan.
+- Personen: vier konkrete Profile mit Aussagen, Beobachtungen und Zusatzinformationen; Alter erst nach Diagnose aufdecken.
+- Auswertung: konkrete Kriterien, 4-Wochen-Maßnahmenplan, gegenseitiger Wissenstransfer, Messgrößen und aufklappbare Beispiellösung.
+- Planspielbereich (Tab "Planspiele · Block 3"): ausführliche Fallakte A/B/C, akutes Entscheidungsereignis, Aufgabenstellung, editierbares Gruppen-Arbeitsblatt, Kopierfunktion und Lehrerhinweise.
+- Kopfbereich im Planspielpanel zeigt auf der Block-3-Registerkarte jetzt auch Block 3.
+
+WICHTIG: Sämtliche Projektdaten, Zahlen, Personen und Aussagen innerhalb des Planspiels sind FIKTIV und dienen ausschließlich didaktischen Zwecken.
+
+WAS BLEIBT UNVERÄNDERT?
+- Kein Austausch von app.js oder styles.css.
+- Keine Änderung an Block 1 oder Block 2.
+- Die bestehenden Änderungen an Block 3 (Planspiel Kapitel 1, Belbin, Kapitel 4/Fotos, KI-Recruiter) bleiben in den beiden Redesign-Dateien erhalten.
+
+INSTALLATION IN DAS RICHTIGE GITHUB-REPOSITORY
+Repository: felialpi123-debug/new-work-lernwelt (NICHT in das Dashboard-Repository hochladen!)
+1. Erstelle eine Sicherheitskopie deiner bestehenden Dateien.
+2. ZIP entpacken.
+3. Im Hauptverzeichnis des Lernwelt-Repositories ersetzen:
+   - index.html
+   - block3-redesign-20261029.js
+   - block3-redesign-20261029.css
+4. Die enthaltenen Dateien aus assets/block3/ in den gleichnamigen Ordner des Repositories kopieren.
+5. Bei GitHub Commit changes speichern und in Vercel das neue Production-Deployment prüfen.
+6. Neu laden (Strg+F5 / auf Mobilgeräten Browser-Tab neu öffnen).
+
+Warum index.html? Die Datei wurde ausschließlich bei den Versionskennungen für die beiden Block-3-Redesign-Dateien geändert, um alte Browser-Caches zu umgehen. Der übrige HTML-Inhalt wurde nicht verändert.
+
+ERKENNBARKEIT
+- Block 3 → Kapitel 2 → Planspiel → Folie "Generation Clash: Rettet NovaCare!"
+- Auf der Folie sind jetzt 4 Kennzahlen: 6 Wochen, 18 Tickets, 7/40, 2 Freigaben.
+- Im Planspielbereich unter Kapitel 2 steht jetzt "Fallakte A · Projektstatus und prüfbare Fakten".
+
+TECHNISCHE PRÜFUNG
+- JavaScript-Syntax erfolgreich.
+- In einem isolierten lokalen Browsertest wurden alle 3 neuen Szenen gerendert.
+- Sprunglinks, Planspielbereich und Eingaben wurden geprüft.
+- Die tatsächliche Vercel-Veröffentlichung wird erst nach deinem Commit sichtbar.

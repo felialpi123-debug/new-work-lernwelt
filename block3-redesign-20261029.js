@@ -293,3 +293,186 @@
   window.__BLOCK3_REDESIGN__ = Object.assign({}, window.__BLOCK3_REDESIGN__||{}, {patch:'planspiel-belbin-v1', extraReplaced:changed});
   console.info('Block3 patch installed', window.__BLOCK3_REDESIGN__);
 })();
+
+
+/* ==================================================================
+   BLOCK 3 · KAPITEL 2 · GENERATION CLASH — VERTIEFUNG 2026-10-29
+   Nur additive, isolierte Änderungen: 3 bestehende Szenen und Planspiel-Pane.
+   Block 1, Block 2, weitere Block-3-Kapitel bleiben unangetastet.
+   ================================================================== */
+(function(){
+  'use strict';
+  if(typeof scenes === 'undefined' || !Array.isArray(scenes)){
+    console.error('Generation Clash: scenes nicht verfügbar');return;
+  }
+  const root=document.getElementById('app');
+  const panel=document.querySelector('.sim-pane[data-pane="promotion"]');
+  if(!root){console.error('Generation Clash: #app nicht gefunden');return;}
+
+  const updated={
+    'b3x2-briefing': `
+<section class="scene-inner b3-scene b3-pro b3gc-slide b3gc-briefing">
+  <div class="b3p-top"><span>BLOCK 3 · KAPITEL 2 · PLANSPIEL</span><span class="b3gc-rev">GENERATION CLASH · FALLAKTE</span></div>
+  <h1>Generation Clash: Rettet NovaCare!</h1>
+  <p class="b3gc-lead">Ihr seid ein internes Beratungsteam. Der NovaCare-Pilot ist <b>sechs Wochen im Verzug</b>. Eure Mission: die Zusammenarbeit stabilisieren – <b>ohne Konflikte vorschnell mit dem Alter zu erklären</b>.</p>
+  <div class="b3gc-body">
+    <div class="b3gc-brief-grid">
+      <div>
+        <div class="b3gc-metrics">
+          <article><strong>6</strong><span>Wochen Verzug</span></article>
+          <article><strong>18</strong><span>offene Tickets</span></article>
+          <article><strong>7/40</strong><span>falsch priorisierte KI-Fälle</span></article>
+          <article><strong>2</strong><span>Freigaben ohne klare Zuständigkeit</span></article>
+        </div>
+        <div class="b3gc-box"><h2>Was ist passiert?</h2><p>Bei drei Pilotkunden häufen sich Beschwerden. Die KI-Priorisierung ordnete in einer Stichprobe sieben von 40 Tickets falsch ein. Wer kritische Fälle kontrolliert, Releases freigibt und Entscheidungen dokumentiert, ist im Team nicht verbindlich geklärt.</p><p class="b3gc-note">Alle Personen, Kennzahlen und Ereignisse sind <b>fiktive Falldaten</b> für dieses Planspiel.</p></div>
+        <div class="b3gc-stages">
+          <div><b>1 · Diagnose</b><span>8 Min</span></div><div><b>2 · Regeln</b><span>10 Min</span></div><div><b>3 · Transfer</b><span>7 Min</span></div><div><b>4 · Entscheidung</b><span>5 Min</span></div>
+        </div>
+      </div>
+      <div class="b3gc-hero-image"><img src="assets/block3/redesign-novaworks.webp" alt="Ein Team bespricht ein kritisches Projekt"><div><b>Auftrag für eure Gruppe</b><span>Entwickelt einen 4-Wochen-Stabilisierungsplan mit Verantwortlichen, Teamregeln und messbaren Ergebnissen.</span></div></div>
+    </div>
+    <div class="b3gc-footer"><b>Abgabe:</b> 3 belegte Ursachen · 3 verbindliche Teamregeln · 1 gegenseitiger Wissenstransfer · 2 Erfolgskennzahlen · 90-Sekunden-Pitch</div>
+  </div>
+</section>`,
+    'b3x2-cases': `
+<section class="scene-inner b3-scene b3-pro b3gc-slide b3gc-cases">
+  <div class="b3p-top"><span>BLOCK 3 · KAPITEL 2 · PLANSPIEL · PERSONEN & BELEGE</span><span class="b3gc-rev">ALTER ZUNÄCHST VERDECKT</span></div>
+  <h1>Vier Menschen. Vier Perspektiven.</h1>
+  <p class="b3gc-lead">Unterscheidet <b>Aussagen</b>, <b>beobachtbare Ereignisse</b> und <b>Vermutungen</b>. Das Alter wird erst nach eurer ersten Diagnose aufgedeckt.</p>
+  <div class="b3gc-body">
+    <div class="b3gc-person-grid">
+      <article class="b3gc-person"><div class="b3gc-person-head"><span class="b3gc-avatar">T</span><div><h2>Thomas</h2><small>Senior Engineer · Bestandssystem</small></div></div><blockquote>„Die KI hat einen kritischen Vorfall zu niedrig eingestuft. Ohne Prüfung gefährden wir das Vertrauen der Kunden.“</blockquote><div class="b3gc-evidence"><b>Beobachtung</b><span>Warnt seit zwei Wochen vor unklaren Qualitätsfreigaben; sein Prüfprotokoll wird selten gelesen.</span></div><details><summary>Weitere Informationen</summary><p>Kennt die Schnittstelle seit Jahren. Möchte ein verbindliches Vier-Augen-Prinzip, aber keine zusätzliche Meetingschleife für jede Kleinigkeit.</p></details></article>
+      <article class="b3gc-person"><div class="b3gc-person-head"><span class="b3gc-avatar">S</span><div><h2>Sabine</h2><small>Projektleitung · Koordination</small></div></div><blockquote>„Entscheidungen landen in Chat, E-Mail und Meetings. Am Ende weiß niemand, welche Version gilt.“</blockquote><div class="b3gc-evidence"><b>Beobachtung</b><span>Zuletzt wurden zwei Freigaben besprochen, aber keine verantwortliche Person dokumentiert.</span></div><details><summary>Weitere Informationen</summary><p>Will flexible Zusammenarbeit ermöglichen. Hat bisher weder ein verbindliches Entscheidungslog noch klare Eskalationsregeln eingeführt.</p></details></article>
+      <article class="b3gc-person"><div class="b3gc-person-head"><span class="b3gc-avatar">D</span><div><h2>Daniel</h2><small>Softwareentwicklung · Integration</small></div></div><blockquote>„Ich arbeite konzentriert und liefere. Aber wenn eine Freigabe fehlt, weiß ich oft nicht, wen ich fragen soll.“</blockquote><div class="b3gc-evidence"><b>Beobachtung</b><span>Zwei Pull Requests warteten länger als einen Arbeitstag auf eine Entscheidung.</span></div><details><summary>Weitere Informationen</summary><p>Arbeitet regelmäßig remote. Dokumentiert technische Änderungen sorgfältig, kennt aber den fachlichen Freigabeweg nicht eindeutig.</p></details></article>
+      <article class="b3gc-person"><div class="b3gc-person-head"><span class="b3gc-avatar">M</span><div><h2>Mia</h2><small>Junior Data Analyst · KI-Priorisierung</small></div></div><blockquote>„Das Modell ist noch nicht gut genug bei Sonderfällen. Ich brauche Feedback, bevor wir es auf echte Kunden loslassen.“</blockquote><div class="b3gc-evidence"><b>Beobachtung</b><span>Von 40 geprüften KI-Zuordnungen waren 7 falsch priorisiert; ein dokumentierter Testfallkatalog fehlt.</span></div><details><summary>Weitere Informationen</summary><p>Kennt KI-Werkzeuge gut, hat aber wenig Produkt- und Kundenhistorie. Fragt wiederholt nach fachlichen Beispielen für kritische Fälle.</p></details></article>
+    </div>
+    <details class="b3gc-age-reveal"><summary>Erst nach eurer Diagnose öffnen: Alter und Einordnung</summary><p>Thomas: 63 Jahre · Sabine: 47 Jahre · Daniel: 34 Jahre · Mia: 24 Jahre. <b>Reflexion:</b> Welche eurer Schlussfolgerungen wären auch ohne diese Altersangaben tragfähig? Die Zuordnung zu einer Generation erklärt nicht automatisch Verhalten, Motivation oder Leistungsfähigkeit.</p></details>
+    <div class="b3gc-footer"><b>Diagnoseauftrag:</b> Nennt drei Ursachen und zitiert je eine konkrete Beobachtung. Was könnt ihr noch nicht wissen und müsstet nachfragen?</div>
+  </div>
+</section>`,
+    'b3x2-gameplus': `
+<section class="scene-inner b3-scene b3-pro b3gc-slide b3gc-solution">
+  <div class="b3p-top"><span>BLOCK 3 · KAPITEL 2 · PLANSPIEL · ENTSCHEIDUNG</span><span class="b3gc-rev">4-WOCHEN-PLAN</span></div>
+  <h1>Welche Lösung hilft NovaCare wirklich?</h1>
+  <p class="b3gc-lead">Präsentiert keine „Generationentipps“, sondern einen <b>prüfbaren Veränderungsplan</b> mit Verantwortlichkeiten, Eskalation und Wissenstransfer.</p>
+  <div class="b3gc-body">
+    <div class="b3gc-result-grid">
+      <article class="b3gc-result"><span>01 · URSACHEN</span><h2>Beobachtung statt Zuschreibung</h2><p>Drei Ursachen mit Beleg: Prozess-/Freigabelücke, KI-Qualitätsrisiko, fehlender Wissenstransfer oder Kommunikationsbruch.</p></article>
+      <article class="b3gc-result"><span>02 · TEAMREGELN</span><h2>Wer entscheidet was?</h2><p>Drei Regeln mit <b>Owner, Zeitpunkt und Kontrollpunkt</b>: KI-Fälle prüfen, Releases freigeben, Entscheidungen dokumentieren.</p></article>
+      <article class="b3gc-result"><span>03 · GEMEINSAM LERNEN</span><h2>Transfer in beide Richtungen</h2><p>Thomas vermittelt kritische Produktfälle. Mia zeigt das KI-Prüfverfahren. Beide erarbeiten gemeinsam einen Testfallkatalog.</p></article>
+      <article class="b3gc-result"><span>04 · WIRKUNG</span><h2>Woran merken wir Erfolg?</h2><p>Beispiel-KPIs: <b>0 ungeprüfte kritische KI-Fälle</b> und <b>100 % dokumentierte Freigabezuständigkeiten</b> innerhalb von vier Wochen.</p></article>
+    </div>
+    <details class="b3gc-teacher"><summary>Beispiellösung / Auswertung aufdecken</summary><div class="b3gc-teacher-content"><p><b>Mögliche Diagnose:</b> Unklare Verantwortlichkeit für KI-Freigaben, fehlende dokumentierte Entscheidungskette und unvollständiges gemeinsames Wissen über kritische Kundenfälle.</p><p><b>Mögliche Regeln:</b> (1) Kritische KI-Prioritäten vor Kundeneinsatz durch Thomas oder benannte Vertretung prüfen. (2) Sabine dokumentiert für jeden Release genau eine freigabeverantwortliche Person und einen Stellvertreter. (3) Daniel und Mia halten Entscheidungen im selben Board mit Datum, Begründung und offener Frage fest.</p><p><b>Wissenstransfer:</b> Zwei gemeinsame 45-Minuten-Sessions pro Woche; Ergebnis nach vier Wochen: zehn geprüfte Grenzfallbeispiele und ein gemeinsam abgenommener Testfallkatalog.</p><p><b>Wichtig:</b> Andere Lösungen sind möglich, sofern sie sich auf Fallbelege stützen, Verantwortlichkeiten regeln und überprüfbar sind.</p></div></details>
+    <div class="b3gc-footer"><b>Leitfrage:</b> Was erklärt das Verhalten besser: Generation, Erfahrung, Rolle, Arbeitsbedingungen oder fehlende Prozesse?</div>
+  </div>
+</section>`
+  };
+
+  let replaced=0;
+  for(const [id,markup] of Object.entries(updated)){
+    const i=scenes.findIndex(s=>s.id===id);
+    if(i<0){console.warn('Generation Clash: fehlende Folie',id);continue;}
+    const old=root.children[i];if(!old)continue;
+    const template=document.createElement('template');template.innerHTML=markup.trim();
+    const fresh=template.content.firstElementChild;if(!fresh)continue;
+    const active=old.classList.contains('active');
+    old.className=fresh.className+' scene'+(active?' active':'');
+    old.innerHTML=fresh.innerHTML;
+    old.dataset.index=String(i);
+    scenes[i].html=markup;
+    replaced++;
+  }
+
+  // Planspielbereich: eigene Fallakte und editierbares Arbeitsblatt statt knapper Sprunglinks.
+  if(panel){
+    const missions=[...panel.querySelectorAll('.mission-list > article')];
+    const old=missions.find(el=>el.querySelector('h4')?.textContent.includes('Generation Clash'));
+    if(old){
+      const article=document.createElement('article');
+      article.className='mission current b3gc-panel-mission';
+      article.innerHTML=`
+      <div class="mission-no">02</div><div class="b3gc-pane-body">
+        <h4>Kapitel 2 · Generation Clash</h4>
+        <p>Ihr übernehmt die Rolle eines internen Beratungsteams. Die Situation ist fiktiv, eure Entscheidung soll jedoch so belastbar sein wie im echten Projektalltag.</p>
+        <div class="b3gc-panel-stats"><span><b>6 Wochen</b> Verzug</span><span><b>18</b> offene Tickets</span><span><b>7/40</b> falsche KI-Prioritäten</span></div>
+        <div class="b3gc-panel-buttons">
+          <button type="button" data-jump-scene="b3x2-briefing">01 · Briefing</button>
+          <button type="button" data-jump-scene="b3x2-cases">02 · Personen & Belege</button>
+          <button type="button" data-jump-scene="b3x2-gameplus">03 · Auswertung</button>
+        </div>
+        <details class="b3gc-doc"><summary>Fallakte A · Projektstatus und prüfbare Fakten</summary>
+          <p><b>NovaCare:</b> Pilotbetrieb bei drei Kunden, geplanter Start bereits überschritten. Der Pilot ist sechs Wochen im Verzug.</p>
+          <ul><li>18 noch offene Tickets; einige davon betreffen kritische Kundenprobleme.</li><li>Eine Stichprobe von 40 KI-priorisierten Fällen ergab sieben fehlerhafte Prioritäten.</li><li>Bei zwei Freigaben wurde die verantwortliche Person nicht eindeutig dokumentiert.</li><li>Zwei technische Pull Requests lagen länger als einen Arbeitstag ohne Entscheidung.</li></ul>
+          <p><small>Alle Angaben sind ausschließlich fiktive Falldaten. Es liegen keine individuellen Leistungsbewertungen vor.</small></p>
+        </details>
+        <details class="b3gc-doc"><summary>Fallakte B · Vier Personen und ihre Aussagen</summary>
+          <p><b>Thomas – Senior Engineer:</b> „Kritische KI-Fälle müssen geprüft werden.“ Kennt Bestandssystem und typische Fehlerfälle; vermisst einen klaren Qualitätsprozess.</p>
+          <p><b>Sabine – Projektleitung:</b> „Ich brauche nachvollziehbare Entscheidungen.“ Koordiniert das Projekt, hat aber bisher kein verbindliches Entscheidungslog eingeführt.</p>
+          <p><b>Daniel – Softwareentwicklung:</b> „Ich brauche klare Ansprechpartner für Freigaben.“ Liefert technische Änderungen, erlebt aber lange Rückfragen und unklare Zuständigkeiten.</p>
+          <p><b>Mia – Junior Data Analyst:</b> „Mir fehlen Grenzfallbeispiele.“ Entwickelt KI-Unterstützung, kennt die Kundenhistorie noch wenig.</p>
+          <details class="b3gc-doc"><summary>Alter nach der ersten Diagnose aufdecken</summary><p>Thomas 63 · Sabine 47 · Daniel 34 · Mia 24 Jahre. Prüft danach: Was an eurer Analyse bleibt ohne Generationenlabel gültig?</p></details>
+        </details>
+        <details class="b3gc-doc"><summary>Fallakte C · Akutes Ereignis – ihr müsst entscheiden</summary>
+          <p><b>Dienstag, 16:00 Uhr:</b> Einer der Pilotkunden meldet einen Vorfall, den die KI als „niedrig“ eingestuft hat. Am nächsten Morgen ist ein Kundentermin geplant. Daniel könnte kurzfristig ein Update einspielen; Thomas fordert zunächst einen Test. Sabine ist telefonisch erreichbar, Mia kann die KI-Zuordnung noch am Abend prüfen.</p>
+          <p><b>Entscheidet:</b> Was stoppt ihr? Wer prüft den Vorfall? Wer darf eine Freigabe erteilen? Wann und wie informiert ihr den Kunden?</p>
+          <p><b>Rahmen:</b> Datenschutz und Sicherheit dürfen nicht zugunsten des Termins umgangen werden.</p>
+        </details>
+        <details class="b3gc-doc" open><summary>Euer Arbeitsauftrag · 30 Minuten</summary>
+          <ol><li><b>8 Min Diagnose:</b> Drei Ursachen nennen, jeweils mit einem Beleg aus der Fallakte. Welche Information fehlt?</li><li><b>10 Min Teamregeln:</b> Drei verbindliche Regeln mit verantwortlicher Person, Prozessschritt und Kontrolle formulieren.</li><li><b>7 Min Wissenstransfer:</b> Was lernen Thomas und Mia voneinander? Wie wird das Ergebnis dokumentiert und geprüft?</li><li><b>5 Min Pitch:</b> 4-Wochen-Plan, zwei KPIs und Rest-Risiko präsentieren; Alter erst danach reflektieren.</li></ol>
+        </details>
+        <div class="b3gc-workbook">
+          <h5>Euer digitales Gruppen-Arbeitsblatt</h5><p>Die Einträge werden ausschließlich im Browser auf diesem Gerät gespeichert.</p>
+          <label>1 · Drei Konfliktursachen und Belege<textarea data-gc-field="diagnose" rows="3" placeholder="Ursache → beobachtbarer Beleg → offene Frage"></textarea></label>
+          <label>2 · Drei überprüfbare Teamregeln<textarea data-gc-field="rules" rows="3" placeholder="Regel → verantwortliche Person → ab wann → Kontrolle"></textarea></label>
+          <label>3 · Wissenstransfer Thomas ↔ Mia<textarea data-gc-field="transfer" rows="2" placeholder="Was vermittelt wer? Welches Ergebnis liegt nach 4 Wochen vor?"></textarea></label>
+          <label>4 · Zwei KPIs und verbleibendes Risiko<textarea data-gc-field="kpi" rows="2" placeholder="Messgröße → Ziel nach 4 Wochen; offenes Restrisiko"></textarea></label>
+          <div class="b3gc-panel-buttons"><button type="button" id="b3gc-copy-plan">Ergebnis kopieren</button><span class="b3gc-save-status" aria-live="polite">Lokal gespeichert</span></div>
+        </div>
+        <details class="b3gc-doc"><summary>Auswertung / Hilfen für die Lehrperson</summary>
+          <p><b>Bewertung (je 0–5 Punkte, insgesamt 20):</b> Belegbasierte Diagnose; Umsetzbarkeit der Regeln; beidseitiger Wissenstransfer; messbarer 4-Wochen-Plan.</p>
+          <p><b>Beispiellösung:</b> KI-Fälle ab definierter Kritikalität menschlich prüfen; Freigaben schriftlich einer Person und einer Vertretung zuordnen; Entscheidungen zentral dokumentieren; Thomas und Mia bauen gemeinsam einen Grenzfall-Testkatalog.</p>
+          <p><b>Reflexion:</b> Altersangaben sind keine hinreichende Erklärung für fehlende Zuständigkeiten oder ungenügende Qualitätskontrollen.</p>
+        </details>
+      </div>`;
+      old.replaceWith(article);
+      // The original click handlers were attached before the replacement;
+      // bind only to this new mission card.
+      article.querySelectorAll('[data-jump-scene]').forEach(b=>b.addEventListener('click',e=>{
+        e.preventDefault();e.stopPropagation();
+        if(typeof window.goToSceneId==='function')window.goToSceneId(b.dataset.jumpScene);
+      }));
+      const fields=[...article.querySelectorAll('[data-gc-field]')];
+      for(const field of fields){
+        const key='b3_generation_clash_'+field.dataset.gcField;
+        try{field.value=localStorage.getItem(key)||'';}catch(e){}
+        field.addEventListener('input',()=>{
+          try{localStorage.setItem(key,field.value);}catch(e){}
+          const status=article.querySelector('.b3gc-save-status');if(status)status.textContent='Lokal gespeichert';
+        });
+      }
+      article.querySelector('#b3gc-copy-plan')?.addEventListener('click',async()=>{
+        const labels={diagnose:'Diagnose',rules:'Teamregeln',transfer:'Wissenstransfer',kpi:'KPIs und Risiko'};
+        const result='Generation Clash – Gruppenlösung\n\n'+fields.map(f=>labels[f.dataset.gcField]+'\n'+(f.value||'(noch offen)')).join('\n\n');
+        const status=article.querySelector('.b3gc-save-status');
+        try{await navigator.clipboard.writeText(result);if(status)status.textContent='Ergebnis kopiert ✓';}
+        catch(e){if(status)status.textContent='Kopieren nicht möglich – Textfelder manuell markieren';}
+      });
+    }
+  }
+  // Der Drawer hat ursprünglich einen Block-1-Header. Beim Wechsel zu Block 3
+  // wird ausschließlich die sichtbare Überschrift angepasst und bei Rückkehr zurückgesetzt.
+  const simHead=document.querySelector('#simulationPanel .sim-head');
+  const simHeadSmall=simHead?.querySelector('small');
+  const simHeadTitle=simHead?.querySelector('h2');
+  if(simHeadSmall && simHeadTitle){
+    const originalSmall=simHeadSmall.textContent, originalTitle=simHeadTitle.textContent;
+    const refreshHead=(isBlock3)=>{
+      simHeadSmall.textContent=isBlock3?'BLOCK 3 · INTERAKTIVE FALLSTUDIEN':originalSmall;
+      simHeadTitle.textContent=isBlock3?'Planspiele · Block 3':originalTitle;
+    };
+    document.querySelectorAll('#simulationPanel .sim-tab').forEach(tab=>tab.addEventListener('click',()=>refreshHead(tab.dataset.simtab==='promotion')));
+    refreshHead(!!panel?.classList.contains('active'));
+  }
+  window.__BLOCK3_GENERATION_CLASH__={version:'2026-10-29-v2',slidesReplaced:replaced,paneUpdated:!!panel};
+  console.info('Generation Clash Update:',window.__BLOCK3_GENERATION_CLASH__);
+})();

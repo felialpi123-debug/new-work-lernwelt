@@ -157,3 +157,89 @@ body.presentation #app>.b3-pro.scene.active .b3p-photo{max-height:450px}
   .b3-pro .b3p-role-board{grid-template-columns:1fr}
   #app>.b3p-any.scene::after{width:100%;opacity:.08;background-position:center top}
 }
+
+/* ===== Generation Clash: three revised scenes + complete in-pane case file ===== */
+#app>.b3gc-slide.scene{box-sizing:border-box!important;display:flex!important;flex-direction:column!important;gap:10px!important;padding:clamp(15px,2vw,30px) clamp(18px,2.6vw,38px) 75px!important;overflow-y:auto!important;background:#f7f6f2!important;color:#162849!important;height:100%!important;max-height:100%!important;isolation:isolate}
+#app>.b3gc-slide.scene::before,#app>.b3gc-slide.scene::after{display:none!important;content:none!important}
+.b3gc-slide *{box-sizing:border-box}
+.b3gc-slide h1{font-size:clamp(27px,3.1vw,45px)!important;line-height:1.08!important;letter-spacing:-.035em!important;margin:4px 0 0!important;max-width:1050px!important}
+.b3gc-slide h2{font-size:clamp(17px,1.45vw,21px)!important;line-height:1.22!important;margin:0 0 8px!important}
+.b3gc-slide p{line-height:1.4!important;margin:5px 0!important}
+.b3gc-slide .b3gc-lead{font-size:clamp(14px,1.28vw,19px)!important;line-height:1.4!important;margin:3px 0 9px!important;max-width:1150px}
+.b3gc-slide .b3gc-rev{font-size:clamp(11px,1vw,14px);font-weight:800;color:#007d6a;letter-spacing:.09em}
+.b3gc-slide .b3gc-body{display:flex;flex-direction:column;gap:12px;flex:1;min-height:0}
+.b3gc-slide .b3gc-brief-grid{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(300px,.62fr);gap:18px;min-height:0;align-items:stretch}
+.b3gc-slide .b3gc-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-bottom:14px}
+.b3gc-slide .b3gc-metrics article{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:13px 11px;background:#fff;border:1px solid #dce7e1;border-radius:16px;min-height:89px;box-shadow:0 8px 20px rgba(12,45,65,.05)}
+.b3gc-slide .b3gc-metrics strong{font-size:clamp(26px,2.6vw,40px);line-height:1;font-weight:850;color:#007f70;letter-spacing:-.04em}
+.b3gc-slide .b3gc-metrics span{margin-top:7px;font-size:clamp(11px,.99vw,14px);line-height:1.23;font-weight:700;color:#28415a}
+.b3gc-slide .b3gc-box{padding:15px 18px;background:#fff;border:1px solid #d8e5e1;border-radius:18px}
+.b3gc-slide .b3gc-box p{font-size:clamp(13px,1.16vw,16px)!important;color:#213c58}
+.b3gc-slide .b3gc-note{font-size:12px!important;color:#61758a!important;margin-top:9px!important}
+.b3gc-slide .b3gc-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-top:12px}
+.b3gc-slide .b3gc-stages div{display:flex;flex-direction:column;gap:5px;padding:10px 9px;background:#e2f5ed;border-radius:12px}
+.b3gc-slide .b3gc-stages b{color:#08685c;font-size:clamp(11px,1vw,15px)}
+.b3gc-slide .b3gc-stages span{font-weight:800;font-size:12px;color:#2d5261}
+.b3gc-slide .b3gc-hero-image{position:relative;min-height:260px;border-radius:20px;overflow:hidden;background:#dce6e4}
+.b3gc-slide .b3gc-hero-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;display:block}
+.b3gc-slide .b3gc-hero-image:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(5,32,44,.88))}
+.b3gc-slide .b3gc-hero-image>div{position:absolute;z-index:1;left:16px;right:16px;bottom:15px;color:#fff;display:flex;flex-direction:column;gap:8px}
+.b3gc-slide .b3gc-hero-image b{font-size:20px}
+.b3gc-slide .b3gc-hero-image span{font-size:14px;line-height:1.4}
+.b3gc-slide .b3gc-footer{padding:12px 15px;border-radius:12px;border-left:4px solid #008d7d;background:#e2f4ec;color:#154b43;font-size:clamp(13px,1.12vw,16px);line-height:1.4}
+.b3gc-slide .b3gc-person-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.b3gc-slide .b3gc-person{background:#fff;border:1px solid #d8e6e1;border-radius:17px;padding:12px 14px;box-shadow:0 6px 20px rgba(12,43,63,.04)}
+.b3gc-slide .b3gc-person-head{display:flex;gap:11px;align-items:center;margin-bottom:8px}
+.b3gc-slide .b3gc-person-head h2{margin:0!important;font-size:19px!important}
+.b3gc-slide .b3gc-person-head small{font-size:12px;color:#466175}
+.b3gc-slide .b3gc-avatar{flex:0 0 40px;height:40px;border-radius:50%;background:#d4f4eb;color:#077768;display:grid;place-items:center;font-size:18px;font-weight:900}
+.b3gc-slide .b3gc-person:nth-child(2) .b3gc-avatar{background:#dfe8ff;color:#22396a}
+.b3gc-slide .b3gc-person:nth-child(3) .b3gc-avatar{background:#ffeadc;color:#884d26}
+.b3gc-slide .b3gc-person:nth-child(4) .b3gc-avatar{background:#e4e0ff;color:#59469b}
+.b3gc-slide .b3gc-person blockquote{padding:6px 10px;border-left:3px solid #00a48c;background:#f0f8f5;border-radius:0 8px 8px 0;font-size:clamp(12px,1.04vw,15px);line-height:1.32;color:#1a4054;margin:0 0 9px!important}
+.b3gc-slide .b3gc-evidence{display:flex;flex-direction:column;gap:3px;font-size:clamp(12px,1vw,14px);line-height:1.3;color:#283f5a}
+.b3gc-slide .b3gc-evidence b{font-size:11px;letter-spacing:.08em;color:#007a6d;text-transform:uppercase}
+.b3gc-slide details{border-radius:12px;padding:8px 10px;background:#f5f7f7;border:1px solid #e0e7e4;margin-top:9px}
+.b3gc-slide details summary{cursor:pointer;font-size:13px;font-weight:750;color:#176b61}
+.b3gc-slide details p{font-size:13px!important;line-height:1.4}
+.b3gc-slide .b3gc-age-reveal{background:#e7f5f1;margin-top:0}
+.b3gc-slide .b3gc-result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.b3gc-slide .b3gc-result{padding:15px 18px;border:1px solid #d8e6e1;border-radius:18px;background:#fff}
+.b3gc-slide .b3gc-result:nth-child(2){background:#eff9f5}
+.b3gc-slide .b3gc-result:nth-child(3){background:#eef2fa}
+.b3gc-slide .b3gc-result:nth-child(4){background:#f8f0e6}
+.b3gc-slide .b3gc-result>span{display:block;margin-bottom:6px;color:#007f70;font-weight:900;font-size:11px;letter-spacing:.08em}
+.b3gc-slide .b3gc-result p{font-size:clamp(13px,1.14vw,16px)!important}
+.b3gc-slide .b3gc-teacher{margin-top:0;padding:10px 14px;background:#eaf5f0;border-radius:14px}
+.b3gc-slide .b3gc-teacher-content{margin-top:10px;display:grid;gap:7px}
+/* Planspielbereich: selbsttragende Fallakte */
+.sim-pane[data-pane="promotion"] .b3gc-panel-mission{align-items:start}
+.sim-pane[data-pane="promotion"] .b3gc-pane-body{min-width:0;display:flex;flex-direction:column;gap:12px}
+.sim-pane[data-pane="promotion"] .b3gc-pane-body>p{margin:0;line-height:1.48;font-size:15px}
+.sim-pane[data-pane="promotion"] .b3gc-panel-stats{display:flex;flex-wrap:wrap;gap:7px}
+.sim-pane[data-pane="promotion"] .b3gc-panel-stats span{display:flex;align-items:center;gap:4px;border-radius:11px;padding:8px 10px;background:#e3f5ee;color:#134e45;font-size:12px}
+.sim-pane[data-pane="promotion"] .b3gc-panel-buttons{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.sim-pane[data-pane="promotion"] .b3gc-panel-buttons button{border:0;border-radius:11px;padding:10px 12px;background:#007d70;color:#fff;font-size:13px;font-weight:800;cursor:pointer}
+.sim-pane[data-pane="promotion"] .b3gc-panel-buttons button:hover{background:#095f57}
+.sim-pane[data-pane="promotion"] .b3gc-doc{background:#f6faf8;border:1px solid #d9e7e1;border-radius:14px;padding:10px 12px}
+.sim-pane[data-pane="promotion"] .b3gc-doc summary{font-size:15px;font-weight:800;color:#173958;cursor:pointer}
+.sim-pane[data-pane="promotion"] .b3gc-doc p,.sim-pane[data-pane="promotion"] .b3gc-doc li{font-size:14px;line-height:1.5;margin:7px 0}
+.sim-pane[data-pane="promotion"] .b3gc-doc ol,.sim-pane[data-pane="promotion"] .b3gc-doc ul{padding-left:22px;margin:10px 0 0}
+.sim-pane[data-pane="promotion"] .b3gc-workbook{padding:15px;border-radius:16px;border:1px solid #bfddd2;background:#edf8f3;display:grid;gap:9px}
+.sim-pane[data-pane="promotion"] .b3gc-workbook h5{font-size:19px;margin:0;color:#173958}
+.sim-pane[data-pane="promotion"] .b3gc-workbook>p{font-size:13px;margin:0 0 5px;color:#4e6977}
+.sim-pane[data-pane="promotion"] .b3gc-workbook label{display:grid;gap:5px;font-size:13px;color:#21465b;font-weight:800}
+.sim-pane[data-pane="promotion"] .b3gc-workbook textarea{box-sizing:border-box;width:100%;resize:vertical;min-height:76px;border:1px solid #c5d8d1;border-radius:10px;padding:9px 11px;font-family:inherit;font-size:14px;background:#fff;color:#173958}
+.sim-pane[data-pane="promotion"] .b3gc-save-status{color:#176558;font-weight:750;font-size:12px}
+@media (max-width:900px){
+  .b3gc-slide .b3gc-brief-grid{grid-template-columns:1fr}
+  .b3gc-slide .b3gc-hero-image{min-height:170px;max-height:210px}
+  .b3gc-slide .b3gc-hero-image>div{bottom:9px}
+  .b3gc-slide .b3gc-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+  .b3gc-slide .b3gc-person-grid,.b3gc-slide .b3gc-result-grid{grid-template-columns:1fr}
+  .b3gc-slide .b3gc-stages{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .b3gc-slide .b3gc-brief-grid{display:block}
+  .b3gc-slide .b3gc-hero-image{display:none}
+}
