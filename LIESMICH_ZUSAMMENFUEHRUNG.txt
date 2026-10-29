@@ -1,0 +1,16 @@
+ZUSAMMENGEFUEHRTES UPDATE – BLOCK 2 + BLOCK 3
+
+Dies ist ein gemeinsames Update aus deinem zuletzt hochgeladenen Block-2-Paket und dem Block-3-Paket mit Kapitel 4 und den vier Planspielen.
+- Block 2 Kapitel 1: Alle aktualisierten Folien, die Schätzfragen-Funktion, block2-update.css und die neuen Grafiken sind erhalten.
+- Block 3 Kapitel 4: Das aktuelle Layout, die 19 Folien und das Planspiel bleiben erhalten.
+- Bereich Planspiele: Kapitel 1 NovaWorks Skill Gap; Kapitel 2 Generation Clash; Kapitel 3 Leadership Inbox; Kapitel 4 The Promotion Decision.
+- Kapitel Organisationen verändern: bleibt aus Block 3 entfernt.
+
+INSTALLATION
+1. Vorher eine Sicherheitskopie des Lernwelt-Ordners erstellen.
+2. app.js und index.html im Lernwelt-Hauptordner ersetzen.
+3. block2-update.css im Hauptordner ablegen und die enthaltenen assets-Unterordner in den bestehenden assets-Ordner kopieren.
+4. Alle uebrigen vorhandenen Dateien, insbesondere styles.css und die editorial-Bilder, beibehalten.
+5. Lernwelt im Browser mit Strg+F5 neu laden.
+
+Wichtig: Das Paket enthaelt keine vollstaendige Lernwelt; es ist ein Update fuer deine bestehende Installation.
