@@ -1,8 +1,1 @@
-UPDATE – Kapitel 2 und Navigation
-
-Nur app.js austauschen (im Hauptverzeichnis der bestehenden Lernwelt).
-
-Entfernt: Generation Myth Buster, Myth Buster Runde 2 und die zusätzliche Folie Mythos oder Evidenz.
-Navigation: Kapitel 2 zeigt jetzt auch die vorgeschalteten Schätzfragen, den Deutschland/Welt-Vergleich, das Video und alle Generation-Clash-Folien. Kapitel 1 umfasst nun auch Auswertung, Belbin und Kahoot.
-
-Andere Dateien bleiben unverändert.
+Kapitel 4 Frauen in Führung: Ersetze app.js UND index.html in deiner bestehenden Lernwelt. Alle bisherigen Assets bleiben unverändert. Das Planspiel ist über Block 3 im Inhaltsverzeichnis sowie über den neuen Tab „Beförderung · Block 3“ im Planspiel-Panel erreichbar. Forschungszahlen sind von fiktiven Planspieldaten gekennzeichnet.
