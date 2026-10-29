@@ -1,0 +1,16 @@
+BLOCK 3 – NEUDESIGN, 29.10.2026
+
+Bitte NICHT den bisherigen Gesamtstand ersetzen. Entpacke die ZIP und lade hoch:
+1. index.html (gemeinsame HTML-Datei; nur eine neue CSS- und Script-Verknüpfung hinzugefügt)
+2. block3-redesign-20261029.css (NEU, ins Stammverzeichnis)
+3. block3-redesign-20261029.js (NEU, ins Stammverzeichnis)
+4. 6 Bilder im Ordner assets/block3/ (NEU)
+
+WICHTIG: app.js, styles.css und sämtliche Block-2-Dateien bleiben vollständig unangetastet.
+Die neue JS-Datei läuft nach app.js und ersetzt ausschließlich ausgewählte Szenen aus Block 3.
+Verwendete bestehende Kapitel-Kennungen bleiben erhalten, Navigation wird für Your Future sichtbar auf Kapitel 5 umgestellt.
+
+Test: Öffne Block 3 > Skills statt Stellen. Du MUSST eine grüne Kennzeichnung "NEUDESIGN · 29.10.2026" sehen und ein deutlich anderes Foto-Layout.
+Falls nicht: kontrolliere, dass beide neuen Dateien im GitHub-Stammordner liegen und im veröffentlichten index.html eingebunden sind. In den Browser-Entwicklertools darf es keine 404 bei block3-redesign-20261029.js oder .css geben.
+
+Es wurden keine Daten aus Block 2 verändert oder kopiert.
