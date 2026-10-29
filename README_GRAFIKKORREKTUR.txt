@@ -1,0 +1,1 @@
+Korrektur: Acht Original-Modellgrafiken aus New_Work_Lernwelt_Vercel_Stand 20261029(1).zip wiederhergestellt. Alle anderen Dateien unveraendert aus Lernwelt_Gesamtupdate_Block2_Kapitel1_Kahoot_und_Block3_KI_Recruiter.zip. Fuer minimale Installation nur die acht Dateien unter assets/diagrams austauschen. Keine JS- oder HTML-Aenderung notwendig.
