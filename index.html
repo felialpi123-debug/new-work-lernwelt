@@ -18,18 +18,31 @@
 .k4v-slide.k4v-hasbg{position:relative;isolation:isolate;overflow:hidden!important}
 .k4v-slide.k4v-hasbg::before{content:"";position:absolute;inset:0;background-image:var(--k4bg);background-size:cover;background-position:center;opacity:.12;z-index:-2}
 .k4v-slide.k4v-hasbg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,250,247,.93),rgba(251,250,247,.98));z-index:-1}
-.k4v-bg-people{--k4bg:url(assets/editorial/people.jpg)}
-.k4v-bg-office{--k4bg:url(assets/editorial/office.jpg)}
-.k4v-bg-lounge{--k4bg:url(assets/editorial/lounge.jpg)}
-.k4v-bg-focus{--k4bg:url(assets/editorial/focus.jpg)}
-.k4v-bg-collab{--k4bg:url(assets/editorial/collaboration.jpg)}
-.k4v-bg-meeting{--k4bg:url(assets/editorial/meeting.jpg)}
-.k4v-bg-hybrid{--k4bg:url(assets/editorial/hybrid.jpg)}
-.k4v-bg-teamwork{--k4bg:url(assets/editorial/teamwork.jpg)}
+.k4v-bg-people{--k4bg:url(assets/block3/k4_leadership_photo.png)}
+.k4v-bg-office{--k4bg:url(assets/block3/k4_strategy_photo.png)}
+.k4v-bg-lounge{--k4bg:url(assets/block3/k4_discussion_photo.png)}
+.k4v-bg-focus{--k4bg:url(assets/block3/k4_collab_photo.png)}
+.k4v-bg-collab{--k4bg:url(assets/block3/k4_profiles_photo.png)}
+.k4v-bg-meeting{--k4bg:url(assets/block3/k4_strategy_photo.png)}
+.k4v-bg-hybrid{--k4bg:url(assets/block3/k4_care_photo.png)}
+.k4v-bg-teamwork{--k4bg:url(assets/block3/k4_discussion_photo.png)}
 .k4v-slide .k4v-covercopy,.k4v-slide .k4v-mediacopy,.k4v-slide .k4v-finalcopy,.k4v-slide .k4v-covergrid>div,.k4v-slide .k4v-takeaway,.k4v-slide .k4v-foot,.k4v-slide .k4v-call,.k4v-slide .k4v-side,.k4v-slide .k4v-stat,.k4v-slide .k4v-note,.k4v-slide .k4v-box{backdrop-filter:saturate(1.05);}
 .k4v-slide .k4v-covercopy,.k4v-slide .k4v-mediacopy,.k4v-slide .k4v-finalcopy{background:rgba(255,255,255,.78);border:1px solid rgba(16,43,78,.08);border-radius:22px;padding:18px 20px}
 .k4v-photo{box-shadow:0 10px 28px rgba(16,43,78,.12)}
 .k4v-photo.k4v-photo-contain{background-size:contain!important;background-repeat:no-repeat;background-position:center;background-color:#f2f5f5}
+
+.k4v-slide.k4v-hasbg::before{opacity:.18!important;filter:saturate(1.02) contrast(1.02)}
+.k4v-slide .k4v-photo{background-color:#eef3f2;background-size:cover;background-position:center;overflow:hidden}
+.k4v-slide .k4v-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.18));pointer-events:none}
+.k4v-slide .k4-photo-label{position:absolute;left:18px;bottom:16px;background:rgba(255,255,255,.88);padding:8px 12px;border-radius:999px;color:#0f6f69;font-weight:700;backdrop-filter:blur(6px)}
+.k4v-slide .k4v-body{position:relative}
+.k4v-photostamp{position:absolute;right:12px;bottom:10px;width:220px;height:128px;border-radius:18px;overflow:hidden;border:1px solid rgba(16,43,78,.08);box-shadow:0 12px 30px rgba(16,43,78,.16)}
+.k4v-photostamp-image{width:100%;height:100%;background-size:cover;background-position:center}
+.k4v-slide.k4v-cycle .k4v-photostamp,.k4v-slide.k4v-ai .k4v-photostamp,.k4v-slide.k4v-tools .k4v-photostamp,.k4v-slide.k4v-debrief .k4v-photostamp{width:240px;height:136px}
+.k4v-slide.k4v-profiles .k4v-photostamp,.k4v-slide.k4v-reveal-slide .k4v-photostamp{top:10px;bottom:auto}
+.k4v-slide.k4v-final .k4v-finalgrid{align-items:stretch}
+.k4v-slide.k4v-final .k4v-photo{min-height:290px}
+
 .k4v-slide .k4v-takeaway{background:rgba(230,245,242,.86)}
 .sim-pane[data-pane="promotion"] .mission-list{display:grid;gap:14px}
 .sim-pane[data-pane="promotion"] .mission{align-items:flex-start}
@@ -66,6 +79,15 @@
 .k4v-slide .k4v-task *{color:#102b4e!important}
 @media(max-width:900px){.k4v-slide .k4v-mediawide,.k4v-slide .k4v-cyclelayout{grid-template-columns:1fr 1fr!important;gap:10px!important}.k4v-slide .k4v-mediacopy{padding:5px!important}.k4fixed-cycle{padding:9px}.k4fixed-step{padding:7px}}
 
+
+/* Block 3 Kapitel 4: neue Fotostrecke; keine Foto-Overlays */
+.k4v-slide.k4v-hasbg::before{background-image:var(--k4bg)!important;opacity:.17!important;background-position:center 38%!important;background-size:cover!important;filter:none!important}
+.k4v-slide.k4v-hasbg::after{background:linear-gradient(90deg,rgba(250,249,246,.94),rgba(250,249,246,.84))!important}
+.k4v-slide .k4v-photo{background-size:contain!important;background-repeat:no-repeat!important;background-position:center!important;background-color:#e9eeeb!important;box-shadow:none!important}
+.k4v-slide .k4v-photo::after{display:none!important}
+.k4v-slide .k4v-photostamp{display:none!important}
+.k4v-slide .k4v-photo-slide .k4v-photo{min-height:220px}
+.k4v-slide .k4v-finalgrid .k4v-photo{background-size:contain!important}
 </style>
 <style id="k4-final-audit">
 /* FINAL K4 image quality control – excludes ALL automatically injected stock images */
