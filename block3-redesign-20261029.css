@@ -93,3 +93,67 @@ body.presentation #app>.b3-pro.scene.active .b3p-takeaway{padding:9px 13px!impor
 body.presentation #app>.b3-pro.scene.active .b3p-photo{max-height:450px}
 @media(max-width:850px){.b3-pro .b3p-grid3,.b3-pro .b3p-chapter-grid{grid-template-columns:repeat(2,1fr)}.b3-pro .b3p-split-photo{grid-template-columns:1fr 1fr}.b3-pro .b3p-bar-row{grid-template-columns:85px minmax(0,1fr) 55px;gap:5px}.b3-pro .b3p-fact-band{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){#app>.b3-pro.scene{padding:17px 15px 100px!important}.b3-pro .b3p-grid2,.b3-pro .b3p-grid3,.b3-pro .b3p-chapter-grid,.b3-pro .b3p-split,.b3-pro .b3p-split-photo,.b3-pro .b3p-hiring-layout,.b3-pro .b3p-sidebars,.b3-pro .b3p-videos,.b3-pro .b3p-est-layout,.b3-pro .b3p-careerpaths{grid-template-columns:1fr}.b3-pro .b3p-fact-band{grid-template-columns:1fr}.b3-pro .b3p-competence-result{flex-direction:column;gap:9px;text-align:center}.b3-pro .b3p-factor-row{grid-template-columns:repeat(2,1fr)}.b3-pro .b3p-photo{height:210px;min-height:210px}.b3-pro .b3p-top .b3p-revision{font-size:8px}.b3-pro .b3p-foursteps{grid-template-columns:1fr 1fr}.b3-pro .b3p-leadership-flow{grid-template-columns:repeat(2,1fr)}.b3-pro .b3p-bar-row{grid-template-columns:100px minmax(0,1fr) 58px}.b3-pro .b3p-videos article{padding:9px}}
+
+
+/* ===== Block 3 refinement patch styles ===== */
+#app>.b3p-any.scene{position:relative;overflow-y:auto!important}
+#app>.b3p-any.scene::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(247,246,242,.96) 0%,rgba(247,246,242,.94) 48%,rgba(247,246,242,.88) 100%);pointer-events:none;z-index:0}
+#app>.b3p-any.scene::after{content:"";position:absolute;top:0;right:0;bottom:0;width:42%;background-repeat:no-repeat;background-position:center right;background-size:cover;opacity:.14;pointer-events:none;z-index:0}
+#app>.b3p-any.scene>*{position:relative;z-index:1}
+#app>.b3p-any.b3p-ch1.scene::after{background-image:url('assets/block3/redesign-skills.webp')}
+#app>.b3p-any.b3p-ch2.scene::after{background-image:url('assets/block3/redesign-people.webp')}
+#app>.b3p-any.b3p-ch3.scene::after{background-image:url('assets/block3/redesign-leader.webp')}
+#app>.b3p-any.b3p-ch4.scene::after{background-image:url('assets/block3/redesign-care.webp')}
+#app>.b3p-any.b3p-ch5.scene::after{background-image:url('assets/block3/redesign-career.webp')}
+.b3p-intro-band{display:flex;align-items:flex-start;gap:14px;margin:10px 0 18px;padding:14px 16px;border-radius:18px;background:rgba(196,232,226,.75);border:1px solid rgba(0,126,111,.18);max-width:1040px}
+.b3p-intro-band strong{min-width:88px;color:#007e6f;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.b3p-intro-band span{font-size:17px;line-height:1.45;color:#18325a}
+.b3-pro .b3p-pill-row{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px}
+.b3-pro .b3p-pill-row span{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;background:#fff;border:1px solid #d7e5e1;font-weight:800;font-size:14px;color:#16304f;box-shadow:0 8px 24px rgba(8,31,52,.06)}
+.b3-pro .b3p-mini-grid{display:grid;gap:14px}
+.b3-pro .b3p-mini-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.b3-pro .b3p-mini-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.b3-pro .b3p-mini-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.b3-pro .b3p-mini-grid-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.b3-pro .b3p-card.sand{background:#f8efe4}
+.b3-pro .b3p-card.navy{background:#dfe7ff}
+.b3-pro .b3p-note-box{padding:18px 20px;border-radius:18px;background:#fff;border:1px solid #d9e7e2;box-shadow:0 10px 30px rgba(8,31,52,.05)}
+.b3-pro .b3p-note-box h3{margin:0 0 8px;font-size:22px;color:#16304f}
+.b3-pro .b3p-note-box p{margin:0;font-size:16px;line-height:1.55;color:#18325a}
+.b3-pro .b3p-accordion-list{display:grid;gap:10px}
+.b3-pro .b3p-accordion-list details{background:#fff;border:1px solid #d8e6e1;border-radius:16px;padding:10px 14px 12px;box-shadow:0 8px 24px rgba(8,31,52,.04)}
+.b3-pro .b3p-accordion-list summary{cursor:pointer;font-size:17px;color:#16304f}
+.b3-pro .b3p-accordion-list p{margin:10px 0 0;font-size:15px;line-height:1.5}
+.b3-pro .b3p-role-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:6px}
+.b3-pro .b3p-role-card{padding:14px 14px 15px;border-radius:18px;background:#fff;border:1px solid #d9e6e1;box-shadow:0 8px 22px rgba(8,31,52,.05)}
+.b3-pro .b3p-role-card .grp{display:inline-block;margin-bottom:8px;padding:5px 9px;border-radius:999px;background:#e4f6f1;color:#007e6f;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.b3-pro .b3p-role-card h3{margin:0 0 7px;font-size:20px;line-height:1.18;color:#16304f}
+.b3-pro .b3p-role-card p{margin:0;font-size:15px;line-height:1.42;color:#18325a}
+.b3-pro .b3p-mission .b3p-photo,.b3-pro .b3p-profiles .b3p-photo,.b3-pro .b3p-bridge .b3p-photo,.b3-pro .b3p-debrief .b3p-photo{min-height:320px}
+.b3-pro .b3p-test .b3new-action{display:inline-flex;align-items:center;justify-content:center;padding:11px 14px;border-radius:14px;background:#007e6f;color:#fff!important;text-decoration:none;font-weight:800;margin-bottom:8px}
+.b3-pro .b3p-support .b3-panel,
+.b3-pro .b3p-support .b3-card,
+.b3-pro .b3p-support article,
+.b3-pro .b3p-support .callout,
+.b3-pro .b3p-support .b3new-task,
+.b3-pro .b3p-support details{background:rgba(255,255,255,.92);border:1px solid #d8e6e1;border-radius:18px;box-shadow:0 10px 28px rgba(8,31,52,.05)}
+.b3p-support h1{max-width:980px}
+.b3p-support .lead{max-width:1000px}
+.b3p-support .b3new-cards, .b3p-support .b3-card-grid{gap:14px}
+.b3p-support .callout{padding:14px 16px}
+.b3p-support .video-card, .b3p-support iframe{border-radius:16px;overflow:hidden}
+@media (max-width: 1100px){
+  .b3-pro .b3p-mini-grid-5{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .b3-pro .b3p-mini-grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .b3-pro .b3p-mini-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .b3-pro .b3p-role-board{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 760px){
+  .b3p-intro-band{flex-direction:column}
+  .b3-pro .b3p-mini-grid-2,
+  .b3-pro .b3p-mini-grid-3,
+  .b3-pro .b3p-mini-grid-4,
+  .b3-pro .b3p-mini-grid-5,
+  .b3-pro .b3p-role-board{grid-template-columns:1fr}
+  #app>.b3p-any.scene::after{width:100%;opacity:.08;background-position:center top}
+}

@@ -49,3 +49,247 @@
  window.__BLOCK3_REDESIGN__={version:"2026-10-29-final-3",replaced:changed,expected:Object.keys(updated).length};
  console.info("Block3 redesign installed:",window.__BLOCK3_REDESIGN__);
 })();
+
+
+/* ===== Block 3 visual refinement patch: Planspiel + Belbin + broader liveliness ===== */
+(function(){
+  "use strict";
+  if(typeof scenes === "undefined" || !Array.isArray(scenes)) return;
+  const root=document.getElementById('app');
+  if(!root) return;
+  const replace={
+    "b3c1-case": `
+<section class="scene-inner b3-scene b3-pro b3p-mission">
+  <div class="b3p-top"><span>BLOCK 3 · KAPITEL 1 · NOVAWORKS · PLANSPIEL</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>NovaWorks: Worum geht es im Planspiel?</h1>
+  <p class="b3p-lead">Ihr seid das Projektleitungsteam von NovaWorks. In <b>12 Wochen</b> soll der Service <b>NovaCare</b> bei <b>drei Pilotkunden</b> starten. Eure Aufgabe ist keine Theoriefrage, sondern eine Managemententscheidung unter Zeit-, Ressourcen- und Qualitätsdruck.</p>
+  <div class="b3p-content">
+    <div class="b3p-split b3p-split-photo">
+      <div>
+        <div class="b3p-pill-row">
+          <span>Start in 12 Wochen</span><span>3 Pilotkunden</span><span>30 Budgetpunkte</span><span>8 interne Profile</span>
+        </div>
+        <div class="b3p-mini-grid b3p-mini-grid-2">
+          <article class="b3p-card mint"><h3>Pflichtumfang</h3><div>Kunden melden Störungen, verfolgen den Status und buchen Wartungen. Zusätzlich braucht ihr eine Schnittstelle zum Bestandssystem, Datenschutz und menschliche Qualitätskontrolle.</div></article>
+          <article class="b3p-card blue"><h3>Ressourcenlage</h3><div>Es gibt vorhandene Mitarbeitende mit begrenzter Kapazität. Reicht das nicht aus, könnt ihr mit <b>Hire</b>, <b>Train</b>, <b>AI</b>, <b>Partner</b> oder <b>Stop</b> nachsteuern.</div></article>
+          <article class="b3p-card accent"><h3>Euer Ziel</h3><div>Alle Pflicht-Skills müssen im Mindestniveau und mit ausreichender Kapazität abgedeckt sein – innerhalb von Zeitfenster und Budget.</div></article>
+          <article class="b3p-card sand"><h3>Woran ihr scheitern könnt</h3><div>Fehlende Skills, zu wenig Kapazität, falsche Priorisierung oder ein Launchplan ohne belastbare Qualitätssicherung.</div></article>
+        </div>
+        <div class="b3p-takeaway"><strong>OUTPUT</strong><span>Am Ende präsentiert ihr eine begründete Launch-Entscheidung: <b>Wie deckt ihr die Skill-Lücken?</b> <b>Was kostet eure Lösung?</b> <b>Welches Risiko bleibt?</b></span></div>
+      </div>
+      <figure class="b3p-photo"><img src="assets/block3/redesign-novaworks.webp" alt="Projektteam in einer Besprechung"><figcaption>Das Planspiel verbindet Skill-Analyse, Priorisierung und Managemententscheidung.</figcaption></figure>
+    </div>
+  </div>
+</section>`,
+    "b3c1-requirements": `
+<section class="scene-inner b3-scene b3-pro b3p-req">
+  <div class="b3p-top"><span>KAPITEL 1 · NOVAWORKS · SKILLANFORDERUNGEN</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Welche Skills braucht NovaCare?</h1>
+  <p class="b3p-lead">Bevor ihr Personalentscheidungen trefft, müsst ihr wissen, <b>was genau geliefert werden muss</b>. Bewertet jede Aufgabe nach <b>erforderlichem Skillniveau</b> und <b>benötigter Kapazität</b>.</p>
+  <div class="b3p-content">
+    <div class="b3p-mini-grid b3p-mini-grid-3">
+      <article class="b3p-card mint"><h3>Backend / API</h3><div><b>Mindestniveau 3</b><br>Bedarf: <b>8 Kapazitätspunkte</b><br>Schnittstelle zum Bestandssystem ist Pflicht.</div></article>
+      <article class="b3p-card blue"><h3>UX / Portal</h3><div><b>Mindestniveau 2</b><br>Bedarf: <b>5 Punkte</b><br>Nutzerführung für Meldung, Status und Buchung.</div></article>
+      <article class="b3p-card sand"><h3>Kundenservice</h3><div><b>Mindestniveau 2</b><br>Bedarf: <b>5 Punkte</b><br>Hilft beim Betrieb und bei Pilotkundenrückfragen.</div></article>
+      <article class="b3p-card blue"><h3>Datenschutz</h3><div><b>Mindestniveau 3</b><br>Bedarf: <b>3 Punkte</b><br>Freigabe und Risikoprüfung sind nicht optional.</div></article>
+      <article class="b3p-card mint"><h3>Prozess-/Ticketdesign</h3><div><b>Mindestniveau 2</b><br>Bedarf: <b>5 Punkte</b><br>Regelt den Ablauf von Störung bis Bearbeitung.</div></article>
+      <article class="b3p-card accent"><h3>Testen / Qualität</h3><div><b>Mindestniveau 2</b><br>Bedarf: <b>4 Punkte</b><br>Human-in-the-loop bleibt verbindlich.</div></article>
+    </div>
+    <div class="b3p-split" style="margin-top:18px;grid-template-columns:1.08fr .92fr;">
+      <div class="b3p-takeaway"><strong>OPTIONAL</strong><span><b>KI-Priorisierung</b> ist wünschenswert, aber nicht launchkritisch. Wenn euer Budget knapp wird, dürft ihr diese Funktion verschieben – Pflicht-Skills jedoch nicht.</span></div>
+      <div class="b3p-note-box"><h3>Leselogik für das Planspiel</h3><p><b>Skillniveau:</b> 0 = keine Kenntnisse, 1 = Grundlagen, 2 = selbstständig, 3 = Expertenniveau.<br><b>Kapazitätspunkte:</b> verfügbarer Projekteinsatz über 12 Wochen – <u>kein Geld</u>.</p></div>
+    </div>
+  </div>
+</section>`,
+    "b3c1-profiles": `
+<section class="scene-inner b3-scene b3-pro b3p-profiles">
+  <div class="b3p-top"><span>KAPITEL 1 · NOVAWORKS · SKILLPROFILE</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Die acht Skillprofile im Überblick</h1>
+  <p class="b3p-lead">Jedes Profil verbindet <b>Rolle</b>, <b>Skillniveau</b>, <b>Kapazität</b> und einen kurzen Praxishinweis. Öffnet die Profile und prüft: <b>Wer kann welche Pflichtaufgabe auf welchem Niveau übernehmen?</b></p>
+  <div class="b3p-content">
+    <div class="b3p-split b3p-split-photo">
+      <div>
+        <div class="b3p-accordion-list">
+          <details open><summary><b>Ada</b> · Kundenservice · 7 Kapazitätspunkte</summary><p><b>Skills:</b> Kundenservice 3; Testen 1; UX 1<br><b>Hinweis:</b> Kundenfälle und Abnahmetests.</p></details>
+          <details><summary><b>Ben</b> · Datenanalyse · 5 Kapazitätspunkte</summary><p><b>Skills:</b> Testen/QA 2; Prozessdesign 1; Datenanalyse 3<br><b>Hinweis:</b> Kann Testfälle und Qualitätsnachweise koordinieren.</p></details>
+          <details><summary><b>Cem</b> · Prozessdesign · 6 Kapazitätspunkte</summary><p><b>Skills:</b> Prozessdesign 3; Kundenservice 2; UX 1<br><b>Hinweis:</b> Verantwortet Ticketabläufe.</p></details>
+          <details><summary><b>Dina</b> · UX/Produkt · 5 Kapazitätspunkte</summary><p><b>Skills:</b> UX/Portal 3; Testen 1; Kundenservice 1<br><b>Hinweis:</b> Erstellt klickbaren Portalprototyp.</p></details>
+          <details><summary><b>Eva</b> · KI-Prototypen · 4 Kapazitätspunkte</summary><p><b>Skills:</b> KI-Integration 2; Testen 1; Backend/API 1<br><b>Hinweis:</b> KI-Ergebnisse müssen separat kontrolliert werden.</p></details>
+          <details><summary><b>Finn</b> · IT-Sicherheit · 3 Kapazitätspunkte</summary><p><b>Skills:</b> Datenschutz 3; IT-Sicherheit 3; Backend/API 1<br><b>Hinweis:</b> Datenschutzfreigabe; keine produktive Schnittstellenentwicklung.</p></details>
+          <details><summary><b>Gina</b> · Projektleitung · 4 Kapazitätspunkte</summary><p><b>Skills:</b> Koordination 3; Prozessdesign 1; Testen 1<br><b>Hinweis:</b> Plant Meilensteine; keine zusätzliche technische Umsetzung.</p></details>
+          <details><summary><b>Hao</b> · Kommunikation · 5 Kapazitätspunkte</summary><p><b>Skills:</b> Kundenservice 2; UX 1; Testen 1<br><b>Hinweis:</b> Kundenschulung und Kommunikation.</p></details>
+        </div>
+        <div class="b3p-takeaway"><strong>MERKE</strong><span>Für <b>nicht genannte Skills</b> gilt Niveau 0. Interne Kapazitätspunkte werden <b>nicht</b> vom externen Maßnahmenbudget abgezogen.</span></div>
+      </div>
+      <figure class="b3p-photo"><img src="assets/block3/redesign-collab.webp" alt="Kollaboratives Arbeiten in einem modernen Büro"><figcaption>Ein Profil beschreibt nicht nur Wissen, sondern auch Verfügbarkeit im Projekt.</figcaption></figure>
+    </div>
+  </div>
+</section>`,
+    "b3c1-rules": `
+<section class="scene-inner b3-scene b3-pro b3p-rules">
+  <div class="b3p-top"><span>KAPITEL 1 · NOVAWORKS · ENTSCHEIDUNGSLOGIK</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Mit welchen Hebeln dürft ihr Lücken schließen?</h1>
+  <p class="b3p-lead">Die Kosten sind <b>fiktive Spielpunkte</b>. Interne Teamkapazitäten sind separat und kosten 0 Budgetpunkte. Entscheidend ist nicht nur die Maßnahme, sondern auch <b>Wirkung, Zeit bis zur Verfügbarkeit und verbleibendes Risiko</b>.</p>
+  <div class="b3p-content">
+    <div class="b3p-mini-grid b3p-mini-grid-5">
+      <article class="b3p-card mint"><h3>HIRE</h3><div>20 Punkte · verfügbar ab Woche 9 · deckt <b>einen fehlenden Skill</b> bis zu 8 Punkte auf Niveau 3 ab.</div></article>
+      <article class="b3p-card blue"><h3>TRAIN</h3><div>8 Punkte · wirksam ab Woche 7 · verbessert bei <b>einer Person</b> einen Skill um eine Stufe.</div></article>
+      <article class="b3p-card accent"><h3>KI</h3><div>12 Punkte · ab Woche 4 · unterstützt Routinearbeit, ersetzt aber keine Pflicht-Skills und keine Qualitätsprüfung.</div></article>
+      <article class="b3p-card sand"><h3>PARTNER</h3><div>15 Punkte · ab Woche 6 · deckt einen Pflicht-Skill auf Niveau 3 mit bis zu 8 Punkten ab.</div></article>
+      <article class="b3p-card navy"><h3>STOP</h3><div>0 Punkte · nur für optionale Funktionen. Pflichtumfang und Datenschutz bleiben verbindlich.</div></article>
+    </div>
+    <div class="b3p-takeaway"><strong>QUALITÄTSREGEL</strong><span>Portal, Schnittstelle, Datenschutz und Ticketbearbeitung brauchen jeweils eine <b>benannte Qualitätsprüfung</b>. Ein günstiger Plan ist wertlos, wenn niemand das Ergebnis absichert.</span></div>
+  </div>
+</section>`,
+    "b3c1-game": `
+<section class="scene-inner b3-scene b3-pro b3p-game">
+  <div class="b3p-top"><span>KAPITEL 1 · NOVAWORKS · ARBEITSAUFTRAG</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Was sollt ihr jetzt konkret tun?</h1>
+  <p class="b3p-lead">Bearbeitet den Fall in eurer Gruppe in <b>25 Minuten</b>. Ziel ist eine <b>belastbare Launch-Entscheidung</b>, keine perfekte Musterlösung.</p>
+  <div class="b3p-content">
+    <div class="b3p-mini-grid b3p-mini-grid-4">
+      <article class="b3p-card mint"><h3>1 · Soll/Ist prüfen</h3><div>Vergleicht Anforderungen und Profile. Wo fehlt Skillniveau? Wo fehlt Kapazität?</div></article>
+      <article class="b3p-card blue"><h3>2 · Intern besetzen</h3><div>Ordnet Pflichtaufgaben Personen und Kapazitätspunkte zu. Niemand darf seine verfügbare Kapazität überschreiten.</div></article>
+      <article class="b3p-card accent"><h3>3 · Lücken schließen</h3><div>Wählt Hire, Train, KI, Partner oder Stop. Begründet eure Wahl mit Kosten, Wirkung und verfügbarer Zeit.</div></article>
+      <article class="b3p-card sand"><h3>4 · Entscheidung abgeben</h3><div>Erstellt einen Launchplan und nennt mindestens <b>ein verbleibendes Risiko</b>.</div></article>
+    </div>
+    <div class="b3p-split" style="margin-top:18px;grid-template-columns:1.06fr .94fr;">
+      <div class="b3p-note-box"><h3>Abgabeformat</h3><p><b>Aufgabe | Verantwortlich | Soll-Skill | vorhandener Skill | Kapazität | Maßnahme | Budget | ab Woche | Qualitätsprüfung</b></p><p>Ergänzt außerdem: <b>Budgetsumme (≤ 30)</b>, <b>Launchentscheidung (ja/nein)</b> und <b>ein Risiko</b>.</p></div>
+      <div class="b3p-takeaway"><strong>PRÜFFRAGEN</strong><span>Wer übernimmt Backend/API auf Niveau 3? Wer sichert Datenschutz ab? Welche Funktion dürft ihr im Zweifel verschieben – und welche nicht?</span></div>
+    </div>
+  </div>
+</section>`,
+    "b3c1-debrief": `
+<section class="scene-inner b3-scene b3-pro b3p-debrief">
+  <div class="b3p-top"><span>KAPITEL 1 · NOVAWORKS · AUSWERTUNG</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Wie könnte eine plausible Lösung aussehen?</h1>
+  <p class="b3p-lead">Es gibt mehrere vertretbare Lösungen. Eine naheliegende Strategie ist, die größte technische Lücke extern abzusichern und die übrigen Pflicht-Skills intern zu bündeln.</p>
+  <div class="b3p-content">
+    <div class="b3p-split b3p-split-photo">
+      <div>
+        <div class="b3p-mini-grid b3p-mini-grid-2">
+          <article class="b3p-card mint"><h3>Beispiellösung</h3><div><b>Partner</b> übernimmt Backend/API (15 Punkte, ab Woche 6). Intern decken Dina, Ada, Finn, Cem und Ben UX, Kundenservice, Datenschutz, Prozesse und QA ab.</div></article>
+          <article class="b3p-card blue"><h3>Bewusste Priorisierung</h3><div><b>KI-Priorisierung wird verschoben</b>. So bleibt das Budget im Rahmen und der Pflichtumfang bleibt absicherbar.</div></article>
+          <article class="b3p-card accent"><h3>Stärke der Lösung</h3><div>Die kritischste technische Lücke wird schnell geschlossen; interne Kompetenzen werden dort eingesetzt, wo sie belastbar vorhanden sind.</div></article>
+          <article class="b3p-card sand"><h3>Diskutierbares Restrisiko</h3><div>Externe Abhängigkeit, Übergabefehler oder zu knappe Zeit für Integration und Abnahme.</div></article>
+        </div>
+        <div class="b3p-takeaway"><strong>DISKUSSION</strong><span>Warum wäre <b>Hire</b> ebenfalls denkbar, aber zeitlich riskanter? Wann würdet ihr für einen dauerhaften Rollout eher interne Entwicklung aufbauen?</span></div>
+      </div>
+      <figure class="b3p-photo"><img src="assets/block3/redesign-support.webp" alt="Führungskraft erklärt eine Entscheidung im Team"><figcaption>Wichtig ist nicht nur die Wahl der Maßnahme, sondern auch die Begründung dahinter.</figcaption></figure>
+    </div>
+  </div>
+</section>`,
+    "b3x1-bridge": `
+<section class="scene-inner b3-scene b3-pro b3p-bridge">
+  <div class="b3p-top"><span>BLOCK 3 · KAPITEL 1 · ÜBERGANG</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Warum schauen wir nach dem Planspiel auf Teamrollen?</h1>
+  <p class="b3p-lead">Im Planspiel habt ihr gesehen: Fachliche Skills entscheiden noch nicht automatisch darüber, ob ein Team gut zusammenarbeitet. Für den Projekterfolg zählt auch, <b>wie Menschen beitragen</b>, abstimmen und Entscheidungen absichern.</p>
+  <div class="b3p-content">
+    <div class="b3p-split b3p-split-photo">
+      <div>
+        <div class="b3p-mini-grid b3p-mini-grid-2">
+          <article class="b3p-card mint"><h3>Wozu Teamrollen?</h3><div>Sie helfen zu beschreiben, <b>welche Beiträge</b> Menschen typischerweise im Team leisten: Ideen entwickeln, strukturieren, moderieren, prüfen, umsetzen oder vertiefen.</div></article>
+          <article class="b3p-card blue"><h3>Welche Alternativen gibt es?</h3><div><b>Belbin</b> betrachtet Beiträge zur Zusammenarbeit. <b>DISC</b> fokussiert Kommunikationsstile. <b>Big Five</b> beschreibt Persönlichkeit. <b>RACI</b> klärt Verantwortung, ist aber kein Rollenmodell.</div></article>
+          <article class="b3p-card sand"><h3>Warum hier Belbin?</h3><div>Für NovaWorks ist Belbin anschaulich, weil das Modell gut zeigt, welche <b>ergänzenden Teambeiträge</b> für ein Projekt fehlen könnten – z. B. Koordination, kritisches Prüfen oder konsequente Umsetzung.</div></article>
+          <article class="b3p-card accent"><h3>Wichtige Grenze</h3><div>Teamrollen sind <b>keine festen Typen</b> und kein Nachweis beruflicher Eignung. Sie dienen hier als Reflexionshilfe – nicht als Diagnosetool.</div></article>
+        </div>
+        <div class="b3p-takeaway"><strong>TRANSFERFRAGE</strong><span>Welche Zusammenarbeit fehlte in eurer NovaCare-Lösung möglicherweise, obwohl die fachlichen Skills abgedeckt waren?</span></div>
+      </div>
+      <figure class="b3p-photo"><img src="assets/block3/redesign-belbin.webp" alt="Team in einer lebendigen Besprechung"><figcaption>Teams brauchen nicht nur Können, sondern auch ergänzende Beiträge zur Zusammenarbeit.</figcaption></figure>
+    </div>
+  </div>
+</section>`,
+    "b3x1-roles": `
+<section class="scene-inner b3-scene b3-pro b3p-belbin">
+  <div class="b3p-top"><span>BLOCK 3 · KAPITEL 1 · TEAMROLLEN</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Belbin anschaulich: neun Rollen, drei Funktionsfelder</h1>
+  <p class="b3p-lead">Belbin beschreibt bevorzugte <b>Beiträge zur Teamarbeit</b>. Die Rollen helfen zu erkennen, welche Perspektiven in einem Projekt stark vertreten sind – und welche möglicherweise fehlen.</p>
+  <div class="b3p-content">
+    <div class="b3p-role-board">
+      <article class="b3p-role-card"><span class="grp">Ideen & Impulse</span><h3>Plant</h3><p>Kreative Ideen und ungewöhnliche Lösungen.</p></article>
+      <article class="b3p-role-card"><span class="grp">Ideen & Impulse</span><h3>Resource Investigator</h3><p>Knüpft Kontakte und entdeckt Chancen von außen.</p></article>
+      <article class="b3p-role-card"><span class="grp">Ideen & Impulse</span><h3>Coordinator</h3><p>Strukturiert das Team und klärt Ziele.</p></article>
+      <article class="b3p-role-card"><span class="grp">Steuerung & Urteil</span><h3>Shaper</h3><p>Bringt Tempo hinein und drängt auf Fortschritt.</p></article>
+      <article class="b3p-role-card"><span class="grp">Steuerung & Urteil</span><h3>Monitor Evaluator</h3><p>Prüft kritisch, wägt ab und hinterfragt.</p></article>
+      <article class="b3p-role-card"><span class="grp">Steuerung & Urteil</span><h3>Teamworker</h3><p>Vermittelt, unterstützt und hält das Team zusammen.</p></article>
+      <article class="b3p-role-card"><span class="grp">Umsetzung & Qualität</span><h3>Implementer</h3><p>Überführt Ideen in verlässliche Schritte.</p></article>
+      <article class="b3p-role-card"><span class="grp">Umsetzung & Qualität</span><h3>Completer Finisher</h3><p>Achtet auf Präzision, Fehler und Qualität.</p></article>
+      <article class="b3p-role-card"><span class="grp">Umsetzung & Qualität</span><h3>Specialist</h3><p>Bringt besonderes Fachwissen in das Team ein.</p></article>
+    </div>
+    <div class="b3p-split" style="margin-top:16px;grid-template-columns:1.1fr .9fr;">
+      <div class="b3p-takeaway"><strong>MERKE</strong><span>Ein gutes Team braucht nicht alle Rollen gleich stark. Wichtig ist vielmehr, dass zentrale Beiträge für die jeweilige Aufgabe vorhanden oder bewusst organisiert sind.</span></div>
+      <div class="b3p-note-box"><h3>Für NovaWorks besonders relevant</h3><p>Koordination, kritisches Prüfen, Umsetzen und Qualitätssicherung sind im Planspiel fast genauso wichtig wie Kreativität.</p></div>
+    </div>
+  </div>
+</section>`,
+    "b3x1-test": `
+<section class="scene-inner b3-scene b3-pro b3p-test">
+  <div class="b3p-top"><span>BLOCK 3 · KAPITEL 1 · SELBSTREFLEXION</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Online-Selbsttest: Teamrollen für euch reflektieren</h1>
+  <p class="b3p-lead">Der verlinkte Test ist eine <b>frei zugängliche Reflexionshilfe</b>. Er ersetzt kein offizielles Belbin-Verfahren, kann euch aber helfen, bevorzugte Beiträge im Team bewusster wahrzunehmen.</p>
+  <div class="b3p-content">
+    <div class="b3p-mini-grid b3p-mini-grid-3">
+      <article class="b3p-card mint"><h3>1 · Test öffnen</h3><div><a href="https://nikku.github.io/belbin/" target="_blank" rel="noopener noreferrer" class="b3new-action">Online-Selbsttest starten ↗</a><br><small>https://nikku.github.io/belbin/</small></div></article>
+      <article class="b3p-card blue"><h3>2 · Ergebnis notieren</h3><div>Haltet eure zwei stärksten Teamrollen und eine weniger ausgeprägte Rolle fest. Was passt? Was überrascht euch?</div></article>
+      <article class="b3p-card accent"><h3>3 · In die Praxis übertragen</h3><div>Welche Beiträge sind in eurer Gruppe vorhanden? Welche Rollen fehlen möglicherweise im NovaWorks-Team?</div></article>
+    </div>
+    <div class="b3p-takeaway"><strong>HINWEIS</strong><span>Niemand muss persönliche Ergebnisse offenlegen. Nutzt die Resultate freiwillig als Gesprächsanlass – nicht als Bewertung von Personen.</span></div>
+  </div>
+</section>`,
+    "b3x1-skills": `
+<section class="scene-inner b3-scene b3-pro b3p-transfer">
+  <div class="b3p-top"><span>BLOCK 3 · KAPITEL 1 · TRANSFER</span><span class="b3p-revision">VISUAL UPDATE · 29.10.2026</span></div>
+  <h1>Fachliche Skills und Teamrollen zusammen denken</h1>
+  <p class="b3p-lead">Für echte Projektarbeit braucht ihr beides: <b>fachliche Kompetenzen</b> für die Aufgabe und <b>funktionierende Teambeiträge</b> für die Zusammenarbeit.</p>
+  <div class="b3p-content">
+    <div class="b3p-mini-grid b3p-mini-grid-3">
+      <article class="b3p-card mint"><h3>Fachliche Skills</h3><div>z. B. UX, API, Datenschutz, Testen, Kundenservice – sie beantworten die Frage: <b>Was kann eine Person fachlich leisten?</b></div></article>
+      <article class="b3p-card blue"><h3>Teamrollen</h3><div>z. B. koordinieren, kritisch prüfen, umsetzen, Ideen liefern – sie beantworten die Frage: <b>Wie trägt jemand zur Zusammenarbeit bei?</b></div></article>
+      <article class="b3p-card accent"><h3>Konsequenz</h3><div>Ein fachlich starkes Team kann an Abstimmung scheitern. Ein harmonisches Team kann entscheidende technische Skills vermissen.</div></article>
+    </div>
+    <div class="b3p-takeaway"><strong>ABSCHLUSSFRAGE</strong><span>Wenn ihr eure NovaWorks-Lösung noch einmal betrachtet: Welche <b>fachliche Lücke</b> und welche <b>Zusammenarbeitslücke</b> wären am kritischsten?</span></div>
+  </div>
+</section>`
+  };
+  let changed=0;
+  for(const [id,markup] of Object.entries(replace)){
+    const i=scenes.findIndex(s=>s.id===id); if(i<0) continue;
+    const el=root.children[i]; if(!el) continue;
+    const tpl=document.createElement('template'); tpl.innerHTML=markup.trim();
+    const fresh=tpl.content.firstElementChild; if(!fresh) continue;
+    const active=el.classList.contains('active');
+    el.className=fresh.className+' scene'+(active?' active':'');
+    el.innerHTML=fresh.innerHTML; el.dataset.index=String(i); scenes[i].html=markup; changed++;
+  }
+
+  // Broader visual treatment for all remaining Block-3 scenes.
+  scenes.forEach((scene,i)=>{
+    if(!/^b3/.test(scene.id) || replace[scene.id]) return;
+    const el=root.children[i]; if(!el) return;
+    el.classList.add('b3p-support','b3p-any');
+    if(/^b3(?:c1|x1)/.test(scene.id)) el.classList.add('b3p-ch1');
+    else if(/^b3(?:c2|x2)/.test(scene.id)) el.classList.add('b3p-ch2');
+    else if(/^b3(?:c3|x3)/.test(scene.id)) el.classList.add('b3p-ch3');
+    else if(/^b3(?:c4|k4)/.test(scene.id)) el.classList.add('b3p-ch4');
+    else if(/^b3(?:c6|x6)/.test(scene.id)) el.classList.add('b3p-ch5');
+
+    // add intro panel to sparse slides
+    if((/^b3c[1234]-start$/.test(scene.id) || scene.id==='b3-start' || scene.id==='b3c6-start') && !el.querySelector('.b3p-intro-band')){
+      const band=document.createElement('div');
+      band.className='b3p-intro-band';
+      band.innerHTML='<strong>Leitfrage</strong><span>'+({
+        'b3-start':'Wie verändern Technologie, Demografie und Führung die Anforderungen an Arbeit – und was bedeutet das für Organisationen und Karrieren?',
+        'b3c2-start':'Was erklären Generationen wirklich – und wo führen uns Stereotype in die Irre?',
+        'b3c3-start':'Welche Art von Führung brauchen Teams, wenn Arbeit digitaler, flexibler und KI-gestützter wird?',
+        'b3c4-start':'Wie entstehen faire Karrierewege und welche strukturellen Hürden verhindern sie?',
+        'b3c6-start':'Wie übersetzt ihr die Inhalte des Moduls in euren eigenen Berufsstart und eure nächsten Schritte?'
+      }[scene.id] || 'Welche Kernfrage beantwortet dieses Kapitel?')+'</span>';
+      const lead=el.querySelector('h1, .scene-title');
+      if(lead && lead.parentNode) lead.parentNode.insertBefore(band, lead.nextSibling);
+      else el.prepend(band);
+    }
+  });
+
+  window.__BLOCK3_REDESIGN__ = Object.assign({}, window.__BLOCK3_REDESIGN__||{}, {patch:'planspiel-belbin-v1', extraReplaced:changed});
+  console.info('Block3 patch installed', window.__BLOCK3_REDESIGN__);
+})();
