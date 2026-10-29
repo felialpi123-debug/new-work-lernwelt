@@ -1,1 +1,4 @@
-Kapitel 4, Block 3: Alle 19 Folien neu gestaltet. Schätzfragen mit Antwort-Button, Managementfrage präzisiert, responsives Folienlayout, wechselnde Designs, Grafiken, bestehende hochauflösende Teamfotos. Ersetze app.js UND index.html. Vorhandene styles.css und assets unverändert lassen. Browser mit Strg+F5 neu laden.
+Kapitel 4 Block 3: Alle 19 Folien inhaltlich und visuell überarbeitet.
+Installation: app.js und index.html in den Lernwelt-Ordner kopieren und überschreiben.
+Bestehende assets/ unverändert behalten.
+Schätzfragen: Antwort auflösen per Button.
