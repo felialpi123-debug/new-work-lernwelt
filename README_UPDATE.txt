@@ -1,1 +1,1 @@
-Kapitel 4 Fehlerkorrektur: ZIP entpacken, app.js und index.html im Lernwelt-Hauptordner ersetzen, Strg+F5. Der bestehende assets-Ordner wird weiterverwendet. Korrigiert: CSS-Klassenkollisionen (doppelte Bilder, fehlender Text), Thomas-Diagramm, Topsharing, Bildwechsel.
+Kapitel 4 Bildkorrektur: app.js ersetzen; neuen Ordner assets/block3 samt Foto hinzufügen. Bestehende assets/editorial behalten. Zwei dekorative Fotos wurden durch scharfe typografische Grafiken ersetzt. Keine Änderung an Navigation oder anderen Kapiteln.
