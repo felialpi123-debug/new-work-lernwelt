@@ -1,4 +1,1 @@
-Kapitel 4 Block 3: Alle 19 Folien inhaltlich und visuell überarbeitet.
-Installation: app.js und index.html in den Lernwelt-Ordner kopieren und überschreiben.
-Bestehende assets/ unverändert behalten.
-Schätzfragen: Antwort auflösen per Button.
+Kapitel 4 Fehlerkorrektur: ZIP entpacken, app.js und index.html im Lernwelt-Hauptordner ersetzen, Strg+F5. Der bestehende assets-Ordner wird weiterverwendet. Korrigiert: CSS-Klassenkollisionen (doppelte Bilder, fehlender Text), Thomas-Diagramm, Topsharing, Bildwechsel.
