@@ -47,6 +47,31 @@
 @media(max-width:900px){.k4v-slide .k4v-mediawide,.k4v-slide .k4v-cyclelayout{grid-template-columns:1fr 1fr!important;gap:10px!important}.k4v-slide .k4v-mediacopy{padding:5px!important}.k4fixed-cycle{padding:9px}.k4fixed-step{padding:7px}}
 
 </style>
+<style id="k4-final-audit">
+/* FINAL K4 image quality control – excludes ALL automatically injected stock images */
+.k4v-slide{isolation:isolate;box-sizing:border-box!important;min-height:0!important;overflow:hidden!important}
+.k4v-slide .b3-human-photo-strip,.k4v-slide .b3-photo-strip,.k4v-slide .scene-photo,.k4v-slide>.photo-strip,.k4v-slide>.b3-human-photo-strip{display:none!important}
+.k4v-slide img:not(.k4-approved-image){display:none!important}
+.k4v-slide .k4v-photo{background-repeat:no-repeat!important;background-size:contain!important;background-position:center!important;max-width:100%!important;min-width:0!important;filter:none!important;image-rendering:auto!important}
+.k4v-slide.k4v-estimate{display:flex!important;flex-direction:column!important;height:calc(100dvh - 115px)!important;max-height:none!important;padding:20px 34px!important}
+.k4v-slide.k4v-estimate .k4v-body{flex:1!important;min-height:0!important;display:flex!important;align-items:center!important}
+.k4v-slide.k4v-estimate .k4v-estgrid{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(250px,.7fr)!important;gap:clamp(12px,3vw,38px)!important;width:100%!important;align-items:center!important}
+.k4v-slide.k4v-estimate .k4v-question{max-width:900px!important}
+.k4v-slide.k4v-estimate .k4v-estart{background:linear-gradient(160deg,#e2f4ef,#e8eff8)!important;min-height:220px!important;max-height:49vh!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;overflow:hidden!important;border-radius:24px!important;padding:20px!important}
+.k4v-slide.k4v-estimate .k4v-estmark{font-size:clamp(60px,9vw,130px)!important;line-height:1!important;color:#007f70!important;font-weight:900!important}
+.k4v-slide.k4v-estimate .k4v-estart p{max-width:230px!important;text-align:center!important;font-size:clamp(13px,1.15vw,17px)!important}
+.k4v-slide.k4v-estimate .k4v-bigquestion{font-size:clamp(24px,3vw,43px)!important;line-height:1.16!important}
+.k4v-slide.k4v-estimate .k4v-heading{display:none!important}
+.k4v-slide.k4v-estimate .k4v-answer{padding:10px 14px!important;max-height:25vh!important;overflow:auto!important}
+.k4v-slide .k4v-mediawide{min-width:0!important;display:grid!important;grid-template-columns:minmax(260px,.84fr) minmax(0,1.16fr)!important;gap:24px!important;align-items:center!important}
+.k4v-slide .k4v-mediawide .k4v-photo{width:100%!important;min-height:240px!important;height:min(47vh,400px)!important;max-height:400px!important}
+.k4v-slide .k4v-mediacopy{min-width:0!important;overflow-wrap:normal!important}
+.k4v-slide .k4v-mediawide .k4v-mediacopy h2{font-size:clamp(22px,2.5vw,36px)!important}
+.k4v-slide .k4v-covergrid .k4v-photo{min-height:240px!important;max-height:48vh!important}
+.k4v-slide .k4v-covergrid,.k4v-slide .k4v-finalgrid{min-width:0!important}
+.k4v-slide.k4v-gamecover .k4v-photo{max-width:670px!important;max-height:40vh!important}
+@media(max-width:760px){.k4v-slide.k4v-estimate .k4v-estgrid{grid-template-columns:minmax(0,1fr)!important}.k4v-slide.k4v-estimate .k4v-estart{display:none!important}.k4v-slide .k4v-mediawide{grid-template-columns:1fr!important}.k4v-slide .k4v-mediawide .k4v-photo{height:23vh!important;min-height:100px!important}}
+</style>
 </head>
 <body>
   <header class="topbar">
