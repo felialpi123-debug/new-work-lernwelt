@@ -1,0 +1,1 @@
+Nur diese beiden Dateien im bestehenden Lernwelt-Ordner ersetzen: app.js und block3-new-leadership-20261030.js. Kapitel 3 wird aus den Folien und der Navigation entfernt. Andere Dateien, insbesondere Block 2, nicht ändern oder löschen.
