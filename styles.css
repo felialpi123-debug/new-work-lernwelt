@@ -825,3 +825,49 @@ body.presentation .scene.editorial-bg{background-size:cover}
 .b2-kahoot-button:hover{transform:translateY(-2px);background:#eee9ff}
 .b2-kahoot-note{color:#d0c8e9;font-size:14px}
 .b2-kahoot-tip{margin:38px auto 0;border:1px solid rgba(255,255,255,.26);border-radius:15px;padding:17px 22px;max-width:780px;color:#e9e4fc;font-size:clamp(14px,1.4vw,18px)}
+
+/* Block 3: refreshed learning slides, isolated from Block 2 */
+.b3-refresh{padding:clamp(20px,3vw,46px)!important;box-sizing:border-box;overflow:auto!important;max-height:100%;background:#f7f6f2;color:#13264a}
+.b3-refresh h1{font-size:clamp(30px,4.4vw,62px)!important;line-height:1.06!important;letter-spacing:-.035em;margin:12px 0 18px!important;max-width:1100px}
+.b3-refresh p{line-height:1.42!important;margin:7px 0!important}.b3-refresh .lead{font-size:clamp(17px,1.8vw,23px)!important;max-width:1100px;margin-bottom:18px!important}
+.b3-refresh-grid,.b3-refresh-split,.b3-refresh-trio,.b3-refresh-compare{display:grid;gap:15px;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.b3-refresh-trio{grid-template-columns:repeat(3,minmax(0,1fr))}.b3-refresh-grid>div,.b3-refresh-split>div,.b3-refresh-trio>div,.b3-refresh-chart{padding:clamp(14px,1.8vw,23px);background:rgba(255,255,255,.92);border:1px solid #d8e7e2;border-radius:20px;min-width:0}
+.b3-refresh-grid>div{display:flex;flex-direction:column;gap:9px}.b3-refresh-grid strong,.b3-refresh-label{color:#007c6b;font-size:clamp(15px,1.35vw,19px)}
+.b3-refresh-grid span{font-size:clamp(14px,1.2vw,17px)}.b3-refresh h3{font-size:clamp(18px,1.7vw,23px);line-height:1.15;margin:2px 0 10px}
+.b3-refresh-bottom{background:#e2f5ee;border-left:5px solid #008e79;border-radius:12px;padding:12px 17px;margin-top:16px;font-size:clamp(14px,1.25vw,18px);line-height:1.35}
+.b3-refresh-mini{padding:12px;background:#e1f4ee;border-radius:12px;color:#075b50;font-weight:700;margin-top:12px}
+.b3-refresh-figure{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}.b3-refresh-figure img{width:100%;height:auto;object-fit:contain;border-radius:18px}.b3-refresh-figure>div{padding:12px}
+.b3-refresh-visual{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#e1f4ee!important}.b3-refresh-stat{font-size:clamp(66px,8vw,128px);font-weight:800;color:#009f8a;line-height:1}.b3-refresh-stat span{font-size:.5em}
+.b3-refresh-chart h3{margin-bottom:16px}.b3-bars{display:grid;gap:11px}.b3-bars>div{display:grid;grid-template-columns:95px minmax(0,1fr) 62px;gap:10px;align-items:center;font-size:14px}.b3-bars i{display:block;height:17px;border-radius:5px;background:linear-gradient(90deg,#008b7b,#82d5bf)}.b3-bars-world i{background:linear-gradient(90deg,#192f58,#6d91bd)}.b3-bars b{text-align:right}
+.b3-refresh-video{aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#162a49}.b3-refresh-video iframe{border:0;width:100%;height:100%}.b3-refresh-facts strong{font-size:clamp(30px,4vw,60px);color:#008b7b}.b3-refresh small{display:block;font-size:12px;margin-top:8px}
+@media(max-width:650px){.b3-refresh-grid,.b3-refresh-split,.b3-refresh-trio,.b3-refresh-compare,.b3-refresh-figure{grid-template-columns:1fr}.b3-refresh{padding:18px!important}.b3-bars>div{grid-template-columns:86px minmax(0,1fr) 58px;gap:6px}}
+
+/* Block 3 — didactic visual modules, no changes to Block 2 */
+.b3-scene .b3-viz-insight{position:relative;clear:both;display:block;margin:18px 0 4px;padding:16px 20px;border:1px solid #b7dfd4;border-left:5px solid #008f7d;border-radius:18px;background:linear-gradient(110deg,#f0fbf7,#ffffff);color:#14294a;box-shadow:0 6px 20px rgba(20,41,74,.05)}
+.b3-scene .b3-viz-heading{font-size:clamp(17px,1.7vw,23px);font-weight:800;color:#086c60;letter-spacing:-.015em}
+.b3-scene .b3-viz-insight p{margin:5px 0 11px!important;font-size:clamp(13px,1.1vw,16px);line-height:1.35}
+.b3-scene .b3-viz-steps,.b3-scene .b3-viz-chips{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.b3-scene .b3-viz-steps span,.b3-scene .b3-viz-chips span{padding:8px 12px;background:#d8f4eb;color:#0a514c;border-radius:10px;font-size:clamp(12px,1.1vw,16px);font-weight:700}
+.b3-scene .b3-viz-steps b{font-size:24px;color:#008e7b}
+.b3-scene .b3-viz-chips span:nth-child(even){background:#e6edf7;color:#1d345a}
+.b3-scene .b3-viz-hint{padding:11px 15px;border-radius:12px;background:#eaf6f1;font-size:clamp(13px,1.15vw,16px);border-left:4px solid #00a28a}
+.b3-photo-cover{position:relative;isolation:isolate;min-height:100%;overflow:hidden!important}
+.b3-photo-cover>.b3-cover-photo{position:absolute;z-index:-1;right:0;top:0;width:45%;height:100%;background-size:cover;background-position:center;opacity:.28;mask-image:linear-gradient(to right,transparent,black 40%);-webkit-mask-image:linear-gradient(to right,transparent,black 40%);pointer-events:none}
+.b3-photo-cover .b3-refresh-split,.b3-photo-cover .b3-refresh-trio{position:relative;z-index:1}
+@media(max-width:760px){.b3-photo-cover>.b3-cover-photo{width:100%;opacity:.12}.b3-scene .b3-viz-insight{padding:12px;margin-top:12px}.b3-scene .b3-viz-steps span,.b3-scene .b3-viz-chips span{font-size:12px}}
+
+/* BLOCK 3 V2 — deliberately visible presentation redesign. Scoped to b3-* to avoid Block 2 */
+.b3-refresh.b3-photo-cover{display:block!important;position:relative!important;isolation:isolate;background:#eff9f6!important;min-height:calc(100dvh - 130px)!important;padding:clamp(18px,2.6vw,35px)!important;overflow:hidden!important}
+.b3-refresh.b3-photo-cover::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#f7f7f2 0%,#f7f7f2 53%,rgba(247,247,242,.2) 100%);pointer-events:none}
+.b3-refresh.b3-photo-cover>.b3-cover-photo{z-index:-2!important;position:absolute!important;right:0!important;top:0!important;width:48%!important;height:100%!important;opacity:1!important;mask-image:none!important;-webkit-mask-image:none!important;background-size:cover!important;background-position:center!important}
+.b3-refresh.b3-photo-cover>h1,.b3-refresh.b3-photo-cover>.lead,.b3-refresh.b3-photo-cover>.b3-refresh-split,.b3-refresh.b3-photo-cover>.b3-refresh-trio,.b3-refresh.b3-photo-cover>.b3-refresh-bottom{max-width:72%;position:relative;z-index:2}
+.b3-refresh.b3-photo-cover>h1{max-width:69%!important;font-size:clamp(35px,4.5vw,62px)!important}
+.b3-refresh.b3-photo-cover .b3-refresh-split,.b3-refresh.b3-photo-cover .b3-refresh-trio{gap:12px}
+.b3-refresh.b3-photo-cover .b3-refresh-split>div,.b3-refresh.b3-photo-cover .b3-refresh-trio>div{background:rgba(255,255,255,.96);border:1px solid #b2dad0;border-radius:18px;box-shadow:0 8px 22px rgba(21,48,67,.08)}
+.b3-scene .b3-version-indicator{display:inline-block;float:right;z-index:5;position:relative;border-radius:99px;background:#083d36;color:white;padding:6px 11px;font-weight:800;font-size:10px;letter-spacing:.09em}
+.b3-scene .b3-viz-emphasis{border:2px solid #009982!important;background:linear-gradient(105deg,#d8f6ec,#fff)!important;box-shadow:0 12px 34px rgba(2,95,79,.16)!important}
+.b3-scene .b3-viz-steps span{border:1px solid #8bcbbb!important}
+@media(max-width:900px){.b3-refresh.b3-photo-cover>.b3-cover-photo{width:100%!important;opacity:.2!important}.b3-refresh.b3-photo-cover>h1,.b3-refresh.b3-photo-cover>.lead,.b3-refresh.b3-photo-cover>.b3-refresh-split,.b3-refresh.b3-photo-cover>.b3-refresh-trio,.b3-refresh.b3-photo-cover>.b3-refresh-bottom{max-width:100%!important}.b3-refresh.b3-photo-cover::before{background:rgba(247,247,242,.72)}}
+
+/* New Leadership · eigenständig verständliche Unterrichtsfolien */
+.nl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.nl-grid>b{padding:17px 19px;border-radius:14px;background:rgba(28,135,132,.09);border:1px solid rgba(28,135,132,.17);font-weight:650;line-height:1.35}.nl-layout{grid-template-columns:minmax(0,1.4fr) minmax(230px,.85fr);gap:25px;align-items:start}.nl-visual{margin:0}.nl-visual img{width:100%;height:330px;object-fit:cover;border-radius:18px}.nl-statbar{background:#e3eaf0;border-radius:99px;height:24px;overflow:hidden;margin:20px 0}.nl-statbar span{display:block;background:#218b80;height:100%}.nl-org{display:grid;grid-template-columns:1fr 35px 1fr;align-items:center;gap:15px;margin:18px 0}.nl-org>div{display:flex;flex-direction:column;align-items:center;gap:6px}.nl-org span{font-size:11px;letter-spacing:.07em;opacity:.65}.nl-org strong{font-size:12px;display:block;background:#e6eff0;border-radius:9px;text-align:center;padding:9px 13px;max-width:100%;width:85%}.nl-org>div:first-child strong:nth-child(2){width:35%}.nl-org>div:first-child strong:nth-child(3){width:47%}.nl-org>div:first-child strong:nth-child(4){width:62%}.nl-org>div:first-child strong:nth-child(5){width:75%}.nl-org>div:last-child strong{background:#d9f0e9}.nl-org>b{text-align:center;font-size:30px;color:#208c75}.b3-scene .challenge-output{margin-top:18px}.b3-scene .b3-layout p{line-height:1.55}.b3-scene .nl-grid>b{display:flex;align-items:center}@media(max-width:900px){.nl-layout{grid-template-columns:1fr}.nl-visual img{height:210px}.nl-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.nl-grid{grid-template-columns:1fr}.nl-org{gap:5px}.nl-org strong{font-size:10px;padding:6px}}
