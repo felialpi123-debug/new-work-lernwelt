@@ -1,0 +1,21 @@
+NEW LEADERSHIP – BLOCK 3, KAPITEL 3 – UPDATE
+
+WICHTIG: Dieses Paket ist ein sicherer ZIP-UPDATER, keine direkt deploybare Gesamt-Lernwelt.
+Die vollständige aktuelle Ausgangs-ZIP war hier nicht als Rohdatei zugänglich.
+
+SO GEHT ES (am Computer oder Handy):
+1. Entpacke dieses Update-Paket und öffne update.html im Browser (Internetverbindung für JSZip nötig).
+2. Wähle die vollständige aktuelle ZIP deiner New Work Lernwelt.
+3. Klicke auf "ZIP aktualisieren".
+4. Lade die vom Browser erzeugte ZIP herunter und teste sie vor dem Vercel-Upload.
+
+GEÄNDERT:
+- Nur Block 3 / Kapitel 3 (New Leadership) – 17 komplett neue Folien.
+- Bisherige Management-/Planspiel-Folien dieses Kapitels werden ersetzt.
+- Bayer-Fallstudie mit drei offenen Recherchefragen statt Planspiel.
+- Stromberg und zweites Führungsvideo werden soweit im bisherigen Kapitel auffindbar übernommen.
+- Sonstige ZIP-Dateien, andere Kapitel und Assets bleiben unverändert.
+
+ACHTUNG: Das automatische Übernehmen der Videos kann nur funktionieren, wenn deren YouTube-Adressen in der bestehenden app.js im bisherigen Kapitel vorhanden sind. Bitte die Videos nachher prüfen.
+
+Bei einer abweichenden Dateistruktur wird der Vorgang bewusst abgebrochen; es wird dann keine ZIP erzeugt.

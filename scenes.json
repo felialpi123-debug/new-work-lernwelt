@@ -1,0 +1,87 @@
+[
+  {
+    "id": "b3c3-start",
+    "title": "New Leadership – Brauchen wir noch Chefs?",
+    "html": "<section class=\"scene-inner b3-scene dark\"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>New Leadership – Brauchen wir noch Chefs?</h1><div class=\"b3-layout\"><div><p>Wenn KI Informationen liefert, Teams selbst arbeiten und Konzerne Führungsebenen abbauen: Wofür brauchen wir dann noch Führung?</p><div class=\"challenge-output\">EINSTIEG · Handzeichen: Brauchen wir in 20 Jahren noch klassische Teamleiter?</div></div></div></section>"
+  },
+  {
+    "id": "b3c3-stromberg",
+    "title": "Führung auf dem Prüfstand: Stromberg",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Führung auf dem Prüfstand: Stromberg</h1><div class=\"b3-layout\"><div><p>Beobachtet die Führungssituation im Video. Welche drei Verhaltensweisen erschweren Zusammenarbeit, Motivation oder Lernen?</p><div id=\"nl-video-stromberg\" class=\"challenge-output\">VIDEO · Der bestehende Stromberg-Link wird beim Update – sofern vorhanden – automatisch hier übernommen.</div><div class=\"challenge-output\">DISKUSSION · Schlechte Führung ist nicht dasselbe wie jede klassische Führung.</div></div></div></section>"
+  },
+  {
+    "id": "b3c3-why",
+    "title": "Warum verändert sich Führung?",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Warum verändert sich Führung?</h1><div class=\"b3-layout\"><div><div class=\"stack-cards\"><b>Wissen ist verteilt</b><b>Hybridarbeit verändert Abstimmung</b><b>KI automatisiert Routinen</b><b>Veränderung wird schneller</b><b>Mehr Schnittstellen und komplexe Probleme</b></div><p>Eine Führungskraft kann nicht jede fachliche Antwort kennen. Sie muss Zusammenarbeit und Entscheidungen ermöglichen.</p></div></div></section>"
+  },
+  {
+    "id": "b3c3-gallup",
+    "title": "Schätzfrage: Wie engagiert sind Führungskräfte?",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Schätzfrage: Wie engagiert sind Führungskräfte?</h1><div class=\"b3-layout\"><div><p>Wie groß war laut Gallup der weltweite Anteil engagierter Führungskräfte im Jahr 2025?</p><button type=\"button\" onclick=\"this.nextElementSibling.hidden=!this.nextElementSibling.hidden\">Lösung anzeigen / ausblenden</button><div hidden><div class=\"big-stat\">22 %</div><p>Gallup, State of the Global Workplace 2026. Engagement misst emotionale Bindung und Beteiligung – nicht unmittelbar die Führungsqualität.</p></div><p><small>Quelle: gallup.com/workplace/349484/state-of-the-globalworkplace.aspx</small></p></div></div></section>"
+  },
+  {
+    "id": "b3c3-definition",
+    "title": "Was bedeutet New Leadership?",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Was bedeutet New Leadership?</h1><div class=\"b3-layout\"><div><p><strong>Arbeitsdefinition:</strong> New Leadership beschreibt ein Führungsverständnis, das durch Orientierung, Vertrauen, Befähigung, Beteiligung und klare Verantwortungsräume selbstständiges Arbeiten ermöglicht.</p><p>Kein einheitlich definierter Führungsstil und kein Synonym für Führung ohne Hierarchie.</p></div></div></section>"
+  },
+  {
+    "id": "b3c3-shift",
+    "title": "Klassische Führung und New Leadership",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Klassische Führung und New Leadership</h1><div class=\"b3-layout\"><div><div class=\"stack-cards\"><b>Anweisung → Ziel und Handlungsrahmen</b><b>Detailkontrolle → Ergebnis und Feedback</b><b>Wissen beim Chef → Wissen im Team</b><b>Einzelentscheidungen → delegierte Entscheidungsrechte</b><b>Fehlerzuweisung → Lernen und Verantwortung</b></div><p>Idealtypische Gegenüberstellung – gute klassische Führung kann ebenfalls partizipativ sein.</p></div></div></section>"
+  },
+  {
+    "id": "b3c3-phrases",
+    "title": "Typische Sätze einer neuen Führungskraft",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Typische Sätze einer neuen Führungskraft</h1><div class=\"b3-layout\"><div><div class=\"stack-cards\"><b>„Welche Lösung schlägst du vor?“</b><b>„Was brauchst du von mir?“</b><b>„Wer kann das fachlich am besten entscheiden?“</b><b>„Was lernen wir aus dem Fehler?“</b><b>„Du kannst innerhalb dieser Grenzen selbst entscheiden.“</b></div></div></div></section>"
+  },
+  {
+    "id": "b3c3-day",
+    "title": "Ein Arbeitstag – zwei Führungswelten",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Ein Arbeitstag – zwei Führungswelten</h1><div class=\"b3-layout\"><div><div class=\"stack-cards\"><b>08:30 – Aufgaben: Zuteilen oder Team-Prioritäten?</b><b>10:00 – Problem: Freigabe oder eigenständige Lösung?</b><b>11:30 – Entscheidung: Chef oder Fachkompetenz?</b><b>14:00 – Fehler: Schuld oder Ursachenanalyse?</b><b>15:30 – Leistung: Anwesenheit oder Ergebnisse?</b></div><div class=\"challenge-output\">FRAGE · Wo muss die Teamleitung weiterhin selbst entscheiden?</div></div></div></section>"
+  },
+  {
+    "id": "b3c3-tools",
+    "title": "Was ändert sich im täglichen Führungsalltag?",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Was ändert sich im täglichen Führungsalltag?</h1><div class=\"b3-layout\"><div><div class=\"stack-cards\"><b>1:1-Gespräche und Coaching</b><b>Delegations- und Eskalationsregeln</b><b>Regelmäßiges Feedback</b><b>Retrospektiven</b><b>Zielklarheit und messbare Ergebnisse</b><b>Psychologische Sicherheit</b></div><p>Methoden sind Hilfsmittel, keine Garantie für erfolgreiche Führung.</p></div></div></section>"
+  },
+  {
+    "id": "b3c3-video",
+    "title": "Führung verstehen – zweites Video",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Führung verstehen – zweites Video</h1><div class=\"b3-layout\"><div><p>Achtet darauf, welche Aufgaben von Führung auch bei selbstorganisierten Teams unverzichtbar bleiben.</p><div id=\"nl-video-leadership\" class=\"challenge-output\">VIDEO · Der zweite vorhandene Führungsvideo-Link wird – sofern er im bisherigen Kapitel auffindbar ist – automatisch übernommen.</div><div class=\"challenge-output\">MERKFRAGE · Welche Aussage im Video würdet ihr unterstützen oder kritisch sehen?</div></div></div></section>"
+  },
+  {
+    "id": "b3c3-change",
+    "title": "Wie entwickelt man sich zum New Leader?",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Wie entwickelt man sich zum New Leader?</h1><div class=\"b3-layout\"><div><div class=\"stack-cards\"><b>1 · Eigenes Kontrollverhalten reflektieren</b><b>2 · Teamfeedback einholen</b><b>3 · Offene Coachingfragen üben</b><b>4 · Entscheiden und Delegieren trennen</b><b>5 · Neue Routinen testen</b><b>6 · Wirksamkeit und Belastung prüfen</b></div><p>Führung verändert sich durch geübtes Verhalten, nicht nur durch einen neuen Titel.</p></div></div></section>"
+  },
+  {
+    "id": "b3c3-hierarchy",
+    "title": "Wenn Unternehmen Managementebenen abbauen",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Wenn Unternehmen Managementebenen abbauen</h1><div class=\"b3-layout\"><div><p>Delayering entfernt hierarchische Zwischenstufen. Es kann Entscheidungswege verkürzen – oder die verbleibenden Führungskräfte überlasten.</p><div class=\"stack-cards\"><b>Modell A · Weniger Chefs, gleiche Freigaben</b><b>Modell B · Weniger Ebenen, echte Entscheidungsrechte im Team</b></div><div class=\"challenge-output\">KERNFRAGE · Wer übernimmt die bisherige Führungsarbeit?</div></div></div></section>"
+  },
+  {
+    "id": "b3c3-bayer",
+    "title": "Bayer: Dynamic Shared Ownership",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Bayer: Dynamic Shared Ownership</h1><div class=\"b3-layout\"><div><p>Bayer verbindet den Abbau von Hierarchie mit dezentraler Entscheidungsverantwortung und selbstorganisierten Teams.</p><div class=\"stack-cards\"><b>Weniger Führungsebenen</b><b>Teams arbeiten näher an Kundenergebnissen</b><b>VACC: Visionary · Architect · Catalyst · Coach</b><b>Kostensenkung und Kulturwandel gleichzeitig</b></div><p><small>Quelle und Rechercheeinstieg: bayer.com – Dynamic Shared Ownership. Unternehmensziele von nachgewiesenen Wirkungen unterscheiden.</small></p></div></div></section>"
+  },
+  {
+    "id": "b3c3-research",
+    "title": "Fallstudie: Bayer unter der Lupe",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Fallstudie: Bayer unter der Lupe</h1><div class=\"b3-layout\"><div><p><strong>Recherchiert selbstständig.</strong> Ihr bekommt bewusst keine fertigen Antworten und keine vorgegebenen Kennzahlen.</p><ol><li>Was verändert Bayer konkret an seiner Organisation und Führung?</li><li>Ist der Umbau ein Beispiel für New Leadership oder vor allem Kostensenkung? Belegt eure Einschätzung.</li><li>Würdet ihr selbst gerne in dieser Organisation arbeiten? Warum oder warum nicht?</li></ol><div class=\"challenge-output\">3–4 Personen · 15 Minuten Recherche + 5 Minuten Ergebnisse · Mindestens zwei Quellen notieren.</div></div></div></section>"
+  },
+  {
+    "id": "b3c3-discuss",
+    "title": "Bayer: Ergebnisse diskutieren",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Bayer: Ergebnisse diskutieren</h1><div class=\"b3-layout\"><div><div class=\"stack-cards\"><b>Welche konkreten Maßnahmen habt ihr gefunden?</b><b>Welche Aussage ist belegte Tatsache, welche ist Unternehmensversprechen?</b><b>Was könnte für Mitarbeitende besser werden?</b><b>Welche Risiken seht ihr?</b></div><div class=\"challenge-output\">AUSWERTUNG · Jede Gruppe nennt eine Erkenntnis und eine offene Frage.</div></div></div></section>"
+  },
+  {
+    "id": "b3c3-takeaway",
+    "title": "Fazit: Führung wird neu verteilt",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Fazit: Führung wird neu verteilt</h1><div class=\"b3-layout\"><div><p><strong>New Work</strong> verändert die Zusammenarbeit. <strong>New Leadership</strong> verändert Führungsverhalten. <strong>Flachere Hierarchien</strong> verändern die Verteilung von Entscheidungen.</p><p><strong>Weniger Management ist nicht automatisch bessere Führung.</strong> Entscheidend sind klare Ziele, echte Entscheidungsspielräume, Kompetenz und Verantwortung.</p><div class=\"challenge-output\">ABSCHLUSS · Brauchen wir überhaupt noch Chefs?</div></div></div></section>"
+  },
+  {
+    "id": "b3c3-score",
+    "title": "Kapitelabschluss · Check dein Verständnis",
+    "html": "<section class=\"scene-inner b3-scene \"><div class=\"eyebrow\">BLOCK 3 · NEW LEADERSHIP</div><h1>Kapitelabschluss · Check dein Verständnis</h1><div class=\"b3-layout\"><div><div class=\"stack-cards\"><b>Was ist der Unterschied zwischen Delegation und Führungslosigkeit?</b><b>Warum ist Hierarchieabbau nicht automatisch New Leadership?</b><b>Welche Chancen und Risiken zeigt Bayer?</b></div><div class=\"challenge-output\">TRANSFER · Nenne eine Führungshandlung, die du als Berufseinsteiger künftig erwarten würdest.</div></div></div></section>"
+  }
+]
