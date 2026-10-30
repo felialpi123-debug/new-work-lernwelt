@@ -1,1 +1,1 @@
-Diese drei Dateien in der bestehenden Lernwelt ersetzen. Alle anderen Dateien, insbesondere Block 2, unverändert lassen. Kapitel 3 enthält 15 echte Navigationsfolien. Stromberg-Video-Link noch offen.
+Nur app.js im Stammordner der bestehenden Lernwelt ersetzen. Alle anderen Dateien unverändert lassen, insbesondere Block 2. Entfernt: Folie Ein Arbeitstag – zwei Führungswelten. Stromberg-Video: https://www.youtube.com/watch?v=glGYgVENCzw
