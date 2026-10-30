@@ -1,1 +1,1 @@
-Nur app.js im Stammordner der bestehenden Lernwelt ersetzen. Alle anderen Dateien unverändert lassen, insbesondere Block 2. Entfernt: Folie Ein Arbeitstag – zwei Führungswelten. Stromberg-Video: https://www.youtube.com/watch?v=glGYgVENCzw
+Nur app.js in der bestehenden Lernwelt ersetzen. Block 2 und alle anderen Kapitel bleiben unverändert. Stromberg-Video: https://www.youtube.com/watch?v=ijjjRZUQYV4
