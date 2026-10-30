@@ -366,6 +366,7 @@ for(const [chapter,endId] of Object.entries({"1": "b3c1-debrief", "2": "b3c2-202
 // Kapitel 3 bewusst leer bis zur Neugestaltung.
 for(let i=block3Scenes.length-1;i>=0;i--){if(/^b3c3-|^b3x3-/.test(block3Scenes[i].id))block3Scenes.splice(i,1);}
 scenes.push(...block3Scenes);
+for(let i=scenes.length-1;i>=0;i--){if(/^b3c3-/.test(scenes[i].id)&&!["b3c3-start","b3c3-manager","b3c3-shift"].includes(scenes[i].id))scenes.splice(i,1);}
 
 
 /* === v3.3 · CLEAN SCENE PIPELINE === */
@@ -600,6 +601,7 @@ const navGroups=[
    {title:"Übergang · People, Leadership & Career", ids:["b3-start"]},
    {title:"Kapitel 1 · Skills statt Stellen", ids:sceneIds("b3c1-start","b3x1-kahoot")},
    {title:"Kapitel 2 · Generationen & Karrierebilder", ids:sceneIds("b3c2-intro-bridge","b3x2-gameplus")},
+   {title:"Kapitel 3 · New Leadership", ids:sceneIds("b3c3-start","b3c3-shift")},
    {title:"Kapitel 4 · Frauen, Macht & Führung", ids:sceneIds("b3c4-start","b3c4-system")},
    {title:"Kapitel 5 · YOUR FUTURE", ids:sceneIds("b3c6-start","b3c6-marketkit")},
    {title:"Finale · Now it's about you", ids:["b3-finale"]}

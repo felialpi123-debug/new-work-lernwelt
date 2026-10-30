@@ -125,3 +125,14 @@ body.presentation #app>.scene.b3l-host .b3l-path{gap:9px}
 #app>.scene.b3l-host .b3l-skill{align-items:center}
 body.b3l-active #presentationNext,body.b3l-active #presentationPrev,body.b3l-active #buildBadge{display:none!important}
 @media(max-width:1050px){#app>.scene.b3l-host .b3l-skills{grid-template-rows:auto}}
+
+.b3l-page .nl-slide{max-width:1120px;margin:0 auto}
+.b3l-page .nl-slide .eyebrow{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#50c8b4;font-weight:800}
+.b3l-page .nl-slide h1{font-size:clamp(1.65rem,3.1vw,3.3rem);line-height:1.12;margin:.4em 0}
+.b3l-page .nl-slide p{font-size:clamp(1rem,1.35vw,1.25rem);line-height:1.55;max-width:85ch}
+.b3l-page .nl-slide .stack-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:22px 0}
+.b3l-page .nl-slide .stack-cards b{display:block;padding:18px;border-radius:15px;background:rgba(60,130,160,.17);border:1px solid rgba(90,180,190,.35);font-size:1rem;line-height:1.35}
+.b3l-page .nl-slide .challenge-output{padding:16px 20px;border-left:4px solid #32c5ac;border-radius:12px;background:rgba(39,176,160,.12);margin:20px 0;font-weight:700}
+.b3l-page .nl-slide .big-stat{font-size:clamp(3rem,8vw,7rem);font-weight:900}
+.b3l-page .nl-slide button[data-nl-reveal]{padding:12px 18px;border-radius:10px;background:#188b80;color:white;border:0;cursor:pointer;font-weight:700}
+.b3l-page .nl-slide ol{font-size:1.13rem;line-height:1.6}
