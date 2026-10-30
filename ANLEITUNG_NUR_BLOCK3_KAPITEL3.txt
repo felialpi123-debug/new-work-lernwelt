@@ -1,0 +1,15 @@
+UPDATE AUSSCHLIESSLICH BLOCK 3 / KAPITEL 3 – NEW LEADERSHIP
+
+Dieses ZIP enthält NUR vier Dateien. Es enthält KEINE Dateien aus Block 2, keine Assets und keine übrigen Kapitel.
+
+INSTALLATION
+1. Deine aktuelle vollständige Lernwelt vom 30.10.2026 vorher sichern.
+2. Diese ZIP entpacken.
+3. Nur die vier Dateien in den bestehenden Stammordner der Lernwelt kopieren und dort die gleichnamigen Dateien ersetzen.
+4. index.html und alle Dateien von Block 1/2 sowie andere Block-3-Dateien NICHT ersetzen oder löschen.
+5. Lernwelt öffnen, Block 3 Kapitel 3 prüfen und das zweite Video testen.
+
+Inhalte: 15 New-Leadership-Folien inklusive Bayer-Recherche, keine separate Managementsimulation.
+Video 2: https://www.youtube.com/watch?v=9HZ-Ul6OH8M
+
+Hinweis: In der bisherigen Version liegen die Block-2-Stylesheets im Hauptordner. Sie gehören zum Bestand und sollen dort bleiben; dieses Update enthält sie ausdrücklich nicht.
