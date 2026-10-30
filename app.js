@@ -363,8 +363,7 @@ for(const [chapter,endId] of Object.entries({"1": "b3c1-debrief", "2": "b3c2-202
  if(start>=0){for(let i=block3Scenes.length-1;i>=0;i--){if(order.includes(block3Scenes[i].id))block3Scenes.splice(i,1)}block3Scenes.splice(block3Scenes.findIndex(s=>s.id==="b3c4-system")+1,0,...found)}
 }
 
-// Kapitel 3 bewusst leer bis zur Neugestaltung.
-for(let i=block3Scenes.length-1;i>=0;i--){if(/^b3c3-|^b3x3-/.test(block3Scenes[i].id))block3Scenes.splice(i,1);}
+// Kapitel 3 ist wieder mit eigenständigen Folien befüllt.
 scenes.push(...block3Scenes);
 
 
