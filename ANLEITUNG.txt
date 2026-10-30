@@ -1,17 +1,1 @@
-UPDATE NUR BLOCK 3 / KAPITEL 3 – NEUAUFBAU (30.10.2026)
-Enthalten: app.js, block3-new-leadership-20261030.js, block3-new-leadership-20261030.css
-Es sind KEINE Block-2-Dateien enthalten.
-
-INSTALLATION
-1. Bestehende Lernwelt sichern.
-2. Diese drei Dateien im Stammordner der bestehenden Lernwelt ersetzen.
-3. Alle anderen Dateien – insbesondere Block 2, index.html und assets – unverändert lassen.
-4. Browser-Cache neu laden (Strg+F5).
-
-INHALTE
-15 Unterfolien: Einstieg, Stromberg-Analyse, Gründe für neue Führung, Gallup-Schätzfrage,
-Definition, Gegenüberstellung, typische Führungssätze, Alltag, Instrumente, zweites Video,
-Entwicklung zum New Leader, Hierarchieabbau, eigenständige Bayer-Recherche,
-Diskussion und Fazit.
-Video 2: https://www.youtube.com/watch?v=9HZ-Ul6OH8M
-Stromberg: noch kein verifizierter Video-Link; die Aufgabe ist als Diskussionsfolie vorhanden.
+Diese drei Dateien in der bestehenden Lernwelt ersetzen. Alle anderen Dateien, insbesondere Block 2, unverändert lassen. Kapitel 3 enthält 15 echte Navigationsfolien. Stromberg-Video-Link noch offen.
