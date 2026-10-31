@@ -1,1 +1,3 @@
-Nur app.js in der bestehenden Lernwelt ersetzen. Block 2 und alle anderen Kapitel bleiben unverändert. Stromberg-Video: https://www.youtube.com/watch?v=ijjjRZUQYV4
+Die Folie „KI-Recruiter · Interview & Feedback“ ist jetzt fest in der Kapitel-5-Reihenfolge direkt nach „Prompt-Architektur: Was muss hinein?“ und vor „Survive the Interview“ registriert.
+
+Nur app.js ersetzen; anschließend Strg+F5. Andere Dateien und Block 2 nicht ändern.
